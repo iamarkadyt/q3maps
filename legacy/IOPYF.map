@@ -1,0 +1,143 @@
+
+// entity 0
+{
+"classname" "worldspawn"
+// brush 0
+{
+( 256 128 16 ) ( 256 0 16 ) ( 128 128 16 ) aedm7/aecell_pads_mh 0 0 0 0.5 0.5 0 0 0
+( 256 128 16 ) ( 128 128 16 ) ( 256 128 8 ) common/nodraw 0 0 0 0.5 0.5 0 0 0
+( 256 128 16 ) ( 256 128 8 ) ( 256 0 16 ) common/nodraw 0 0 0 0.5 0.5 0 0 0
+( 128 0 8 ) ( 256 0 8 ) ( 128 128 8 ) common/nodraw 0 0 0 0.5 0.5 0 0 0
+( 128 0 8 ) ( 128 0 16 ) ( 256 0 8 ) common/nodraw 0 0 0 0.5 0.5 0 0 0
+( 128 0 8 ) ( 128 128 8 ) ( 128 0 16 ) common/nodraw 0 0 0 0.5 0.5 0 0 0
+}
+// brush 1
+{
+( 376 384 280 ) ( 376 0 280 ) ( -96 384 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 432 272 ) ( -96 432 272 ) ( 376 432 -8 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 384 280 ) ( 376 384 0 ) ( 376 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 -24 0 ) ( -96 -24 280 ) ( 376 -24 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( -96 384 0 ) ( -96 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 384 272 ) ( 376 0 272 ) ( 376 384 272 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+}
+// brush 2
+{
+( 376 384 280 ) ( 376 0 280 ) ( -96 384 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 432 272 ) ( -96 432 272 ) ( 376 432 -8 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 384 280 ) ( 376 384 0 ) ( 376 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( 376 0 0 ) ( -96 384 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( -96 384 0 ) ( -96 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 424 -8 ) ( -96 424 272 ) ( 376 424 272 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+}
+// brush 3
+{
+( 376 384 280 ) ( 376 0 280 ) ( -96 384 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 432 272 ) ( -96 432 272 ) ( 376 432 -8 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 384 280 ) ( 376 384 0 ) ( 376 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( 376 0 0 ) ( -96 384 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 -24 0 ) ( -96 -24 280 ) ( 376 -24 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 368 0 280 ) ( 368 384 0 ) ( 368 384 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+}
+// brush 4
+{
+( 376 432 272 ) ( -96 432 272 ) ( 376 432 -8 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 384 280 ) ( 376 384 0 ) ( 376 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( 376 0 0 ) ( -96 384 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 -24 0 ) ( -96 -24 280 ) ( 376 -24 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( -96 384 0 ) ( -96 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 384 8 ) ( 376 0 8 ) ( -96 0 8 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+}
+// brush 5
+{
+( 376 384 280 ) ( 376 0 280 ) ( -96 384 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 384 280 ) ( 376 384 0 ) ( 376 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( 376 0 0 ) ( -96 384 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 -24 0 ) ( -96 -24 280 ) ( 376 -24 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( -96 384 0 ) ( -96 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 -16 0 ) ( -96 -16 280 ) ( -96 -16 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+}
+// brush 6
+{
+( 376 384 280 ) ( 376 0 280 ) ( -96 384 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( 376 432 272 ) ( -96 432 272 ) ( 376 432 -8 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( 376 0 0 ) ( -96 384 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 -24 0 ) ( -96 -24 280 ) ( 376 -24 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -96 0 0 ) ( -96 384 0 ) ( -96 0 280 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+( -88 0 280 ) ( -88 384 0 ) ( -88 0 0 ) gothic_floor/blocks17floor3 0 0 0 0.5 0.5 0 0 0
+}
+// brush 7
+{
+patchDef2
+{
+aedm7/ap_belt
+( 3 3 0 0 0 )
+(
+( ( -64 256 16 0 0 ) ( -64 320 16 0 -2 ) ( -64 384 16 0 -4 ) )
+( ( 64 256 16 2 0 ) ( 64 320 16 2 -2 ) ( 64 384 16 2 -4 ) )
+( ( 192 256 16 4 0 ) ( 192 320 16 4 -2 ) ( 192 384 16 4 -4 ) )
+)
+}
+}
+}
+// entity 1
+{
+"classname" "weapon_bfg"
+"origin" "260 196 24"
+}
+// entity 2
+{
+"classname" "light"
+"light" "300"
+"_color" "34 0 255"
+"origin" "192 192 152"
+}
+// entity 3
+{
+"classname" "info_player_intermission"
+"origin" "96 184 160"
+}
+// entity 4
+{
+"classname" "info_player_deathmatch"
+"origin" "152 208 40"
+}
+// entity 5
+{
+"classname" "info_player_start"
+"origin" "208 336 40"
+}
+// entity 6
+{
+"classname" "light"
+"light" "300"
+"_color" "34 0 255"
+"origin" "192 64 152"
+}
+// entity 7
+{
+"classname" "light"
+"light" "300"
+"_color" "34 0 255"
+"origin" "248 120 152"
+}
+// entity 8
+{
+"classname" "light"
+"light" "300"
+"_color" "34 0 255"
+"origin" "136 120 152"
+}
+// entity 9
+{
+"classname" "light"
+"light" "300"
+"_color" "34 0 255"
+"origin" "136 8 152"
+}
+// entity 10
+{
+"classname" "light"
+"light" "300"
+"_color" "34 0 255"
+"origin" "248 8 152"
+}

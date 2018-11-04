@@ -15,6 +15,8 @@ Following are some of the useful GTKRadiant shortcuts:
 `Ctrl + Alt + Shift + LMBC` Select individual faces for texture assigment.<br>
 `Ctrl + LMB Drag` Select & drag a face.<br>
 `Shift + LMBC` Select an item (brush, entity, anything).<br>
+`Shift + LMB Drag` Select items in a brush mode.<br>
+`Middle MB Click` Pick a texture.<br>
 
 ### KDE Specific Shortcuts
 

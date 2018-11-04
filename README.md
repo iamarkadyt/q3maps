@@ -1,4 +1,4 @@
-## Read this!
+# Read this!
 
 When reverse engineering pk3 files:
 
@@ -7,3 +7,15 @@ When reverse engineering pk3 files:
 * Finally, in the radiant, set the game folder to the directory containing the abovementioned baseq3 and the game binary.
 
 Good luck!
+
+# Useful Shortcuts
+
+Following are some of the useful GTKRadiant shortcuts:
+
+`Ctrl + Alt + Shift + LMBC` Select individual faces for texture assigment.<br>
+`Ctrl + LMB Drag` Select & drag a face.<br>
+`Shift + LMBC` Select an item (brush, entity, anything).<br>
+
+### KDE Specific Shortcuts
+
+`Alt + RMB Drag` Easily resize KDE windows with 1px border.

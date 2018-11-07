@@ -16,8 +16,15 @@ Following are some of the useful GTKRadiant shortcuts:
 `Ctrl + LMB Drag` Select & drag a face.<br>
 `Shift + LMBC` Select an item (brush, entity, anything).<br>
 `Shift + LMB Drag` Select items in a brush mode.<br>
+`Shift + Ctrl + LMB Drag` Select individual faces in a brush mode.<br>
 `Middle MB Click` Pick a texture.<br>
+`Shift MMBC` Assign a current texture to a brush.<br>
 
 ### KDE Specific Shortcuts
 
 `Alt + RMB Drag` Easily resize KDE windows with 1px border.
+
+# Some tips
+
+* `T Junction Issues` Fighting stitching issues often includes caulking invisible faces and ensuring that visible faces are perfectly aligned to each other. If none of that helps, tweaking the geometry would resolve the problem.
+* `Radiant` Radiant (as of Gtk v1.6.4) needs to be restarted at least every 6 hours of continuous work to avoid possible issues of brush mutation.

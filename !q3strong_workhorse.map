@@ -4736,7 +4736,7 @@
 ( -188 112 444 ) ( -188 112 412 ) ( -188 72 412 ) q3stronghold/kilt_alien_boarder 0 0 0 0.500000 0.500000 0 0 0
 ( -188 72 444 ) ( -188 72 412 ) ( -316 72 412 ) common/caulk 0 0 0 0.500000 0.500000 0 0 0
 ( -316 112 444 ) ( -316 112 412 ) ( -188 112 412 ) q3stronghold/kilt_alien_boarder 0 0 0 0.500000 0.500000 0 0 0
-( -316 112 412 ) ( -316 72 412 ) ( -188 72 412 ) q3stronghold/kilt_alien_boarder 0 0 0 0.500000 0.500000 0 0 0
+( -316 112 412 ) ( -316 72 412 ) ( -188 72 412 ) common/caulk 0 0 0 0.500000 0.500000 0 4 0
 ( -316 72 444 ) ( -316 112 444 ) ( -188 112 444 ) q3stronghold/kilt_alien_boarder 0 0 0 0.500000 0.500000 0 0 0
 }
 // brush 529
@@ -17077,14 +17077,6 @@ q3stronghold/glass
 }
 // brush 1886
 {
-( -192 410 224 ) ( -248 426 224 ) ( -248 426 360 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
-( -264 418 336 ) ( -208 426 336 ) ( -264 418 472 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
-( -172 354 360 ) ( -172 426 360 ) ( -172 426 224 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
-( -344 -78 408 ) ( -344 -62 408 ) ( -120 -62 408 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
-( -344 -62 280 ) ( -344 -78 280 ) ( -120 -78 280 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
-}
-// brush 1887
-{
 ( -240 434 224 ) ( -288 402 224 ) ( -288 402 360 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 ( -200 426 472 ) ( -296 426 472 ) ( -296 426 336 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 ( -344 -78 408 ) ( -344 -62 408 ) ( -120 -62 408 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
@@ -17092,7 +17084,7 @@ q3stronghold/glass
 ( -260 406 280 ) ( -264 406 280 ) ( -260 406 408 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 ( -326 408 280 ) ( -326 416 280 ) ( -326 416 408 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 }
-// brush 1888
+// brush 1887
 {
 ( -332 448 408 ) ( -332 428 408 ) ( -332 428 280 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 ( -164 448 408 ) ( -320 448 408 ) ( -320 448 280 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
@@ -17101,16 +17093,7 @@ q3stronghold/glass
 ( -320 428 408 ) ( -320 448 408 ) ( -164 448 408 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 ( -164 448 280 ) ( -320 448 280 ) ( -320 428 280 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
 }
-// brush 1889
-{
-( -1024 -16 280 ) ( -1024 -32 280 ) ( -1024 -32 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
-( -584 -136 408 ) ( -584 72 408 ) ( -120 72 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
-( -584 72 280 ) ( -584 -136 280 ) ( -120 -136 280 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
-( -1004 2 256 ) ( -1056 -33 256 ) ( -1056 -33 392 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
-( -1052 -12 280 ) ( -1052 -8 280 ) ( -1052 -12 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
-( -1046 32 280 ) ( -1040 32 280 ) ( -1046 32 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
-}
-// brush 1890
+// brush 1888
 {
 ( -1160 1156 304 ) ( -1164 1156 304 ) ( -1164 1076 304 ) common/areaportal -32 -56 0 0.500000 0.500000 0 13 0
 ( -1164 1076 440 ) ( -1164 1156 440 ) ( -1160 1156 440 ) common/areaportal -32 -56 0 0.500000 0.500000 0 13 0
@@ -17119,7 +17102,7 @@ q3stronghold/glass
 ( -1156 1184 432 ) ( -1160 1184 432 ) ( -1160 1184 304 ) common/areaportal -32 48 0 0.500000 0.500000 0 13 0
 ( -1164 1156 432 ) ( -1164 1076 432 ) ( -1164 1076 304 ) common/areaportal 56 48 0 0.500000 0.500000 0 13 0
 }
-// brush 1891
+// brush 1889
 {
 ( -96 636 136 ) ( -96 556 136 ) ( -96 556 8 ) common/areaportal -56 -32 0 0.500000 0.500000 0 13 0
 ( -88 666 136 ) ( -92 666 136 ) ( -92 666 8 ) common/areaportal 8 -32 0 0.500000 0.500000 0 13 0
@@ -17128,7 +17111,7 @@ q3stronghold/glass
 ( -96 556 144 ) ( -96 636 144 ) ( -92 636 144 ) common/areaportal 8 56 0 0.500000 0.500000 0 13 0
 ( -92 636 8 ) ( -96 636 8 ) ( -96 556 8 ) common/areaportal 8 56 0 0.500000 0.500000 0 13 0
 }
-// brush 1892
+// brush 1890
 {
 ( -92 -92 8 ) ( -96 -92 8 ) ( -96 -172 8 ) common/areaportal 8 8 0 0.500000 0.500000 0 13 0
 ( -96 -172 144 ) ( -96 -92 144 ) ( -92 -92 144 ) common/areaportal 8 8 0 0.500000 0.500000 0 13 0
@@ -17137,7 +17120,7 @@ q3stronghold/glass
 ( -88 -62 136 ) ( -92 -62 136 ) ( -92 -62 8 ) common/areaportal 8 32 0 0.500000 0.500000 0 13 0
 ( -96 -92 136 ) ( -96 -172 136 ) ( -96 -172 8 ) common/areaportal -8 32 0 0.500000 0.500000 0 13 0
 }
-// brush 1893
+// brush 1891
 {
 ( -1166 186 136 ) ( -1166 106 136 ) ( -1166 106 8 ) common/areaportal -52 32 0 0.500000 0.500000 0 13 0
 ( -1158 216 136 ) ( -1162 216 136 ) ( -1162 216 8 ) common/areaportal 36 32 0 0.500000 0.500000 0 13 0
@@ -17146,7 +17129,7 @@ q3stronghold/glass
 ( -1166 106 144 ) ( -1166 186 144 ) ( -1162 186 144 ) common/areaportal 36 52 0 0.500000 0.500000 0 13 0
 ( -1162 186 8 ) ( -1166 186 8 ) ( -1166 106 8 ) common/areaportal 36 52 0 0.500000 0.500000 0 13 0
 }
-// brush 1894
+// brush 1892
 {
 ( -1264 1632 8 ) ( -1586 1632 8 ) ( -1586 1628 8 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -1584 1628 136 ) ( -1584 1632 136 ) ( -1262 1632 136 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
@@ -17155,7 +17138,7 @@ q3stronghold/glass
 ( -1264 1632 122 ) ( -1586 1632 122 ) ( -1586 1632 8 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -1586 1632 122 ) ( -1586 1628 122 ) ( -1586 1628 8 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1895
+// brush 1893
 {
 ( -1916 898 8 ) ( -1918 898 8 ) ( -1918 650 8 ) common/clusterportal -8 8 0 0.500000 0.500000 0 13 0
 ( -1918 650 146 ) ( -1918 898 146 ) ( -1916 898 146 ) common/clusterportal -8 8 0 0.500000 0.500000 0 13 0
@@ -17164,7 +17147,7 @@ q3stronghold/glass
 ( -1918 710 4 ) ( -1918 738 148 ) ( -1916 710 4 ) common/clusterportal 32 0 0 0.500000 0.500000 0 13 0
 ( -1918 836 152 ) ( -1918 866 2 ) ( -1916 866 2 ) common/clusterportal 32 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1896
+// brush 1894
 {
 ( -916 726 152 ) ( -886 726 2 ) ( -886 724 2 ) common/clusterportal 16 0 -180 0.500000 -0.500000 0 13 0
 ( -1042 726 4 ) ( -1014 726 148 ) ( -1042 724 4 ) common/clusterportal 16 0 -180 0.500000 -0.500000 0 13 0
@@ -17173,7 +17156,7 @@ q3stronghold/glass
 ( -1102 726 146 ) ( -854 726 146 ) ( -854 724 146 ) common/clusterportal 39 -40 -90 0.500000 0.500000 0 13 0
 ( -854 724 8 ) ( -854 726 8 ) ( -1102 726 8 ) common/clusterportal 39 -40 -90 0.500000 0.500000 0 13 0
 }
-// brush 1897
+// brush 1895
 {
 ( -1922 1630 8 ) ( -2074 1630 8 ) ( -2074 1622 8 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -2064 1622 222 ) ( -2064 1630 222 ) ( -1912 1630 222 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
@@ -17182,7 +17165,7 @@ q3stronghold/glass
 ( -1922 1630 264 ) ( -2074 1630 264 ) ( -2074 1630 8 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -2076 1630 264 ) ( -2076 1622 264 ) ( -2076 1622 8 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1898
+// brush 1896
 {
 ( -1959 1628 424 ) ( -2045 1628 424 ) ( -2042 1628 440 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -2043 1636 424 ) ( -1957 1636 424 ) ( -1960 1636 440 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
@@ -17191,7 +17174,7 @@ q3stronghold/glass
 ( -1936 1636 438 ) ( -1933 1636 422 ) ( -1933 1620 422 ) common/clusterportal 8 0 0 0.500000 0.500000 0 13 0
 ( -2064 1620 442 ) ( -2067 1620 426 ) ( -2067 1636 426 ) common/clusterportal 8 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1899
+// brush 1897
 {
 ( -2208 916 442 ) ( -2211 916 426 ) ( -2211 932 426 ) common/clusterportal 8 0 0 0.500000 0.500000 0 13 0
 ( -2080 932 438 ) ( -2077 932 422 ) ( -2077 916 422 ) common/clusterportal 8 0 0 0.500000 0.500000 0 13 0
@@ -17200,7 +17183,7 @@ q3stronghold/glass
 ( -2187 932 424 ) ( -2101 932 424 ) ( -2104 932 440 ) common/clusterportal -32 0 0 0.500000 0.500000 0 13 0
 ( -2103 924 424 ) ( -2189 924 424 ) ( -2186 924 440 ) common/clusterportal -32 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1900
+// brush 1898
 {
 ( -1828 1239 424 ) ( -1828 1325 424 ) ( -1828 1322 440 ) common/clusterportal -32 0 -180 0.500000 -0.500000 0 13 0
 ( -1820 1323 424 ) ( -1820 1237 424 ) ( -1820 1240 440 ) common/clusterportal -32 0 -180 0.500000 -0.500000 0 13 0
@@ -17209,7 +17192,7 @@ q3stronghold/glass
 ( -1820 1216 438 ) ( -1820 1213 422 ) ( -1836 1213 422 ) common/clusterportal 8 0 0 0.500000 0.500000 0 13 0
 ( -1836 1344 442 ) ( -1836 1347 426 ) ( -1820 1347 426 ) common/clusterportal 8 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1901
+// brush 1899
 {
 ( -1178 746 472 ) ( -1178 746 288 ) ( -1178 802 288 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -1170 796 472 ) ( -1170 796 288 ) ( -1170 740 288 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
@@ -17218,7 +17201,7 @@ q3stronghold/glass
 ( -1178 802 288 ) ( -1178 746 288 ) ( -1122 746 288 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -1178 746 472 ) ( -1178 802 472 ) ( -1122 802 472 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1902
+// brush 1900
 {
 ( -552 -2 416 ) ( -552 1 400 ) ( -536 1 400 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -536 -92 418 ) ( -536 -95 402 ) ( -552 -95 402 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
@@ -17227,7 +17210,7 @@ q3stronghold/glass
 ( -536 -5 400 ) ( -536 -91 400 ) ( -536 -88 416 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -552 -91 400 ) ( -552 -5 400 ) ( -552 -8 416 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 }
-// brush 1903
+// brush 1901
 {
 ( -291 72 400 ) ( -205 72 400 ) ( -208 72 416 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -205 56 400 ) ( -291 56 400 ) ( -288 56 416 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
@@ -17235,6 +17218,23 @@ q3stronghold/glass
 ( -288 72 416 ) ( -208 72 416 ) ( -208 56 416 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -292 56 418 ) ( -295 56 402 ) ( -295 72 402 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
 ( -204 72 416 ) ( -201 72 400 ) ( -201 56 400 ) common/clusterportal 0 0 0 0.500000 0.500000 0 13 0
+}
+// brush 1902
+{
+( -344 -62 280 ) ( -344 -78 280 ) ( -120 -78 280 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
+( -344 -78 408 ) ( -344 -62 408 ) ( -120 -62 408 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
+( -172 354 360 ) ( -172 426 360 ) ( -172 426 224 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
+( -264 418 336 ) ( -208 426 336 ) ( -264 418 472 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
+( -192 410 224 ) ( -248 426 224 ) ( -248 426 360 ) common/weapclip 0 0 0 0.500000 0.500000 0 5 0
+}
+// brush 1903
+{
+( -1046 32 280 ) ( -1040 32 280 ) ( -1046 32 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
+( -1052 -12 280 ) ( -1052 -8 280 ) ( -1052 -12 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
+( -1004 2 256 ) ( -1056 -33 256 ) ( -1056 -33 392 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
+( -584 72 280 ) ( -584 -136 280 ) ( -120 -136 280 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
+( -584 -136 408 ) ( -584 72 408 ) ( -120 72 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
+( -1024 -16 280 ) ( -1024 -32 280 ) ( -1024 -32 408 ) common/clip 0 0 0 0.500000 0.500000 0 13 0
 }
 }
 // entity 1
@@ -17244,24 +17244,6 @@ q3stronghold/glass
 "angle" "315"
 }
 // entity 2
-{
-"origin" "-2112 768 32"
-"angle" "270"
-"classname" "team_CTF_redplayer"
-}
-// entity 3
-{
-"origin" "-1560 1280 328"
-"angle" "180"
-"classname" "team_CTF_redplayer"
-}
-// entity 4
-{
-"origin" "-1232 1232 32"
-"angle" "180"
-"classname" "team_CTF_redplayer"
-}
-// entity 5
 {
 "angle" "270"
 "lip" "0"
@@ -17304,7 +17286,7 @@ q3stronghold/glass
 ( -104 -344 102 ) ( -104 -264 102 ) ( -80 -264 102 ) q3stronghold/kilt_tek_door -28 16 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 6
+// entity 3
 {
 "angle" "90"
 "team" "reddoor1"
@@ -17347,7 +17329,7 @@ q3stronghold/glass
 ( -1176 56 28 ) ( -1176 16 30 ) ( -1152 16 30 ) q3stronghold/darkconcrete -104 16 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 7
+// entity 4
 {
 "angle" "90"
 "team" "reddoor3"
@@ -17390,7 +17372,7 @@ q3stronghold/glass
 ( -1176 1006 410 ) ( -1176 1006 398 ) ( -1176 1048 398 ) q3stronghold/kilt_tek_door -26 96 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 8
+// entity 5
 {
 "angle" "270"
 "team" "reddoor1"
@@ -17433,25 +17415,7 @@ q3stronghold/glass
 ( -1176 -64 144 ) ( -1176 -64 102 ) ( -1176 -26 102 ) q3stronghold/kilt_tek_door -104 16 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 9
-{
-"classname" "team_CTF_redplayer"
-"angle" "90"
-"origin" "-2128 528 224"
-}
-// entity 10
-{
-"origin" "-2408 1216 328"
-"angle" "360"
-"classname" "team_CTF_redplayer"
-}
-// entity 11
-{
-"classname" "team_CTF_redplayer"
-"angle" "270"
-"origin" "-2176 1576 328"
-}
-// entity 12
+// entity 6
 {
 "classname" "func_door"
 "team" "reddoor3"
@@ -17494,7 +17458,7 @@ q3stronghold/glass
 ( -1176 1048 326 ) ( -1176 1048 314 ) ( -1176 1088 314 ) q3stronghold/kilt_tek_door -26 96 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 13
+// entity 7
 {
 "classname" "func_door"
 "team" "reddoor2"
@@ -17537,7 +17501,7 @@ q3stronghold/glass
 ( -104 -224 144 ) ( -104 -184 144 ) ( -80 -184 144 ) q3stronghold/darkconcrete -28 16 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 14
+// entity 8
 {
 "angle" "90"
 "team" "reddoor4"
@@ -17580,7 +17544,7 @@ q3stronghold/glass
 ( -104 504 144 ) ( -104 544 144 ) ( -80 544 144 ) q3stronghold/darkconcrete 84 16 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 15
+// entity 9
 {
 "angle" "270"
 "team" "reddoor4"
@@ -17623,31 +17587,21 @@ q3stronghold/glass
 ( -104 384 102 ) ( -104 464 102 ) ( -80 464 102 ) q3stronghold/darkconcrete 84 16 0 -0.640000 0.500000 0 0 0
 }
 }
-// entity 16
-{
-"origin" "-2256 1352 344"
-"classname" "info_player_start"
-}
-// entity 17
-{
-"origin" "-2256 1304 344"
-"classname" "info_player_deathmatch"
-}
-// entity 18
+// entity 10
 {
 "angle" "45"
 "model" "models/mapobjects/teleporter/teleporter.md3"
 "origin" "-1924 1916 7"
 "classname" "misc_model"
 }
-// entity 19
+// entity 11
 {
 "classname" "misc_model"
 "origin" "-1924 1916 303"
 "model" "models/mapobjects/teleporter/teleporter.md3"
 "angle" "45"
 }
-// entity 20
+// entity 12
 {
 "classname" "trigger_teleport"
 "target" "t2"
@@ -17661,7 +17615,7 @@ q3stronghold/glass
 ( -1890 1917 316 ) ( -1923 1950 316 ) ( -1954 1919 316 ) common/trigger 33 10 -44 0.500448 0.499758 0 7 0
 }
 }
-// entity 21
+// entity 13
 {
 "classname" "trigger_teleport"
 "target" "t1"
@@ -17675,21 +17629,21 @@ q3stronghold/glass
 ( -1923 1950 92 ) ( -1954 1919 92 ) ( -1954 1919 76 ) common/trigger -41 -16 0 0.351562 0.500000 0 7 0
 }
 }
-// entity 22
+// entity 14
 {
 "angle" "270"
 "origin" "-2000 1866 32"
 "classname" "misc_teleporter_dest"
 "targetname" "t2"
 }
-// entity 23
+// entity 15
 {
 "classname" "item_botroam"
 "weight" "50"
 "origin" "-72 -264 16"
 "spawnflags" "0"
 }
-// entity 24
+// entity 16
 {
 "classname" "info_camp"
 "weight" "75"
@@ -17697,402 +17651,354 @@ q3stronghold/glass
 "origin" "-320 -120 288"
 "spawnflags" "0"
 }
-// entity 25
+// entity 17
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-1248 768 296"
 }
-// entity 26
+// entity 18
 {
 "origin" "-320 568 32"
 "angle" "270"
 "classname" "team_CTF_bluespawn"
 }
-// entity 27
+// entity 19
 {
 "origin" "-824 -232 32"
 "classname" "team_CTF_bluespawn"
 }
-// entity 28
+// entity 20
 {
 "classname" "team_CTF_redspawn"
 "angle" "90"
 "origin" "-648 -368 32"
 }
-// entity 29
+// entity 21
 {
 "classname" "target_location"
-"message" "Body Armor Red"
-"origin" "-576 1060 52"
+"message" "Integral Passage Red"
+"origin" "-720 1008 52"
 }
-// entity 30
+// entity 22
 {
 "classname" "weapon_rocketlauncher"
 "origin" "-424 1040 216"
 }
-// entity 31
+// entity 23
 {
-"message" "Pipe Entrance Red"
+"message" "Cellar Red"
 "origin" "-512 1880 16"
 "classname" "target_location"
 }
-// entity 32
+// entity 24
 {
 "origin" "-1440 1816 72"
-"message" "R. Launcher Red"
+"message" "Cellar Entrance Red"
 "classname" "target_location"
 }
-// entity 33
+// entity 25
 {
-"origin" "-1568 928 224"
-"message" "Lift Room Red"
+"origin" "-1568 928 128"
+"message" "Main Room Red"
 "classname" "target_location"
 }
-// entity 34
+// entity 26
 {
 "message" "Ramp Room Red"
 "origin" "-1600 -72 144"
 "classname" "target_location"
 }
-// entity 35
+// entity 27
 {
-"origin" "-288 -96 464"
+"origin" "-292 -96 464"
 "message" "Railgun Red"
 "classname" "target_location"
 }
-// entity 36
+// entity 28
 {
 "origin" "-856 752 352"
 "message" "Upper Hall Red"
 "classname" "target_location"
 }
-// entity 37
+// entity 29
 {
 "origin" "-576 488 128"
 "message" "Right Hall Red"
 "classname" "target_location"
 }
-// entity 38
+// entity 30
 {
-"origin" "448 448 128"
+"origin" "276 476 128"
 "message" "Central Bridge"
 "classname" "target_location"
 }
-// entity 39
+// entity 31
 {
-"origin" "-448 -256 120"
+"origin" "-320 -260 120"
 "message" "Left Hall Red"
 "classname" "target_location"
 }
-// entity 40
+// entity 32
 {
 "origin" "-2240 544 280"
 "message" "Ramp Room Red"
 "classname" "target_location"
 }
-// entity 41
+// entity 33
 {
 "origin" "-2184 1272 400"
 "message" "Flag Room Red"
 "classname" "target_location"
 }
-// entity 42
-{
-"origin" "-2112 768 32"
-"angle" "270"
-"classname" "team_CTF_redplayer"
-}
-// entity 43
-{
-"origin" "-1560 1280 328"
-"angle" "180"
-"classname" "team_CTF_redplayer"
-}
-// entity 44
-{
-"origin" "-1232 1232 32"
-"angle" "180"
-"classname" "team_CTF_redplayer"
-}
-// entity 45
+// entity 34
 {
 "classname" "team_CTF_redspawn"
 "origin" "-672 384 32"
 }
-// entity 46
+// entity 35
 {
 "classname" "team_CTF_redspawn"
 "angle" "180"
 "origin" "-608 1816 -56"
 }
-// entity 47
-{
-"classname" "team_CTF_redplayer"
-"angle" "90"
-"origin" "-2128 528 224"
-}
-// entity 48
+// entity 36
 {
 "classname" "item_health_mega"
 "origin" "-1604 416 24"
 }
-// entity 49
+// entity 37
 {
 "origin" "-2336 248 32"
 "classname" "item_armor_combat"
 }
-// entity 50
+// entity 38
 {
 "origin" "-144 32 296"
 "classname" "weapon_railgun"
 }
-// entity 51
+// entity 39
 {
 "origin" "-392 -272 416"
 "angle" "45"
 "classname" "team_CTF_redspawn"
 }
-// entity 52
+// entity 40
 {
 "origin" "-808 1128 200"
 "angle" "315"
 "classname" "team_CTF_redspawn"
 }
-// entity 53
+// entity 41
 {
-"angle" "270"
-"origin" "-672 992 32"
+"angle" "180"
+"origin" "-494 854 32"
 "classname" "team_CTF_redspawn"
 }
-// entity 54
+// entity 42
 {
 "classname" "team_CTF_redspawn"
 "angle" "45"
 "origin" "-1016 -96 32"
 }
-// entity 55
+// entity 43
 {
 "origin" "-264 -160 32"
 "angle" "180"
 "classname" "team_CTF_redspawn"
 }
-// entity 56
+// entity 44
 {
 "classname" "target_position"
 "origin" "128 304 64"
 "targetname" "redbridge_end1"
 }
-// entity 57
+// entity 45
 {
 "classname" "holdable_medkit"
 "origin" "24 876 24"
 }
-// entity 58
-{
-"origin" "-2408 1216 328"
-"angle" "360"
-"classname" "team_CTF_redplayer"
-}
-// entity 59
-{
-"classname" "target_position"
-"targetname" "reddoor_spot4"
-"origin" "-92 464 76"
-}
-// entity 60
+// entity 46
 {
 "classname" "weapon_shotgun"
 "origin" "-16 -664 24"
 }
-// entity 61
+// entity 47
 {
 "origin" "-92 -264 76"
 "targetname" "reddoor_spot2"
 "classname" "target_position"
 }
-// entity 62
+// entity 48
 {
 "origin" "128 104 64"
 "classname" "target_position"
 "targetname" "redbridge_end2"
 }
-// entity 63
+// entity 49
 {
 "classname" "target_position"
 "targetname" "reddoor_spot1"
 "origin" "-1164 16 76"
 }
-// entity 64
+// entity 50
 {
 "origin" "-1164 1048 372"
 "targetname" "reddoor_spot3"
 "classname" "target_position"
 }
-// entity 65
-{
-"classname" "team_CTF_redplayer"
-"angle" "270"
-"origin" "-2176 1576 328"
-}
-// entity 66
+// entity 51
 {
 "classname" "target_location"
 "message" "Upper Hall Red"
 "origin" "-480 480 352"
 }
-// entity 67
+// entity 52
 {
 "classname" "target_location"
 "message" "Central Bridge"
-"origin" "448 -320 128"
+"origin" "276 -292 128"
 }
-// entity 68
+// entity 53
 {
 "classname" "target_location"
 "message" "Left Hall Red"
 "origin" "-832 0 120"
 }
-// entity 69
+// entity 54
 {
 "classname" "target_location"
-"message" "Lift Room Red"
-"origin" "-1568 1376 224"
+"message" "Main Room Red"
+"origin" "-1568 1376 128"
 }
-// entity 70
+// entity 55
 {
 "classname" "target_location"
 "message" "Right Hall Red"
-"origin" "-560 1016 248"
+"origin" "-540 856 248"
 }
-// entity 71
+// entity 56
 {
 "origin" "-856 768 296"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 72
+// entity 57
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-864 448 296"
 }
-// entity 73
+// entity 58
 {
 "origin" "-480 448 296"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 74
+// entity 59
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-480 -64 288"
 }
-// entity 75
+// entity 60
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-704 1872 -72"
 "spawnflags" "1"
 }
-// entity 76
+// entity 61
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-1008 1864 -72"
 "spawnflags" "1"
 }
-// entity 77
+// entity 62
 {
 "origin" "-1440 1864 -72"
 "weight" "40"
 "classname" "item_botroam"
 "spawnflags" "1"
 }
-// entity 78
+// entity 63
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-1440 1528 16"
 "spawnflags" "1"
 }
-// entity 79
+// entity 64
 {
 "origin" "-2000 1536 16"
 "weight" "35"
 "classname" "item_botroam"
 }
-// entity 80
+// entity 65
 {
 "origin" "-1296 416 16"
 "weight" "25"
 "classname" "item_botroam"
 }
-// entity 81
+// entity 66
 {
 "classname" "item_botroam"
 "weight" "25"
 "origin" "-1784 416 16"
 }
-// entity 82
+// entity 67
 {
 "origin" "-2392 736 16"
 "weight" "25"
 "classname" "item_botroam"
 }
-// entity 83
+// entity 68
 {
 "classname" "item_botroam"
 "weight" "25"
 "origin" "-2112 128 16"
 }
-// entity 84
+// entity 69
 {
 "origin" "-696 -264 16"
 "weight" "50"
 "classname" "item_botroam"
 }
-// entity 85
-{
-"origin" "-2328 552 208"
-"weight" "30"
-"classname" "item_botroam"
-}
-// entity 86
+// entity 70
 {
 "origin" "-672 888 16"
 "weight" "45"
 "classname" "item_botroam"
 }
-// entity 87
+// entity 71
 {
 "classname" "item_botroam"
 "weight" "40"
 "origin" "-2000 1744 16"
 }
-// entity 88
+// entity 72
 {
 "origin" "-1008 1864 -72"
 "weight" "40"
 "classname" "item_botroam"
 "spawnflags" "1"
 }
-// entity 89
+// entity 73
 {
 "origin" "-1208 1864 -72"
 "weight" "40"
 "classname" "item_botroam"
 "spawnflags" "1"
 }
-// entity 90
+// entity 74
 {
 "targetname" "t1"
 "angle" "270"
 "origin" "-2000 1866 328"
 "classname" "misc_teleporter_dest"
 }
-// entity 91
+// entity 75
 {
 "target" "t3"
 "classname" "trigger_teleport"
@@ -18106,24 +18012,24 @@ q3stronghold/glass
 ( -339 1958 4 ) ( -370 1927 4 ) ( -370 1927 -12 ) common/trigger -63 0 0 0.351562 0.500000 0 7 0
 }
 }
-// entity 92
+// entity 76
 {
 "angle" "45"
 "model" "models/mapobjects/teleporter/teleporter.md3"
 "origin" "-340 1924 -81"
 "classname" "misc_model"
 }
-// entity 93
+// entity 77
 {
 "targetname" "t3"
 "classname" "misc_teleporter_dest"
 "origin" "-1282 356 296"
 "angle" "90"
 }
-// entity 94
+// entity 78
 {
 "classname" "func_rotating"
-"noise" "sound/world/fan4.wav"
+"noise" "sound/world/x_bobber.wav"
 "origin" "-640 1864 96"
 "speed" "200"
 // brush 0
@@ -18172,217 +18078,217 @@ q3stronghold/glass
 ( -632 1856 108 ) ( -632 1856 100 ) ( -636 1804 102 ) base_trim/pewter_shiney -48 0 0 0.500000 0.500000 0 0 0
 }
 }
-// entity 95
+// entity 79
 {
 "classname" "weapon_rocketlauncher"
 "origin" "-844 176 28"
 }
-// entity 96
+// entity 80
 {
 "classname" "item_health_large"
 "origin" "-516 -440 28"
 }
-// entity 97
+// entity 81
 {
 "classname" "weapon_plasmagun"
 "origin" "-1216 556 24"
 }
-// entity 98
+// entity 82
 {
 "classname" "ammo_cells"
 "origin" "-1216 600 24"
 }
-// entity 99
+// entity 83
 {
 "classname" "weapon_plasmagun"
 "origin" "-1888 992 320"
 }
-// entity 100
+// entity 84
 {
 "classname" "ammo_cells"
 "origin" "-1888 1036 320"
 }
-// entity 101
+// entity 85
 {
 "origin" "-1888 1080 320"
 "classname" "ammo_cells"
 }
-// entity 102
+// entity 86
 {
 "classname" "ammo_slugs"
 "origin" "-1224 352 288"
 }
-// entity 103
+// entity 87
 {
 "classname" "item_health"
 "origin" "-1224 396 288"
 }
-// entity 104
+// entity 88
 {
 "classname" "ammo_slugs"
 "origin" "-380 -316 328"
 "spawnflags" "1"
 }
-// entity 105
+// entity 89
 {
 "classname" "ammo_grenades"
 "origin" "-380 -316 296"
 "count" "20"
 }
-// entity 106
+// entity 90
 {
 "classname" "weapon_grenadelauncher"
 "origin" "-144 -316 296"
 }
-// entity 107
+// entity 91
 {
 "classname" "item_health"
 "origin" "-520 -200 296"
 }
-// entity 108
+// entity 92
 {
 "classname" "item_health_large"
 "origin" "-744 1200 192"
 }
-// entity 109
+// entity 93
 {
 "classname" "ammo_shells"
 "origin" "-2464 1868 320"
 }
-// entity 110
+// entity 94
 {
 "classname" "ammo_rockets"
 "origin" "-2464 1824 320"
 }
-// entity 111
+// entity 95
 {
 "classname" "item_health_large"
 "origin" "-2376 1944 392"
 }
-// entity 112
+// entity 96
 {
 "classname" "weapon_shotgun"
 "origin" "-576 1728 -104"
 }
-// entity 113
+// entity 97
 {
 "classname" "ammo_shells"
 "origin" "-532 1728 -104"
 }
-// entity 114
+// entity 98
 {
 "classname" "item_armor_combat"
 "origin" "-328 1728 -104"
 }
-// entity 115
+// entity 99
 {
 "classname" "weapon_grenadelauncher"
 "origin" "-2448 1940 96"
 }
-// entity 116
+// entity 100
 {
 "classname" "item_health_large"
 "origin" "-2400 992 328"
 }
-// entity 117
+// entity 101
 {
 "classname" "ammo_grenades"
 "origin" "-2356 992 328"
 "count" "20"
 }
-// entity 118
+// entity 102
 {
 "classname" "ammo_cells"
 "origin" "-1220 1572 320"
 }
-// entity 119
+// entity 103
 {
 "classname" "item_health"
 "origin" "-1264 1572 328"
 }
-// entity 120
+// entity 104
 {
 "classname" "item_armor_combat"
 "origin" "-1956 1060 396"
 }
-// entity 121
+// entity 105
 {
 "classname" "weapon_rocketlauncher"
 "origin" "-2268 888 32"
 }
-// entity 122
+// entity 106
 {
 "classname" "item_health"
 "origin" "-2268 772 168"
 }
-// entity 123
+// entity 107
 {
 "classname" "item_regen"
 "origin" "-1464 -220 168"
 "team" "1028"
 }
-// entity 124
+// entity 108
 {
 "classname" "item_enviro"
 "origin" "-1464 -220 168"
 "team" "1028"
 }
-// entity 125
+// entity 109
 {
 "classname" "ammo_rockets"
 "origin" "-2352 -268 24"
 }
-// entity 126
+// entity 110
 {
 "classname" "item_health"
 "origin" "-1512 76 24"
 }
-// entity 127
+// entity 111
 {
 "origin" "-2308 -268 24"
 "classname" "ammo_shells"
 }
-// entity 128
+// entity 112
 {
 "classname" "ammo_slugs"
 "origin" "-1564 1748 -64"
 }
-// entity 129
+// entity 113
 {
 "classname" "item_health"
 "origin" "-1568 1928 -64"
 }
-// entity 130
+// entity 114
 {
 "classname" "ammo_rockets"
 "origin" "-1564 1704 -64"
 }
-// entity 131
+// entity 115
 {
 "classname" "item_health"
 "origin" "-1888 1696 32"
 }
-// entity 132
+// entity 116
 {
 "classname" "item_armor_body"
 "origin" "-512 1052 96"
 }
-// entity 133
+// entity 117
 {
 "origin" "-1352 -220 24"
 "classname" "ammo_cells"
 }
-// entity 134
+// entity 118
 {
 "origin" "-1308 -220 24"
 "classname" "ammo_slugs"
 }
-// entity 135
+// entity 119
 {
 "classname" "item_health"
 "origin" "-16 -708 24"
 }
-// entity 136
+// entity 120
 {
 "target" "reddoor_spot1"
 "radius" "128"
@@ -18391,13 +18297,7 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.8789062 0 0"
 }
-// entity 137
-{
-"origin" "-92 464 76"
-"targetname" "reddoor_spot4"
-"classname" "target_position"
-}
-// entity 138
+// entity 121
 {
 "target" "reddoor_spot4"
 "radius" "128"
@@ -18406,7 +18306,7 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.8789062 0 0"
 }
-// entity 139
+// entity 122
 {
 "_color" "0.8789062 0 0"
 "light" "15"
@@ -18415,7 +18315,7 @@ q3stronghold/glass
 "radius" "128"
 "target" "reddoor_spot4"
 }
-// entity 140
+// entity 123
 {
 "radius" "128"
 "origin" "24 876 44"
@@ -18423,13 +18323,13 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.8789062 0 0"
 }
-// entity 141
+// entity 124
 {
 "classname" "target_position"
 "targetname" "reddoor_spot2"
 "origin" "-92 -264 76"
 }
-// entity 142
+// entity 125
 {
 "_color" "0.8789062 0 0"
 "light" "15"
@@ -18438,7 +18338,7 @@ q3stronghold/glass
 "radius" "128"
 "target" "reddoor_spot2"
 }
-// entity 143
+// entity 126
 {
 "target" "reddoor_spot2"
 "radius" "128"
@@ -18447,13 +18347,13 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.8789062 0 0"
 }
-// entity 144
+// entity 127
 {
 "origin" "-1164 16 76"
 "targetname" "reddoor_spot1"
 "classname" "target_position"
 }
-// entity 145
+// entity 128
 {
 "_color" "0.8789062 0 0"
 "light" "15"
@@ -18462,13 +18362,13 @@ q3stronghold/glass
 "radius" "128"
 "target" "reddoor_spot1"
 }
-// entity 146
+// entity 129
 {
 "classname" "target_position"
 "targetname" "reddoor_spot3"
 "origin" "-1164 1048 372"
 }
-// entity 147
+// entity 130
 {
 "_color" "0.8789062 0 0"
 "light" "15"
@@ -18477,7 +18377,7 @@ q3stronghold/glass
 "radius" "128"
 "target" "reddoor_spot3"
 }
-// entity 148
+// entity 131
 {
 "target" "reddoor_spot3"
 "radius" "128"
@@ -18486,38 +18386,155 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.8789062 0 0"
 }
-// entity 149
+// entity 132
 {
 "_color" "1.000000 0.127451 0.000000"
 "origin" "-1716 696 172"
 "light" "10"
 "classname" "light"
 }
-// entity 150
+// entity 133
 {
 "_color" "1.000000 0.127451 0.000000"
 "origin" "-1936 1504 248"
 "light" "15"
 "classname" "light"
 }
-// entity 151
+// entity 134
 {
 "classname" "light"
 "light" "10"
 "origin" "-152 464 160"
 "_color" "1.000000 0.127451 0.000000"
 }
-// entity 152
+// entity 135
 {
 "_color" "1.000000 0.127451 0.000000"
 "origin" "-864 1048 384"
 "light" "15"
 "classname" "light"
 }
-// entity 153
+// entity 136
 {
 "_color" "1.000000 0.127451 0.000000"
 "origin" "-2280 1672 172"
+"light" "10"
+"classname" "light"
+}
+// entity 137
+{
+"classname" "light"
+"light" "10"
+"origin" "-152 -264 160"
+"_color" "1.000000 0.127451 0.000000"
+}
+// entity 138
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1104 8 166"
+"light" "10"
+"classname" "light"
+}
+// entity 139
+{
+"origin" "-2212 1712 472"
+"classname" "ammo_bfg"
+}
+// entity 140
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1944 1424 172"
+"light" "10"
+"classname" "light"
+}
+// entity 141
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1436 1584 172"
+"light" "10"
+"classname" "light"
+}
+// entity 142
+{
+"classname" "light"
+"light" "10"
+"origin" "-1208 976 172"
+"_color" "1.000000 0.127451 0.000000"
+}
+// entity 143
+{
+"classname" "light"
+"light" "10"
+"origin" "-1208 566 172"
+"_color" "1.000000 0.127451 0.000000"
+}
+// entity 144
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1420 590 172"
+"light" "10"
+"classname" "light"
+}
+// entity 145
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1848 1156 172"
+"light" "10"
+"classname" "light"
+}
+// entity 146
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1680 488 172"
+"light" "10"
+"classname" "light"
+}
+// entity 147
+{
+"classname" "light"
+"light" "10"
+"origin" "-1752 336 172"
+"_color" "1.000000 0.127451 0.000000"
+}
+// entity 148
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1272 336 172"
+"light" "10"
+"classname" "light"
+}
+// entity 149
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1512 -280 172"
+"light" "10"
+"classname" "light"
+}
+// entity 150
+{
+"classname" "light"
+"light" "10"
+"origin" "-1912 -280 172"
+"_color" "1.000000 0.127451 0.000000"
+}
+// entity 151
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-1752 136 172"
+"light" "10"
+"classname" "light"
+}
+// entity 152
+{
+"classname" "light"
+"light" "10"
+"origin" "-2032 620 172"
+"_color" "1.000000 0.127451 0.000000"
+}
+// entity 153
+{
+"_color" "1.000000 0.127451 0.000000"
+"origin" "-2234 940 172"
 "light" "10"
 "classname" "light"
 }
@@ -18525,144 +18542,255 @@ q3stronghold/glass
 {
 "classname" "light"
 "light" "10"
-"origin" "-152 -264 160"
-"_color" "1.000000 0.127451 0.000000"
-}
-// entity 155
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1104 8 166"
-"light" "10"
-"classname" "light"
-}
-// entity 156
-{
-"origin" "-2212 1712 472"
-"classname" "ammo_bfg"
-}
-// entity 157
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1944 1424 172"
-"light" "10"
-"classname" "light"
-}
-// entity 158
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1436 1584 172"
-"light" "10"
-"classname" "light"
-}
-// entity 159
-{
-"classname" "light"
-"light" "10"
-"origin" "-1208 976 172"
-"_color" "1.000000 0.127451 0.000000"
-}
-// entity 160
-{
-"classname" "light"
-"light" "10"
-"origin" "-1208 566 172"
-"_color" "1.000000 0.127451 0.000000"
-}
-// entity 161
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1420 590 172"
-"light" "10"
-"classname" "light"
-}
-// entity 162
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1848 1156 172"
-"light" "10"
-"classname" "light"
-}
-// entity 163
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1680 488 172"
-"light" "10"
-"classname" "light"
-}
-// entity 164
-{
-"classname" "light"
-"light" "10"
-"origin" "-1752 336 172"
-"_color" "1.000000 0.127451 0.000000"
-}
-// entity 165
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1272 336 172"
-"light" "10"
-"classname" "light"
-}
-// entity 166
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1512 -280 172"
-"light" "10"
-"classname" "light"
-}
-// entity 167
-{
-"classname" "light"
-"light" "10"
-"origin" "-1912 -280 172"
-"_color" "1.000000 0.127451 0.000000"
-}
-// entity 168
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-1752 136 172"
-"light" "10"
-"classname" "light"
-}
-// entity 169
-{
-"classname" "light"
-"light" "10"
-"origin" "-2032 620 172"
-"_color" "1.000000 0.127451 0.000000"
-}
-// entity 170
-{
-"_color" "1.000000 0.127451 0.000000"
-"origin" "-2234 940 172"
-"light" "10"
-"classname" "light"
-}
-// entity 171
-{
-"classname" "light"
-"light" "10"
 "origin" "-2416 824 172"
 "_color" "1.000000 0.127451 0.000000"
 }
-// entity 172
+// entity 155
 {
 "_color" "1.000000 0.127451 0.000000"
 "origin" "-2416 24 172"
 "light" "10"
 "classname" "light"
 }
-// entity 173
+// entity 156
 {
 "classname" "light"
 "light" "10"
 "origin" "-1272 136 172"
 "_color" "1.000000 0.127451 0.000000"
 }
-// entity 174
+// entity 157
 {
 "_color" "1.000000 0.127451 0.000000"
 "origin" "-1208 1342 172"
 "light" "10"
 "classname" "light"
+}
+// entity 158
+{
+"classname" "item_botroam"
+"weight" "30"
+"origin" "-2328 552 208"
+}
+// entity 159
+{
+"classname" "target_position"
+"targetname" "reddoor_spot4"
+"origin" "-92 464 76"
+}
+// entity 160
+{
+"origin" "-92 464 76"
+"targetname" "reddoor_spot4"
+"classname" "target_position"
+}
+// entity 161
+{
+"angle" "270"
+"origin" "30 802 32"
+"classname" "info_player_start"
+}
+// entity 162
+{
+"angle" "270"
+"origin" "-30 746 36"
+"classname" "info_player_deathmatch"
+}
+// entity 163
+{
+"random" "10"
+"wait" "120"
+"classname" "target_speaker"
+"origin" "-1580 1940 194"
+"noise" "sound/ogidle.wav"
+}
+// entity 164
+{
+"classname" "target_speaker"
+"origin" "564 516 332"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}
+// entity 165
+{
+"noise" "sound/world/wind2.wav"
+"spawnflags" "1"
+"origin" "570 -468 332"
+"classname" "target_speaker"
+}
+// entity 166
+{
+"noise" "sound/world/wind2.wav"
+"spawnflags" "1"
+"origin" "-2182 908 616"
+"classname" "target_speaker"
+}
+// entity 167
+{
+"classname" "target_speaker"
+"origin" "-1822 1580 616"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}
+// entity 168
+{
+"noise" "sound/world/wind2.wav"
+"spawnflags" "1"
+"origin" "-2282 2014 616"
+"classname" "target_speaker"
+}
+// entity 169
+{
+"noise" "sound/world/wind2.wav"
+"spawnflags" "1"
+"origin" "-2372 -234 464"
+"classname" "target_speaker"
+}
+// entity 170
+{
+"classname" "target_speaker"
+"origin" "-1262 -340 400"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}
+// entity 171
+{
+"classname" "target_speaker"
+"origin" "-2470 476 392"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}
+// entity 172
+{
+"classname" "target_speaker"
+"origin" "-2522 2014 280"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}
+// entity 173
+{
+"noise" "sound/world/wind2.wav"
+"spawnflags" "1"
+"origin" "-1834 2014 280"
+"classname" "target_speaker"
+}
+// entity 174
+{
+"origin" "-1568 1280 352"
+"message" "Main Room Bridge Red"
+"classname" "target_location"
+}
+// entity 175
+{
+"classname" "target_location"
+"message" "Main Room Bridge Red"
+"origin" "-1264 1488 352"
+}
+// entity 176
+{
+"origin" "-1264 388 352"
+"message" "Main Room Bridge Red"
+"classname" "target_location"
+}
+// entity 177
+{
+"origin" "-2176 1840 128"
+"message" "Main Room Red"
+"classname" "target_location"
+}
+// entity 178
+{
+"classname" "target_location"
+"message" "Flag Room Red"
+"origin" "-2176 1840 400"
+}
+// entity 179
+{
+"origin" "-964 760 52"
+"message" "Integral Passage Red"
+"classname" "target_location"
+}
+// entity 180
+{
+"classname" "target_location"
+"message" "Integral Passage Red"
+"origin" "-1084 432 52"
+}
+// entity 181
+{
+"origin" "-904 1028 312"
+"message" "Right Hall Red"
+"classname" "target_location"
+}
+// entity 182
+{
+"classname" "target_location"
+"message" "Main Room Red"
+"origin" "-1320 696 128"
+}
+// entity 183
+{
+"origin" "-1604 416 128"
+"message" "Mega Passage Red"
+"classname" "target_location"
+}
+// entity 184
+{
+"classname" "target_location"
+"message" "Railgun Red"
+"origin" "-872 -48 404"
+}
+// entity 185
+{
+"classname" "target_location"
+"message" "Railgun Red"
+"origin" "-248 280 404"
+}
+// entity 186
+{
+"classname" "target_location"
+"message" "Right Hall Red"
+"origin" "-232 468 84"
+}
+// entity 187
+{
+"classname" "target_location"
+"message" "Central Bridge"
+"origin" "780 476 128"
+}
+// entity 188
+{
+"origin" "780 -292 128"
+"message" "Central Bridge"
+"classname" "target_location"
+}
+// entity 189
+{
+"classname" "target_location"
+"message" "Left Hall Red"
+"origin" "-696 -260 120"
+}
+// entity 190
+{
+"classname" "target_location"
+"message" "Mega Passage Pads Red"
+"origin" "-1692 412 392"
+}
+// entity 191
+{
+"message" "Ramp Room Red"
+"origin" "-2180 192 68"
+"classname" "target_location"
+}
+// entity 192
+{
+"classname" "target_location"
+"origin" "-2144 248 340"
+"message" "Ramp Room Red"
+}
+// entity 193
+{
+"classname" "target_location"
+"message" "Main Room Bridge Red"
+"origin" "-1268 760 352"
 }

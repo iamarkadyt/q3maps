@@ -35683,379 +35683,373 @@ q3stronghold/glass
 // entity 182
 {
 "classname" "target_location"
-"message" "Central Bridge"
-"origin" "852 388 128"
-}
-// entity 183
-{
-"classname" "target_location"
 "message" "Left Hall Red"
 "origin" "-696 -260 120"
 }
-// entity 184
+// entity 183
 {
 "classname" "target_location"
 "message" "Mega Passage Pads Red"
 "origin" "-1692 412 392"
 }
-// entity 185
+// entity 184
 {
 "message" "Ramp Room Red"
 "origin" "-2180 192 68"
 "classname" "target_location"
 }
-// entity 186
+// entity 185
 {
 "classname" "target_location"
 "origin" "-2144 248 340"
 "message" "Ramp Room Red"
 }
-// entity 187
+// entity 186
 {
 "classname" "target_location"
 "message" "Main Room Bridge Red"
 "origin" "-1268 760 352"
 }
-// entity 188
+// entity 187
 {
 "classname" "item_botroam"
 "weight" "25"
 "origin" "-1472 1096 16"
 }
-// entity 189
+// entity 188
 {
 "origin" "-1512 -64 16"
 "weight" "25"
 "classname" "item_botroam"
 }
-// entity 190
+// entity 189
 {
 "angle" "225"
 "classname" "team_CTF_redplayer"
 "origin" "-1904 1560 328"
 }
-// entity 191
+// entity 190
 {
 "angle" "315"
 "origin" "-2328 1496 344"
 "classname" "team_CTF_redplayer"
 }
-// entity 192
+// entity 191
 {
 "angle" "45"
 "classname" "team_CTF_redplayer"
 "origin" "-2296 1088 328"
 }
-// entity 193
+// entity 192
 {
 "angle" "225"
 "origin" "-1888 1760 328"
 "classname" "team_CTF_redplayer"
 }
-// entity 194
+// entity 193
 {
 "classname" "team_CTF_redplayer"
 "origin" "-2456 1776 328"
 }
-// entity 195
+// entity 194
 {
 "angle" "270"
 "origin" "-2008 1632 328"
 "classname" "team_CTF_redplayer"
 }
-// entity 196
+// entity 195
 {
 "angle" "90"
 "classname" "team_CTF_redplayer"
 "origin" "-2144 928 328"
 }
-// entity 197
+// entity 196
 {
 "angle" "180"
 "origin" "-1824 1280 328"
 "classname" "team_CTF_redplayer"
 }
-// entity 198
+// entity 197
 {
 "classname" "team_CTF_redplayer"
 "origin" "-2392 1328 328"
 }
-// entity 199
+// entity 198
 {
 "classname" "team_CTF_redspawn"
 "origin" "-2392 1328 328"
 }
-// entity 200
+// entity 199
 {
 "angle" "225"
 "origin" "-1904 1560 328"
 "classname" "team_CTF_redspawn"
 }
-// entity 201
+// entity 200
 {
 "angle" "270"
 "classname" "team_CTF_redspawn"
 "origin" "-2008 1632 328"
 }
-// entity 202
+// entity 201
 {
 "origin" "-2296 1088 328"
 "classname" "team_CTF_redspawn"
 "angle" "45"
 }
-// entity 203
+// entity 202
 {
 "angle" "90"
 "classname" "team_CTF_redspawn"
 "origin" "-2144 928 328"
 }
-// entity 204
+// entity 203
 {
 "angle" "315"
 "classname" "team_CTF_redspawn"
 "origin" "-2328 1496 344"
 }
-// entity 205
+// entity 204
 {
 "angle" "180"
 "classname" "team_CTF_redspawn"
 "origin" "-1824 1280 328"
 }
-// entity 206
+// entity 205
 {
 "angle" "360"
 "classname" "team_CTF_redspawn"
 "origin" "-2456 1776 328"
 }
-// entity 207
+// entity 206
 {
 "angle" "225"
 "classname" "team_CTF_redspawn"
 "origin" "-1888 1760 328"
 }
-// entity 208
+// entity 207
 {
 "origin" "-1232 1456 328"
 "classname" "team_CTF_redspawn"
 "angle" "270"
 }
-// entity 209
+// entity 208
 {
 "angle" "90"
 "classname" "team_CTF_redspawn"
 "origin" "-1224 448 296"
 }
-// entity 210
+// entity 209
 {
 "origin" "-824 768 312"
 "classname" "team_CTF_redspawn"
 "angle" "180"
 }
-// entity 211
+// entity 210
 {
 "angle" "360"
 "classname" "team_CTF_redspawn"
 "origin" "-920 -48 304"
 }
-// entity 212
+// entity 211
 {
 "origin" "-328 -320 304"
 "classname" "team_CTF_redspawn"
 "angle" "360"
 }
-// entity 213
+// entity 212
 {
 "angle" "45"
 "classname" "team_CTF_redspawn"
 "origin" "-488 -168 304"
 }
-// entity 214
+// entity 213
 {
 "origin" "-248 296 304"
 "classname" "team_CTF_redspawn"
 "angle" "270"
 }
-// entity 215
+// entity 214
 {
 "angle" "270"
 "classname" "team_CTF_redspawn"
 "origin" "-424 448 312"
 }
-// entity 216
+// entity 215
 {
 "origin" "-1216 936 32"
 "classname" "team_CTF_redspawn"
 "angle" "180"
 }
-// entity 217
+// entity 216
 {
 "angle" "180"
 "classname" "team_CTF_redspawn"
 "origin" "-1232 1504 32"
 }
-// entity 218
+// entity 217
 {
 "angle" "135"
 "classname" "team_CTF_redspawn"
 "origin" "-1216 976 104"
 }
-// entity 219
+// entity 218
 {
 "origin" "-1816 1008 176"
 "classname" "team_CTF_redspawn"
 "angle" "45"
 }
-// entity 220
+// entity 219
 {
 "origin" "-1816 1104 32"
 "classname" "team_CTF_redspawn"
 "angle" "360"
 }
-// entity 221
+// entity 220
 {
 "angle" "360"
 "classname" "team_CTF_redspawn"
 "origin" "-2032 1448 32"
 }
-// entity 222
+// entity 221
 {
 "origin" "-2384 1792 32"
 "classname" "team_CTF_redspawn"
 "angle" "360"
 }
-// entity 223
+// entity 222
 {
 "angle" "315"
 "classname" "team_CTF_redspawn"
 "origin" "-2272 1960 32"
 }
-// entity 224
+// entity 223
 {
 "origin" "-832 1864 -56"
 "angle" "180"
 "classname" "team_CTF_redspawn"
 }
-// entity 225
+// entity 224
 {
 "angle" "270"
 "classname" "team_CTF_redspawn"
 "origin" "-2056 920 32"
 }
-// entity 226
+// entity 225
 {
 "origin" "-2392 864 32"
 "classname" "team_CTF_redspawn"
 "angle" "360"
 }
-// entity 227
+// entity 226
 {
 "origin" "-2240 600 32"
 "classname" "team_CTF_redspawn"
 "angle" "270"
 }
-// entity 228
+// entity 227
 {
 "angle" "360"
 "classname" "team_CTF_redspawn"
 "origin" "-2400 -168 32"
 }
-// entity 229
+// entity 228
 {
 "origin" "-1920 320 32"
 "classname" "team_CTF_redspawn"
 "angle" "270"
 }
-// entity 230
+// entity 229
 {
 "origin" "-2080 512 224"
 "classname" "team_CTF_redspawn"
 "angle" "180"
 }
-// entity 231
+// entity 230
 {
 "angle" "270"
 "classname" "team_CTF_redspawn"
 "origin" "-2392 584 224"
 }
-// entity 232
+// entity 231
 {
 "angle" "270"
 "classname" "team_CTF_redspawn"
 "origin" "-2080 600 224"
 }
-// entity 233
+// entity 232
 {
 "angle" "360"
 "classname" "team_CTF_redspawn"
 "origin" "-1768 704 32"
 }
-// entity 234
+// entity 233
 {
 "origin" "-2400 224 136"
 "classname" "team_CTF_redspawn"
 "angle" "360"
 }
-// entity 235
+// entity 234
 {
 "origin" "-1656 -232 32"
 "classname" "team_CTF_redspawn"
 "angle" "135"
 }
-// entity 236
+// entity 235
 {
 "angle" "225"
 "classname" "team_CTF_redspawn"
 "origin" "-1720 112 32"
 }
-// entity 237
+// entity 236
 {
 "classname" "team_CTF_redspawn"
 "angle" "315"
 "origin" "-656 1008 200"
 }
-// entity 238
+// entity 237
 {
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 "origin" "-408 544 32"
 }
-// entity 239
+// entity 238
 {
 "classname" "team_CTF_redspawn"
 "origin" "-582 1054 32"
 "angle" "270"
 }
-// entity 240
+// entity 239
 {
 "origin" "-496 1128 200"
 "angle" "270"
 "classname" "team_CTF_redspawn"
 }
-// entity 241
+// entity 240
 {
 "classname" "team_CTF_redspawn"
 "angle" "180"
 "origin" "-544 1128 200"
 }
-// entity 242
+// entity 241
 {
 "origin" "-944 112 32"
 "angle" "315"
 "classname" "team_CTF_redspawn"
 }
-// entity 243
+// entity 242
 {
 "angle" "180"
 "classname" "team_CTF_bluespawn"
 "origin" "-592 0 32"
 }
-// entity 244
+// entity 243
 {
 "angle" "315"
 "origin" "3392 -1416 336"
 "classname" "team_CTF_blueflag"
 }
-// entity 245
+// entity 244
 {
 "classname" "func_door"
 "team" "bluedoor2"
@@ -36098,7 +36092,7 @@ q3stronghold/glass
 ( 1128 464 102 ) ( 1128 464 8 ) ( 1128 384 8 ) q3stronghold/kilt_tek_door 40 15 0 0.640137 0.500000 0 0 0
 }
 }
-// entity 246
+// entity 245
 {
 "classname" "func_door"
 "lip" "0"
@@ -36141,7 +36135,7 @@ q3stronghold/glass
 ( 2200 104 144 ) ( 2200 104 30 ) ( 2200 64 28 ) q3stronghold/kilt_tek_door -35 15 0 0.639893 0.500000 0 0 0
 }
 }
-// entity 247
+// entity 246
 {
 "lip" "0"
 "classname" "func_door"
@@ -36184,7 +36178,7 @@ q3stronghold/glass
 ( 2200 -886 410 ) ( 2200 -928 420 ) ( 2176 -928 420 ) q3stronghold/darkconcrete -90 -144 0 0.639893 -0.500000 0 0 0
 }
 }
-// entity 248
+// entity 247
 {
 "lip" "0"
 "classname" "func_door"
@@ -36227,7 +36221,7 @@ q3stronghold/glass
 ( 2200 184 144 ) ( 2200 146 144 ) ( 2176 146 144 ) q3stronghold/darkconcrete -167 -224 0 0.640015 -0.500000 0 0 0
 }
 }
-// entity 249
+// entity 248
 {
 "lip" "0"
 "angle" "90"
@@ -36270,7 +36264,7 @@ q3stronghold/glass
 ( 2200 -928 326 ) ( 2200 -968 324 ) ( 2176 -968 324 ) q3stronghold/darkconcrete -90 -144 0 0.639893 -0.500000 0 0 0
 }
 }
-// entity 250
+// entity 249
 {
 "lip" "0"
 "angle" "270"
@@ -36313,7 +36307,7 @@ q3stronghold/glass
 ( 1128 344 144 ) ( 1128 344 18 ) ( 1128 304 18 ) q3stronghold/kilt_tek_door 40 15 0 0.640137 0.500000 0 0 0
 }
 }
-// entity 251
+// entity 250
 {
 "lip" "0"
 "classname" "func_door"
@@ -36356,7 +36350,7 @@ q3stronghold/glass
 ( 1128 -384 144 ) ( 1128 -384 18 ) ( 1128 -424 18 ) q3stronghold/kilt_tek_door -103 15 0 0.640015 0.500000 0 0 0
 }
 }
-// entity 252
+// entity 251
 {
 "lip" "0"
 "classname" "func_door"
@@ -36399,21 +36393,21 @@ q3stronghold/glass
 ( 1128 -264 102 ) ( 1128 -264 8 ) ( 1128 -344 8 ) q3stronghold/kilt_tek_door -103 15 0 0.640015 0.500000 0 0 0
 }
 }
-// entity 253
+// entity 252
 {
 "classname" "misc_model"
 "origin" "2948 -1796 7"
 "model" "models/mapobjects/teleporter/teleporter.md3"
 "angle" "45"
 }
-// entity 254
+// entity 253
 {
 "angle" "45"
 "model" "models/mapobjects/teleporter/teleporter.md3"
 "origin" "2948 -1796 303"
 "classname" "misc_model"
 }
-// entity 255
+// entity 254
 {
 "target" "t4"
 "classname" "trigger_teleport"
@@ -36427,7 +36421,7 @@ q3stronghold/glass
 ( 2947 -1830 388 ) ( 2978 -1799 388 ) ( 2978 -1799 372 ) common/trigger 35 0 -180 0.351318 -0.500000 0 7 0
 }
 }
-// entity 256
+// entity 255
 {
 "target" "t5"
 "classname" "trigger_teleport"
@@ -36441,21 +36435,21 @@ q3stronghold/glass
 ( 2914 -1797 20 ) ( 2947 -1830 20 ) ( 2978 -1799 20 ) common/trigger -6 14 136 0.500542 0.499764 0 7 0
 }
 }
-// entity 257
+// entity 256
 {
 "targetname" "t4"
 "classname" "misc_teleporter_dest"
 "origin" "3024 -1746 32"
 "angle" "270"
 }
-// entity 258
+// entity 257
 {
 "spawnflags" "0"
 "origin" "1096 384 16"
 "weight" "50"
 "classname" "item_botroam"
 }
-// entity 259
+// entity 258
 {
 "spawnflags" "0"
 "origin" "1284 264 320"
@@ -36463,325 +36457,235 @@ q3stronghold/glass
 "weight" "275"
 "classname" "info_camp"
 }
-// entity 260
+// entity 259
 {
 "origin" "2272 -648 296"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 261
+// entity 260
 {
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 "origin" "1424 -256 32"
 }
-// entity 262
+// entity 261
 {
 "classname" "team_CTF_bluespawn"
 "origin" "1848 376 32"
 }
-// entity 263
+// entity 262
 {
 "origin" "1456 496 32"
 "angle" "135"
 "classname" "team_CTF_bluespawn"
 }
-// entity 264
-{
-"origin" "1744 -888 52"
-"message" "Integral Passage Red"
-"classname" "target_location"
-}
-// entity 265
+// entity 263
 {
 "origin" "1448 -920 216"
 "classname" "weapon_rocketlauncher"
 }
-// entity 266
-{
-"classname" "target_location"
-"origin" "1536 -1760 16"
-"message" "Cellar Red"
-}
-// entity 267
-{
-"classname" "target_location"
-"message" "Cellar Entrance Red"
-"origin" "2464 -1696 72"
-}
-// entity 268
-{
-"classname" "target_location"
-"message" "Main Room Red"
-"origin" "2592 -808 128"
-}
-// entity 269
-{
-"classname" "target_location"
-"origin" "2624 192 144"
-"message" "Ramp Room Red"
-}
-// entity 270
-{
-"classname" "target_location"
-"message" "Railgun Red"
-"origin" "1316 216 464"
-}
-// entity 271
-{
-"classname" "target_location"
-"message" "Upper Hall Red"
-"origin" "1880 -632 352"
-}
-// entity 272
-{
-"classname" "target_location"
-"message" "Right Hall Red"
-"origin" "1600 -368 128"
-}
-// entity 273
-{
-"classname" "target_location"
-"message" "Left Hall Red"
-"origin" "1344 380 120"
-}
-// entity 274
-{
-"classname" "target_location"
-"message" "Ramp Room Red"
-"origin" "3264 -424 280"
-}
-// entity 275
-{
-"classname" "target_location"
-"message" "Flag Room Red"
-"origin" "3208 -1152 400"
-}
-// entity 276
+// entity 264
 {
 "origin" "1696 -264 32"
 "classname" "team_CTF_bluespawn"
 "angle" "45"
 }
-// entity 277
+// entity 265
 {
 "origin" "2600 -1728 -56"
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 }
-// entity 278
+// entity 266
 {
 "origin" "2628 -296 24"
 "classname" "item_health_mega"
 }
-// entity 279
+// entity 267
 {
 "classname" "item_armor_combat"
 "origin" "3360 -128 32"
 }
-// entity 280
+// entity 268
 {
 "classname" "weapon_railgun"
 "origin" "1168 88 296"
 }
-// entity 281
+// entity 269
 {
 "classname" "team_CTF_bluespawn"
 "angle" "45"
 "origin" "1416 392 416"
 }
-// entity 282
+// entity 270
 {
 "classname" "team_CTF_bluespawn"
 "origin" "1518 -734 32"
 "angle" "180"
 }
-// entity 283
+// entity 271
 {
 "origin" "2040 216 32"
 "angle" "45"
 "classname" "team_CTF_bluespawn"
 }
-// entity 284
+// entity 272
 {
 "classname" "team_CTF_bluespawn"
 "angle" "225"
 "origin" "1208 280 32"
 }
-// entity 285
+// entity 273
 {
 "targetname" "bluebridge_end1"
 "origin" "896 -184 64"
 "classname" "target_position"
 }
-// entity 286
+// entity 274
 {
 "origin" "1000 -756 24"
 "classname" "holdable_medkit"
 }
-// entity 287
+// entity 275
 {
 "origin" "1056 768 24"
 "classname" "weapon_shotgun"
 }
-// entity 288
+// entity 276
 {
 "classname" "target_position"
 "targetname" "bluedoor_spot2"
 "origin" "1116 384 76"
 }
-// entity 289
+// entity 277
 {
 "targetname" "bluebridge_end2"
 "classname" "target_position"
 "origin" "896 16 64"
 }
-// entity 290
+// entity 278
 {
 "origin" "2188 104 76"
 "targetname" "bluedoor_spot1"
 "classname" "target_position"
 }
-// entity 291
+// entity 279
 {
 "classname" "target_position"
 "targetname" "bluedoor_spot3"
 "origin" "2188 -928 372"
 }
-// entity 292
-{
-"origin" "1504 -360 352"
-"message" "Upper Hall Red"
-"classname" "target_location"
-}
-// entity 293
-{
-"origin" "1856 120 120"
-"message" "Left Hall Red"
-"classname" "target_location"
-}
-// entity 294
-{
-"origin" "2592 -1256 128"
-"message" "Main Room Red"
-"classname" "target_location"
-}
-// entity 295
-{
-"origin" "1564 -736 248"
-"message" "Right Hall Red"
-"classname" "target_location"
-}
-// entity 296
+// entity 280
 {
 "classname" "item_botroam"
 "weight" "50"
 "origin" "1880 -648 296"
 }
-// entity 297
+// entity 281
 {
 "origin" "1888 -328 296"
 "weight" "60"
 "classname" "item_botroam"
 }
-// entity 298
+// entity 282
 {
 "classname" "item_botroam"
 "weight" "60"
 "origin" "1504 -328 296"
 }
-// entity 299
+// entity 283
 {
 "origin" "1504 184 288"
 "weight" "70"
 "classname" "item_botroam"
 }
-// entity 300
+// entity 284
 {
 "spawnflags" "1"
 "origin" "1728 -1752 -72"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 301
+// entity 285
 {
 "spawnflags" "1"
 "origin" "2032 -1744 -72"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 302
+// entity 286
 {
 "spawnflags" "1"
 "classname" "item_botroam"
 "weight" "40"
 "origin" "2464 -1744 -72"
 }
-// entity 303
+// entity 287
 {
 "spawnflags" "1"
 "origin" "2464 -1408 16"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 304
+// entity 288
 {
 "classname" "item_botroam"
 "weight" "35"
 "origin" "3024 -1416 16"
 }
-// entity 305
+// entity 289
 {
 "classname" "item_botroam"
 "weight" "25"
 "origin" "2944 -664 16"
 }
-// entity 306
+// entity 290
 {
 "classname" "item_botroam"
 "weight" "25"
 "origin" "3416 -616 16"
 }
-// entity 307
+// entity 291
 {
 "origin" "3136 -8 16"
 "weight" "25"
 "classname" "item_botroam"
 }
-// entity 308
+// entity 292
 {
 "classname" "item_botroam"
 "weight" "50"
 "origin" "1720 384 16"
 }
-// entity 309
+// entity 293
 {
 "origin" "3024 -1624 16"
 "weight" "40"
 "classname" "item_botroam"
 }
-// entity 310
+// entity 294
 {
 "spawnflags" "1"
 "classname" "item_botroam"
 "weight" "40"
 "origin" "2032 -1744 -72"
 }
-// entity 311
+// entity 295
 {
 "spawnflags" "1"
 "classname" "item_botroam"
 "weight" "40"
 "origin" "2232 -1744 -72"
 }
-// entity 312
+// entity 296
 {
 "classname" "misc_teleporter_dest"
 "origin" "3024 -1746 328"
 "angle" "270"
 "targetname" "t5"
 }
-// entity 313
+// entity 297
 {
 "classname" "trigger_teleport"
 "target" "t6"
@@ -36795,21 +36699,21 @@ q3stronghold/glass
 ( 1330 -1805 -68 ) ( 1363 -1838 -68 ) ( 1394 -1807 -68 ) common/trigger -31 50 135 0.500454 0.499848 0 7 0
 }
 }
-// entity 314
+// entity 298
 {
 "classname" "misc_model"
 "origin" "1364 -1804 -81"
 "model" "models/mapobjects/teleporter/teleporter.md3"
 "angle" "45"
 }
-// entity 315
+// entity 299
 {
 "angle" "90"
 "origin" "2306 -236 296"
 "classname" "misc_teleporter_dest"
 "targetname" "t6"
 }
-// entity 316
+// entity 300
 {
 "speed" "200"
 "origin" "1664 -1744 96"
@@ -36861,217 +36765,217 @@ q3stronghold/glass
 ( 1660 -1684 102 ) ( 1668 -1684 102 ) ( 1668 -1684 106 ) base_trim/pewter_shiney 0 0 -180 0.500000 -0.500000 0 0 0
 }
 }
-// entity 317
+// entity 301
 {
 "origin" "1868 -56 28"
 "classname" "weapon_rocketlauncher"
 }
-// entity 318
+// entity 302
 {
 "origin" "1540 560 28"
 "classname" "item_health_large"
 }
-// entity 319
+// entity 303
 {
 "origin" "2240 -436 24"
 "classname" "weapon_plasmagun"
 }
-// entity 320
+// entity 304
 {
 "origin" "2240 -480 24"
 "classname" "ammo_cells"
 }
-// entity 321
+// entity 305
 {
 "origin" "2912 -872 320"
 "classname" "weapon_plasmagun"
 }
-// entity 322
+// entity 306
 {
 "origin" "2912 -916 320"
 "classname" "ammo_cells"
 }
-// entity 323
+// entity 307
 {
 "classname" "ammo_cells"
 "origin" "2912 -960 320"
 }
-// entity 324
+// entity 308
 {
 "origin" "2248 -232 288"
 "classname" "ammo_slugs"
 }
-// entity 325
+// entity 309
 {
 "origin" "2248 -276 288"
 "classname" "item_health"
 }
-// entity 326
+// entity 310
 {
 "spawnflags" "1"
 "origin" "1404 436 328"
 "classname" "ammo_slugs"
 }
-// entity 327
+// entity 311
 {
 "count" "20"
 "origin" "1404 436 296"
 "classname" "ammo_grenades"
 }
-// entity 328
+// entity 312
 {
 "origin" "1168 436 296"
 "classname" "weapon_grenadelauncher"
 }
-// entity 329
+// entity 313
 {
 "origin" "1544 320 296"
 "classname" "item_health"
 }
-// entity 330
+// entity 314
 {
 "origin" "1768 -1080 192"
 "classname" "item_health_large"
 }
-// entity 331
+// entity 315
 {
 "origin" "3488 -1748 320"
 "classname" "ammo_shells"
 }
-// entity 332
+// entity 316
 {
 "origin" "3488 -1704 320"
 "classname" "ammo_rockets"
 }
-// entity 333
+// entity 317
 {
 "origin" "3400 -1824 392"
 "classname" "item_health_large"
 }
-// entity 334
+// entity 318
 {
 "origin" "1600 -1608 -104"
 "classname" "weapon_shotgun"
 }
-// entity 335
+// entity 319
 {
 "origin" "1556 -1608 -104"
 "classname" "ammo_shells"
 }
-// entity 336
+// entity 320
 {
 "origin" "1352 -1608 -104"
 "classname" "item_armor_combat"
 }
-// entity 337
+// entity 321
 {
 "origin" "3472 -1820 96"
 "classname" "weapon_grenadelauncher"
 }
-// entity 338
+// entity 322
 {
 "origin" "3424 -872 328"
 "classname" "item_health_large"
 }
-// entity 339
+// entity 323
 {
 "count" "20"
 "origin" "3380 -872 328"
 "classname" "ammo_grenades"
 }
-// entity 340
+// entity 324
 {
 "origin" "2244 -1452 320"
 "classname" "ammo_cells"
 }
-// entity 341
+// entity 325
 {
 "origin" "2288 -1452 328"
 "classname" "item_health"
 }
-// entity 342
+// entity 326
 {
 "origin" "2980 -940 396"
 "classname" "item_armor_combat"
 }
-// entity 343
+// entity 327
 {
 "origin" "3292 -768 32"
 "classname" "weapon_rocketlauncher"
 }
-// entity 344
+// entity 328
 {
 "origin" "3292 -652 168"
 "classname" "item_health"
 }
-// entity 345
+// entity 329
 {
 "team" "1028"
 "origin" "2488 340 168"
 "classname" "item_regen"
 }
-// entity 346
+// entity 330
 {
 "team" "1028"
 "origin" "2488 340 168"
 "classname" "item_enviro"
 }
-// entity 347
+// entity 331
 {
 "origin" "3376 388 24"
 "classname" "ammo_rockets"
 }
-// entity 348
+// entity 332
 {
 "origin" "2536 44 24"
 "classname" "item_health"
 }
-// entity 349
+// entity 333
 {
 "classname" "ammo_shells"
 "origin" "3332 388 24"
 }
-// entity 350
+// entity 334
 {
 "origin" "2588 -1628 -64"
 "classname" "ammo_slugs"
 }
-// entity 351
+// entity 335
 {
 "origin" "2592 -1808 -64"
 "classname" "item_health"
 }
-// entity 352
+// entity 336
 {
 "origin" "2588 -1584 -64"
 "classname" "ammo_rockets"
 }
-// entity 353
+// entity 337
 {
 "origin" "2912 -1576 32"
 "classname" "item_health"
 }
-// entity 354
+// entity 338
 {
 "origin" "1536 -932 96"
 "classname" "item_armor_body"
 }
-// entity 355
+// entity 339
 {
 "classname" "ammo_cells"
 "origin" "2376 340 24"
 }
-// entity 356
+// entity 340
 {
 "classname" "ammo_slugs"
 "origin" "2332 340 24"
 }
-// entity 357
+// entity 341
 {
 "origin" "1056 812 24"
 "classname" "item_health"
 }
-// entity 358
+// entity 342
 {
 "_color" "0.000000 0.501961 1.000000"
 "light" "15"
@@ -37080,7 +36984,7 @@ q3stronghold/glass
 "radius" "128"
 "target" "bluedoor_spot1"
 }
-// entity 359
+// entity 343
 {
 "_color" "0.000000 0.501961 1.000000"
 "light" "15"
@@ -37089,7 +36993,7 @@ q3stronghold/glass
 "radius" "128"
 "target" "bluedoor_spot4"
 }
-// entity 360
+// entity 344
 {
 "target" "bluedoor_spot4"
 "radius" "128"
@@ -37098,7 +37002,7 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 361
+// entity 345
 {
 "_color" "0.000000 0.501961 1.000000"
 "light" "15"
@@ -37106,13 +37010,13 @@ q3stronghold/glass
 "origin" "1000 -756 44"
 "radius" "128"
 }
-// entity 362
+// entity 346
 {
 "origin" "1116 384 76"
 "targetname" "bluedoor_spot2"
 "classname" "target_position"
 }
-// entity 363
+// entity 347
 {
 "target" "bluedoor_spot2"
 "radius" "128"
@@ -37121,7 +37025,7 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 364
+// entity 348
 {
 "_color" "0.000000 0.501961 1.000000"
 "light" "15"
@@ -37130,13 +37034,13 @@ q3stronghold/glass
 "radius" "128"
 "target" "bluedoor_spot2"
 }
-// entity 365
+// entity 349
 {
 "classname" "target_position"
 "targetname" "bluedoor_spot1"
 "origin" "2188 104 76"
 }
-// entity 366
+// entity 350
 {
 "target" "bluedoor_spot1"
 "radius" "128"
@@ -37145,13 +37049,13 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 367
+// entity 351
 {
 "origin" "2188 -928 372"
 "targetname" "bluedoor_spot3"
 "classname" "target_position"
 }
-// entity 368
+// entity 352
 {
 "target" "bluedoor_spot3"
 "radius" "128"
@@ -37160,7 +37064,7 @@ q3stronghold/glass
 "light" "15"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 369
+// entity 353
 {
 "_color" "0.000000 0.501961 1.000000"
 "light" "15"
@@ -37169,205 +37073,205 @@ q3stronghold/glass
 "radius" "128"
 "target" "bluedoor_spot3"
 }
-// entity 370
+// entity 354
 {
 "classname" "light"
 "light" "10"
 "origin" "2740 -576 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 371
+// entity 355
 {
 "classname" "light"
 "light" "15"
 "origin" "2960 -1384 248"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 372
+// entity 356
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "1176 -344 160"
 "light" "10"
 "classname" "light"
 }
-// entity 373
+// entity 357
 {
 "classname" "light"
 "light" "15"
 "origin" "1888 -928 384"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 374
+// entity 358
 {
 "classname" "light"
 "light" "10"
 "origin" "3304 -1552 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 375
+// entity 359
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "1176 384 160"
 "light" "10"
 "classname" "light"
 }
-// entity 376
+// entity 360
 {
 "classname" "light"
 "light" "10"
 "origin" "2128 112 166"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 377
+// entity 361
 {
 "classname" "ammo_bfg"
 "origin" "3236 -1592 472"
 }
-// entity 378
+// entity 362
 {
 "classname" "light"
 "light" "10"
 "origin" "2968 -1304 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 379
+// entity 363
 {
 "classname" "light"
 "light" "10"
 "origin" "2460 -1464 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 380
+// entity 364
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "2232 -856 172"
 "light" "10"
 "classname" "light"
 }
-// entity 381
+// entity 365
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "2232 -446 172"
 "light" "10"
 "classname" "light"
 }
-// entity 382
+// entity 366
 {
 "classname" "light"
 "light" "10"
 "origin" "2444 -470 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 383
+// entity 367
 {
 "classname" "light"
 "light" "10"
 "origin" "2872 -1036 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 384
+// entity 368
 {
 "classname" "light"
 "light" "10"
 "origin" "2704 -368 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 385
+// entity 369
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "2776 -216 172"
 "light" "10"
 "classname" "light"
 }
-// entity 386
+// entity 370
 {
 "classname" "light"
 "light" "10"
 "origin" "2296 -216 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 387
+// entity 371
 {
 "classname" "light"
 "light" "10"
 "origin" "2536 400 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 388
+// entity 372
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "2936 400 172"
 "light" "10"
 "classname" "light"
 }
-// entity 389
+// entity 373
 {
 "classname" "light"
 "light" "10"
 "origin" "2776 -16 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 390
+// entity 374
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "3056 -500 172"
 "light" "10"
 "classname" "light"
 }
-// entity 391
+// entity 375
 {
 "classname" "light"
 "light" "10"
 "origin" "3258 -820 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 392
+// entity 376
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "3440 -704 172"
 "light" "10"
 "classname" "light"
 }
-// entity 393
+// entity 377
 {
 "classname" "light"
 "light" "10"
 "origin" "3440 96 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 394
+// entity 378
 {
 "_color" "0.000000 0.501961 1.000000"
 "origin" "2296 -16 172"
 "light" "10"
 "classname" "light"
 }
-// entity 395
+// entity 379
 {
 "classname" "light"
 "light" "10"
 "origin" "2232 -1222 172"
 "_color" "0.000000 0.501961 1.000000"
 }
-// entity 396
+// entity 380
 {
 "origin" "3352 -432 208"
 "weight" "30"
 "classname" "item_botroam"
 }
-// entity 397
+// entity 381
 {
 "origin" "1116 -344 76"
 "targetname" "bluedoor_spot4"
 "classname" "target_position"
 }
-// entity 398
+// entity 382
 {
 "classname" "target_position"
 "targetname" "bluedoor_spot4"
 "origin" "1116 -344 76"
 }
-// entity 399
+// entity 383
 {
 "noise" "sound/ogidle.wav"
 "origin" "2604 -1820 194"
@@ -37375,536 +37279,422 @@ q3stronghold/glass
 "wait" "120"
 "random" "10"
 }
-// entity 400
+// entity 384
 {
 "noise" "sound/world/wind2.wav"
 "spawnflags" "1"
 "origin" "180 -556 332"
 "classname" "target_speaker"
 }
-// entity 401
+// entity 385
 {
 "classname" "target_speaker"
 "origin" "230 604 332"
 "spawnflags" "1"
 "noise" "sound/world/wind2.wav"
 }
-// entity 402
+// entity 386
 {
 "classname" "target_speaker"
 "origin" "3206 -788 616"
 "spawnflags" "1"
 "noise" "sound/world/wind2.wav"
 }
-// entity 403
+// entity 387
 {
 "noise" "sound/world/wind2.wav"
 "spawnflags" "1"
 "origin" "2846 -1460 616"
 "classname" "target_speaker"
 }
-// entity 404
+// entity 388
 {
 "classname" "target_speaker"
 "origin" "3306 -1894 616"
 "spawnflags" "1"
 "noise" "sound/world/wind2.wav"
 }
-// entity 405
+// entity 389
 {
 "classname" "target_speaker"
 "origin" "3396 354 464"
 "spawnflags" "1"
 "noise" "sound/world/wind2.wav"
 }
-// entity 406
+// entity 390
 {
 "noise" "sound/world/wind2.wav"
 "spawnflags" "1"
 "origin" "2286 460 400"
 "classname" "target_speaker"
 }
-// entity 407
+// entity 391
 {
 "noise" "sound/world/wind2.wav"
 "spawnflags" "1"
 "origin" "3494 -356 392"
 "classname" "target_speaker"
 }
-// entity 408
+// entity 392
 {
 "noise" "sound/world/wind2.wav"
 "spawnflags" "1"
 "origin" "3546 -1894 280"
 "classname" "target_speaker"
 }
-// entity 409
+// entity 393
 {
 "classname" "target_speaker"
 "origin" "2858 -1894 280"
 "spawnflags" "1"
 "noise" "sound/world/wind2.wav"
 }
-// entity 410
-{
-"classname" "target_location"
-"message" "Main Room Bridge Red"
-"origin" "2592 -1160 352"
-}
-// entity 411
-{
-"origin" "2288 -1368 352"
-"message" "Main Room Bridge Red"
-"classname" "target_location"
-}
-// entity 412
-{
-"classname" "target_location"
-"message" "Main Room Bridge Red"
-"origin" "2288 -268 352"
-}
-// entity 413
-{
-"classname" "target_location"
-"message" "Main Room Red"
-"origin" "3200 -1720 128"
-}
-// entity 414
-{
-"origin" "3200 -1720 400"
-"message" "Flag Room Red"
-"classname" "target_location"
-}
-// entity 415
-{
-"classname" "target_location"
-"message" "Integral Passage Red"
-"origin" "1988 -640 52"
-}
-// entity 416
-{
-"origin" "2108 -312 52"
-"message" "Integral Passage Red"
-"classname" "target_location"
-}
-// entity 417
-{
-"classname" "target_location"
-"message" "Right Hall Red"
-"origin" "1928 -908 312"
-}
-// entity 418
-{
-"origin" "2344 -576 128"
-"message" "Main Room Red"
-"classname" "target_location"
-}
-// entity 419
-{
-"classname" "target_location"
-"message" "Mega Passage Red"
-"origin" "2628 -296 128"
-}
-// entity 420
-{
-"origin" "1896 168 404"
-"message" "Railgun Red"
-"classname" "target_location"
-}
-// entity 421
-{
-"origin" "1272 -160 404"
-"message" "Railgun Red"
-"classname" "target_location"
-}
-// entity 422
-{
-"origin" "1256 -348 84"
-"message" "Right Hall Red"
-"classname" "target_location"
-}
-// entity 423
-{
-"origin" "1720 380 120"
-"message" "Left Hall Red"
-"classname" "target_location"
-}
-// entity 424
-{
-"origin" "2716 -292 392"
-"message" "Mega Passage Pads Red"
-"classname" "target_location"
-}
-// entity 425
-{
-"classname" "target_location"
-"origin" "3204 -72 68"
-"message" "Ramp Room Red"
-}
-// entity 426
-{
-"message" "Ramp Room Red"
-"origin" "3168 -128 340"
-"classname" "target_location"
-}
-// entity 427
-{
-"origin" "2292 -640 352"
-"message" "Main Room Bridge Red"
-"classname" "target_location"
-}
-// entity 428
+// entity 394
 {
 "origin" "2496 -976 16"
 "weight" "25"
 "classname" "item_botroam"
 }
-// entity 429
+// entity 395
 {
 "classname" "item_botroam"
 "weight" "25"
 "origin" "2536 184 16"
 }
-// entity 430
+// entity 396
 {
 "origin" "2928 -1440 328"
 "classname" "team_CTF_blueplayer"
 "angle" "225"
 }
-// entity 431
+// entity 397
 {
 "classname" "team_CTF_blueplayer"
 "origin" "3352 -1376 344"
 "angle" "315"
 }
-// entity 432
+// entity 398
 {
 "origin" "3320 -968 328"
 "classname" "team_CTF_blueplayer"
 "angle" "45"
 }
-// entity 433
+// entity 399
 {
 "classname" "team_CTF_blueplayer"
 "origin" "2912 -1640 328"
 "angle" "225"
 }
-// entity 434
+// entity 400
 {
 "origin" "3480 -1656 328"
 "classname" "team_CTF_blueplayer"
 }
-// entity 435
+// entity 401
 {
 "classname" "team_CTF_blueplayer"
 "origin" "3032 -1512 328"
 "angle" "270"
 }
-// entity 436
+// entity 402
 {
 "origin" "3168 -808 328"
 "classname" "team_CTF_blueplayer"
 "angle" "90"
 }
-// entity 437
+// entity 403
 {
 "classname" "team_CTF_blueplayer"
 "origin" "2848 -1160 328"
 "angle" "180"
 }
-// entity 438
+// entity 404
 {
 "origin" "3416 -1208 328"
 "classname" "team_CTF_blueplayer"
 }
-// entity 439
+// entity 405
 {
 "origin" "3416 -1208 328"
 "classname" "team_CTF_bluespawn"
 }
-// entity 440
+// entity 406
 {
 "classname" "team_CTF_bluespawn"
 "origin" "2928 -1440 328"
 "angle" "225"
 }
-// entity 441
+// entity 407
 {
 "origin" "3032 -1512 328"
 "classname" "team_CTF_bluespawn"
 "angle" "270"
 }
-// entity 442
+// entity 408
 {
 "angle" "45"
 "classname" "team_CTF_bluespawn"
 "origin" "3320 -968 328"
 }
-// entity 443
+// entity 409
 {
 "origin" "3168 -808 328"
 "classname" "team_CTF_bluespawn"
 "angle" "90"
 }
-// entity 444
+// entity 410
 {
 "origin" "3352 -1376 344"
 "classname" "team_CTF_bluespawn"
 "angle" "315"
 }
-// entity 445
+// entity 411
 {
 "origin" "2848 -1160 328"
 "classname" "team_CTF_bluespawn"
 "angle" "180"
 }
-// entity 446
+// entity 412
 {
 "origin" "3480 -1656 328"
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 }
-// entity 447
+// entity 413
 {
 "origin" "2912 -1640 328"
 "classname" "team_CTF_bluespawn"
 "angle" "225"
 }
-// entity 448
+// entity 414
 {
 "angle" "270"
 "classname" "team_CTF_bluespawn"
 "origin" "2256 -1336 328"
 }
-// entity 449
+// entity 415
 {
 "origin" "2248 -328 296"
 "classname" "team_CTF_bluespawn"
 "angle" "90"
 }
-// entity 450
+// entity 416
 {
 "angle" "180"
 "classname" "team_CTF_bluespawn"
 "origin" "1848 -648 312"
 }
-// entity 451
+// entity 417
 {
 "origin" "1944 168 304"
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 }
-// entity 452
+// entity 418
 {
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 "origin" "1352 440 304"
 }
-// entity 453
+// entity 419
 {
 "origin" "1512 288 304"
 "classname" "team_CTF_bluespawn"
 "angle" "45"
 }
-// entity 454
+// entity 420
 {
 "angle" "270"
 "classname" "team_CTF_bluespawn"
 "origin" "1272 -176 304"
 }
-// entity 455
+// entity 421
 {
 "origin" "1448 -328 312"
 "classname" "team_CTF_bluespawn"
 "angle" "270"
 }
-// entity 456
+// entity 422
 {
 "angle" "180"
 "classname" "team_CTF_bluespawn"
 "origin" "2240 -816 32"
 }
-// entity 457
+// entity 423
 {
 "origin" "2256 -1384 32"
 "classname" "team_CTF_bluespawn"
 "angle" "180"
 }
-// entity 458
+// entity 424
 {
 "origin" "2240 -856 104"
 "classname" "team_CTF_bluespawn"
 "angle" "135"
 }
-// entity 459
+// entity 425
 {
 "angle" "45"
 "classname" "team_CTF_bluespawn"
 "origin" "2840 -888 176"
 }
-// entity 460
+// entity 426
 {
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 "origin" "2840 -984 32"
 }
-// entity 461
+// entity 427
 {
 "origin" "3056 -1328 32"
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 }
-// entity 462
+// entity 428
 {
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 "origin" "3408 -1672 32"
 }
-// entity 463
+// entity 429
 {
 "origin" "3296 -1840 32"
 "classname" "team_CTF_bluespawn"
 "angle" "315"
 }
-// entity 464
+// entity 430
 {
 "classname" "team_CTF_bluespawn"
 "angle" "180"
 "origin" "1856 -1744 -56"
 }
-// entity 465
+// entity 431
 {
 "origin" "3080 -800 32"
 "classname" "team_CTF_bluespawn"
 "angle" "270"
 }
-// entity 466
+// entity 432
 {
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 "origin" "3416 -744 32"
 }
-// entity 467
+// entity 433
 {
 "angle" "270"
 "classname" "team_CTF_bluespawn"
 "origin" "3264 -480 32"
 }
-// entity 468
+// entity 434
 {
 "origin" "3424 288 32"
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 }
-// entity 469
+// entity 435
 {
 "angle" "270"
 "classname" "team_CTF_bluespawn"
 "origin" "2944 -200 32"
 }
-// entity 470
+// entity 436
 {
 "angle" "180"
 "classname" "team_CTF_bluespawn"
 "origin" "3104 -392 224"
 }
-// entity 471
+// entity 437
 {
 "origin" "3416 -464 224"
 "classname" "team_CTF_bluespawn"
 "angle" "270"
 }
-// entity 472
+// entity 438
 {
 "origin" "3104 -480 224"
 "classname" "team_CTF_bluespawn"
 "angle" "270"
 }
-// entity 473
+// entity 439
 {
 "origin" "2792 -584 32"
 "classname" "team_CTF_bluespawn"
 "angle" "360"
 }
-// entity 474
+// entity 440
 {
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 "origin" "3424 -104 136"
 }
-// entity 475
+// entity 441
 {
 "angle" "135"
 "classname" "team_CTF_bluespawn"
 "origin" "2680 352 32"
 }
-// entity 476
+// entity 442
 {
 "origin" "2744 8 32"
 "classname" "team_CTF_bluespawn"
 "angle" "225"
 }
-// entity 477
+// entity 443
 {
 "origin" "1680 -888 200"
 "angle" "315"
 "classname" "team_CTF_bluespawn"
 }
-// entity 478
+// entity 444
 {
 "origin" "1432 -424 32"
 "angle" "360"
 "classname" "team_CTF_bluespawn"
 }
-// entity 479
+// entity 445
 {
 "angle" "270"
 "origin" "1606 -934 32"
 "classname" "team_CTF_bluespawn"
 }
-// entity 480
+// entity 446
 {
 "classname" "team_CTF_bluespawn"
 "angle" "270"
 "origin" "1520 -1008 200"
 }
-// entity 481
+// entity 447
 {
 "origin" "1568 -1008 200"
 "angle" "180"
 "classname" "team_CTF_bluespawn"
 }
-// entity 482
+// entity 448
 {
 "classname" "team_CTF_bluespawn"
 "angle" "315"
 "origin" "1968 8 32"
 }
-// entity 483
+// entity 449
 {
 "origin" "1616 120 32"
 "classname" "team_CTF_bluespawn"
 "angle" "180"
 }
-// entity 484
-{
-"origin" "860 -348 128"
-"message" "Central Bridge"
-"classname" "target_location"
-}
-// entity 485
+// entity 450
 {
 "origin" "156 464 128"
 "message" "Central Bridge"
 "classname" "target_location"
 }
-// entity 486
+// entity 451
 {
 "classname" "target_location"
 "message" "Central Bridge"
 "origin" "164 -272 128"
 }
-// entity 487
+// entity 452
 {
 "origin" "524 200 28"
 "classname" "item_quad"
@@ -37912,7 +37702,7 @@ q3stronghold/glass
 "wait" "100"
 "random" "20"
 }
-// entity 488
+// entity 453
 {
 "classname" "weapon_bfg"
 "origin" "524 200 28"
@@ -37920,13 +37710,223 @@ q3stronghold/glass
 "wait" "100"
 "random" "20"
 }
-// entity 489
+// entity 454
 {
 "classname" "ammo_rockets"
 "origin" "1056 724 24"
 }
-// entity 490
+// entity 455
 {
 "classname" "ammo_rockets"
 "origin" "-32 -608 24"
+}
+// entity 456
+{
+"classname" "target_location"
+"message" "Integral Passage Blue"
+"origin" "1744 -888 52"
+}
+// entity 457
+{
+"message" "Cellar Blue"
+"origin" "1536 -1760 16"
+"classname" "target_location"
+}
+// entity 458
+{
+"origin" "2464 -1696 72"
+"message" "Cellar Entrance Blue"
+"classname" "target_location"
+}
+// entity 459
+{
+"origin" "2592 -808 128"
+"message" "Main Room Blue"
+"classname" "target_location"
+}
+// entity 460
+{
+"message" "Ramp Room Blue"
+"origin" "2624 192 144"
+"classname" "target_location"
+}
+// entity 461
+{
+"origin" "1316 216 464"
+"message" "Railgun Blue"
+"classname" "target_location"
+}
+// entity 462
+{
+"origin" "1880 -632 352"
+"message" "Upper Hall Blue"
+"classname" "target_location"
+}
+// entity 463
+{
+"origin" "1600 -368 128"
+"message" "Right Hall Blue"
+"classname" "target_location"
+}
+// entity 464
+{
+"origin" "1344 380 120"
+"message" "Left Hall Blue"
+"classname" "target_location"
+}
+// entity 465
+{
+"origin" "3264 -424 280"
+"message" "Ramp Room Blue"
+"classname" "target_location"
+}
+// entity 466
+{
+"origin" "3208 -1152 400"
+"message" "Flag Room Blue"
+"classname" "target_location"
+}
+// entity 467
+{
+"classname" "target_location"
+"message" "Upper Hall Blue"
+"origin" "1504 -360 352"
+}
+// entity 468
+{
+"classname" "target_location"
+"message" "Left Hall Blue"
+"origin" "1856 120 120"
+}
+// entity 469
+{
+"classname" "target_location"
+"message" "Main Room Blue"
+"origin" "2592 -1256 128"
+}
+// entity 470
+{
+"classname" "target_location"
+"message" "Right Hall Blue"
+"origin" "1564 -736 248"
+}
+// entity 471
+{
+"origin" "2592 -1160 352"
+"message" "Main Room Bridge Blue"
+"classname" "target_location"
+}
+// entity 472
+{
+"classname" "target_location"
+"message" "Main Room Bridge Blue"
+"origin" "2288 -1368 352"
+}
+// entity 473
+{
+"origin" "2288 -268 352"
+"message" "Main Room Bridge Blue"
+"classname" "target_location"
+}
+// entity 474
+{
+"origin" "3200 -1720 128"
+"message" "Main Room Blue"
+"classname" "target_location"
+}
+// entity 475
+{
+"classname" "target_location"
+"message" "Flag Room Blue"
+"origin" "3200 -1720 400"
+}
+// entity 476
+{
+"origin" "1988 -640 52"
+"message" "Integral Passage Blue"
+"classname" "target_location"
+}
+// entity 477
+{
+"classname" "target_location"
+"message" "Integral Passage Blue"
+"origin" "2108 -312 52"
+}
+// entity 478
+{
+"origin" "1928 -908 312"
+"message" "Right Hall Blue"
+"classname" "target_location"
+}
+// entity 479
+{
+"classname" "target_location"
+"message" "Main Room Blue"
+"origin" "2344 -576 128"
+}
+// entity 480
+{
+"origin" "2628 -296 128"
+"message" "Mega Passage Blue"
+"classname" "target_location"
+}
+// entity 481
+{
+"classname" "target_location"
+"message" "Railgun Blue"
+"origin" "1896 168 404"
+}
+// entity 482
+{
+"classname" "target_location"
+"message" "Railgun Blue"
+"origin" "1272 -160 404"
+}
+// entity 483
+{
+"classname" "target_location"
+"message" "Left Hall Blue"
+"origin" "1720 380 120"
+}
+// entity 484
+{
+"classname" "target_location"
+"message" "Mega Passage Pads Blue"
+"origin" "2716 -292 392"
+}
+// entity 485
+{
+"message" "Ramp Room Blue"
+"origin" "3204 -72 68"
+"classname" "target_location"
+}
+// entity 486
+{
+"classname" "target_location"
+"origin" "3168 -128 340"
+"message" "Ramp Room Blue"
+}
+// entity 487
+{
+"classname" "target_location"
+"message" "Main Room Bridge Blue"
+"origin" "2292 -640 352"
+}
+// entity 488
+{
+"classname" "target_location"
+"message" "Central Bridge"
+"origin" "868 -344 128"
+}
+// entity 489
+{
+"origin" "860 392 128"
+"message" "Central Bridge"
+"classname" "target_location"
+}
+// entity 490
+{
+"origin" "1256 -348 84"
+"message" "Right Hall Blue"
+"classname" "target_location"
 }

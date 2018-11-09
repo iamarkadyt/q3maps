@@ -17505,7 +17505,7 @@ q3stronghold/glass
 // entity 21
 {
 "origin" "-720 1008 52"
-"message" "Integral Passage Red"
+"message" "Integral Passage Blue"
 "classname" "target_location"
 }
 // entity 22
@@ -17517,42 +17517,42 @@ q3stronghold/glass
 {
 "classname" "target_location"
 "origin" "-512 1880 16"
-"message" "Cellar Red"
+"message" "Cellar Blue"
 }
 // entity 24
 {
 "classname" "target_location"
-"message" "Cellar Entrance Red"
+"message" "Cellar Entrance Blue"
 "origin" "-1440 1816 72"
 }
 // entity 25
 {
 "classname" "target_location"
-"message" "Main Room Red"
+"message" "Main Room Blue"
 "origin" "-1568 928 128"
 }
 // entity 26
 {
 "classname" "target_location"
 "origin" "-1600 -72 144"
-"message" "Ramp Room Red"
+"message" "Ramp Room Blue"
 }
 // entity 27
 {
 "classname" "target_location"
-"message" "Railgun Red"
+"message" "Railgun Blue"
 "origin" "-292 -96 464"
 }
 // entity 28
 {
 "classname" "target_location"
-"message" "Upper Hall Red"
+"message" "Upper Hall Blue"
 "origin" "-856 752 352"
 }
 // entity 29
 {
 "classname" "target_location"
-"message" "Right Hall Red"
+"message" "Right Hall Blue"
 "origin" "-576 488 128"
 }
 // entity 30
@@ -17564,19 +17564,19 @@ q3stronghold/glass
 // entity 31
 {
 "classname" "target_location"
-"message" "Left Hall Red"
+"message" "Left Hall Blue"
 "origin" "-320 -260 120"
 }
 // entity 32
 {
 "classname" "target_location"
-"message" "Ramp Room Red"
+"message" "Ramp Room Blue"
 "origin" "-2240 544 280"
 }
 // entity 33
 {
 "classname" "target_location"
-"message" "Flag Room Red"
+"message" "Flag Room Blue"
 "origin" "-2184 1272 400"
 }
 // entity 34
@@ -17673,7 +17673,7 @@ q3stronghold/glass
 // entity 50
 {
 "origin" "-480 480 352"
-"message" "Upper Hall Red"
+"message" "Upper Hall Blue"
 "classname" "target_location"
 }
 // entity 51
@@ -17685,19 +17685,19 @@ q3stronghold/glass
 // entity 52
 {
 "origin" "-832 0 120"
-"message" "Left Hall Red"
+"message" "Left Hall Blue"
 "classname" "target_location"
 }
 // entity 53
 {
 "origin" "-1568 1376 128"
-"message" "Main Room Red"
+"message" "Main Room Blue"
 "classname" "target_location"
 }
 // entity 54
 {
 "origin" "-540 856 248"
-"message" "Right Hall Red"
+"message" "Right Hall Blue"
 "classname" "target_location"
 }
 // entity 55
@@ -18488,79 +18488,79 @@ q3stronghold/glass
 // entity 171
 {
 "classname" "target_location"
-"message" "Main Room Bridge Red"
+"message" "Main Room Bridge Blue"
 "origin" "-1568 1280 352"
 }
 // entity 172
 {
 "origin" "-1264 1488 352"
-"message" "Main Room Bridge Red"
+"message" "Main Room Bridge Blue"
 "classname" "target_location"
 }
 // entity 173
 {
 "classname" "target_location"
-"message" "Main Room Bridge Red"
+"message" "Main Room Bridge Blue"
 "origin" "-1264 388 352"
 }
 // entity 174
 {
 "classname" "target_location"
-"message" "Main Room Red"
+"message" "Main Room Blue"
 "origin" "-2176 1840 128"
 }
 // entity 175
 {
 "origin" "-2176 1840 400"
-"message" "Flag Room Red"
+"message" "Flag Room Blue"
 "classname" "target_location"
 }
 // entity 176
 {
 "classname" "target_location"
-"message" "Integral Passage Red"
+"message" "Integral Passage Blue"
 "origin" "-964 760 52"
 }
 // entity 177
 {
 "origin" "-1084 432 52"
-"message" "Integral Passage Red"
+"message" "Integral Passage Blue"
 "classname" "target_location"
 }
 // entity 178
 {
 "classname" "target_location"
-"message" "Right Hall Red"
+"message" "Right Hall Blue"
 "origin" "-904 1028 312"
 }
 // entity 179
 {
 "origin" "-1320 696 128"
-"message" "Main Room Red"
+"message" "Main Room Blue"
 "classname" "target_location"
 }
 // entity 180
 {
 "classname" "target_location"
-"message" "Mega Passage Red"
+"message" "Mega Passage Blue"
 "origin" "-1604 416 128"
 }
 // entity 181
 {
 "origin" "-872 -48 404"
-"message" "Railgun Red"
+"message" "Railgun Blue"
 "classname" "target_location"
 }
 // entity 182
 {
 "origin" "-248 280 404"
-"message" "Railgun Red"
+"message" "Railgun Blue"
 "classname" "target_location"
 }
 // entity 183
 {
 "origin" "-232 468 84"
-"message" "Right Hall Red"
+"message" "Right Hall Blue"
 "classname" "target_location"
 }
 // entity 184
@@ -18578,31 +18578,31 @@ q3stronghold/glass
 // entity 186
 {
 "origin" "-696 -260 120"
-"message" "Left Hall Red"
+"message" "Left Hall Blue"
 "classname" "target_location"
 }
 // entity 187
 {
 "origin" "-1692 412 392"
-"message" "Mega Passage Pads Red"
+"message" "Mega Passage Pads Blue"
 "classname" "target_location"
 }
 // entity 188
 {
 "classname" "target_location"
 "origin" "-2180 192 68"
-"message" "Ramp Room Red"
+"message" "Ramp Room Blue"
 }
 // entity 189
 {
-"message" "Ramp Room Red"
+"message" "Ramp Room Blue"
 "origin" "-2144 248 340"
 "classname" "target_location"
 }
 // entity 190
 {
 "origin" "-1268 760 352"
-"message" "Main Room Bridge Red"
+"message" "Main Room Bridge Blue"
 "classname" "target_location"
 }
 // entity 191

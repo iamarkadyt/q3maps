@@ -39779,3 +39779,24 @@ q3stronghold/glass
 "classname" "target_speaker"
 "wait" "20"
 }
+// entity 619
+{
+"noise" "sound/world/wind2.wav"
+"spawnflags" "1"
+"origin" "-850 -562 462"
+"classname" "target_speaker"
+}
+// entity 620
+{
+"classname" "target_speaker"
+"origin" "-714 -24 462"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}
+// entity 621
+{
+"classname" "target_speaker"
+"origin" "-398 -562 462"
+"spawnflags" "1"
+"noise" "sound/world/wind2.wav"
+}

@@ -1,8 +1,8 @@
 // entity 0
 {
-"_lightmapscale" "1"
-"_ambient" "10"
 "classname" "worldspawn"
+"_ambient" "10"
+"_lightmapscale" "1"
 // brush 0
 {
 ( -656 1858 76 ) ( -656 1860 76 ) ( -656 1860 88 ) q3stronghold/darkconcrete -176 0 0 0.500000 0.500000 0 0 0
@@ -39777,6 +39777,7 @@ q3stronghold/glass
 }
 // entity 605
 {
+"target" "t8"
 "random" "20"
 "wait" "100"
 "team" "bridge"
@@ -39785,6 +39786,7 @@ q3stronghold/glass
 }
 // entity 606
 {
+"target" "t8"
 "angle" "180"
 "origin" "524 200 28"
 "classname" "item_quad"
@@ -39794,6 +39796,7 @@ q3stronghold/glass
 }
 // entity 607
 {
+"target" "t8"
 "team" "bridge"
 "count" "15"
 "random" "20"
@@ -39925,4 +39928,17 @@ q3stronghold/glass
 {
 "origin" "1500 320 308"
 "classname" "ammo_rockets"
+}
+// entity 625
+{
+"angle" "315"
+"origin" "-2384 1536 336"
+"classname" "team_CTF_redflag"
+}
+// entity 626
+{
+"targetname" "t8"
+"noise" "*taunt.wav"
+"origin" "524 200 84"
+"classname" "target_speaker"
 }

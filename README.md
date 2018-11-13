@@ -1,20 +1,27 @@
 # Description
 
-In this repository you will find some of the maps that I used to create for the Quake III Arena.
+In this repository you will find some of my map works for the Quake III Arena game.
 
-Below are some development tips that you may be not interested in reading, I mainly keep them here for myself.
+If you want to checkout the maps in the editor, clone the repository and copy-merge the contents of the directory of the desired map into the `baseq3` folder:
+```
+cd ~/Games/Q3/baseq3/
+git clone https://github.com/arkadyt/q3maps
+rsync -a q3maps/q3strong2018/ ./
+```
+To contribute, edit the map files directly in the cloned repository.<br>
+Also ensure the location of the game directory is set in the Radiant and shaderlist.txt is updated with the names of the new (copy-merged) shaders.
 
-# Dev tips
+# Development tips
 
 ### When reverse engineering pk3 files:
 
-* Unpack textures and scripts folders directly into the baseq3 folder.
-* Then add unpacked shaders names to the baseq3/scripts/shaderlist.txt file.
+* Unpack textures and scripts folders directly into the baseq3 folder (that's what we do above with rsync).
+* Then add the names of the unpacked shaders to the baseq3/scripts/shaderlist.txt file.
 * Finally, in the radiant, set the game folder to the directory containing the abovementioned baseq3 and the game binary.
 
 Good luck!
 
-### Other tips
+### Some other tips
 
 * `Commit` frequently. You never know when Radiant will crash next.
 * `Describe changes` precisely. You can't walk through commits with `git bisect` and checkout the sources. It's hard to know what changes have been done, but really important to, when trying to understang what broke the (say) `bspc` build.

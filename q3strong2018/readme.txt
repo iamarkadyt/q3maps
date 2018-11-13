@@ -5,10 +5,10 @@ To my loving dad, Sergey 'alarixx' Titenko.
 Title                   : Stronghold Opposition 2018
 Date                    : Nov 10th 2018
 Version                 : 1.0.1
-Source .map file        : Included.
+Source .map file        : https://github.com/arkadyt/q3maps/
 Filename                : q3strong2018.bsp
 Author                  : Arkady 'arcan770077f' Titenko (aka arkadyt)
-Email Address           : arkadyt@arkadyt.com
+Email Address           : To contact me open an issue here https://github.com/arkadyt/q3maps/
 Description             : CTF map based on Quake 3 CTF's Stronghold Opposition by Remco 'SithLord' Mooijweer (yr. 2000).
 Additional Credits to   : - id software for Quake III Arena & Quake III Team Arena.
                           - Guys over at the github.com/ioquake for continuing the development of this great game.
@@ -21,9 +21,8 @@ Additional Credits to   : - id software for Quake III Arena & Quake III Team Are
 ====================================================================================
 
 * Changelog *
-Following changes rebalance the map by introducing new gameplay flows that make it more interesting and bring previously dead (unused) areas of the map to life.
+Following changes rebalance the map by introducing new gameplay flows that make it more interesting to play and bring previously dead (unused) areas of the map to life.
 
-Decorations & Structural:
 - Raised ceiling in the flagrooms.
 - Relit scene with modified sun shaders for more realistic look. Added soft global illumination. 
 - Added a passage from the Ramp Room to the Main Room (former 'Lift Room').
@@ -32,7 +31,6 @@ Decorations & Structural:
 - Added a passage from the Main Room to the Right Hall.
 - Added two passages from the Railgun Room to the Right and Left Halls (holes in the floor!).
 
-Items:
 Improved overall items layout and:
 - BFG now spawns sometimes instead of Quad.
 - Have put Regens on top of the crate stacks in the Ramp Rooms.
@@ -40,11 +38,9 @@ Improved overall items layout and:
 - Added more rocketlaunchers (yay!) and grenade launchers.
 - Some other neat changes. GO CHECK IT OUT!
 
-Other:
 - Botclipped scene properly to prevent bots from constantly falling into the pool in the center. They still can jump down when they need though!
-- Used newer tools (bspc 2.1i) to compile bot files. Bots have to be slightly more clever now.
-- Used cluster-portal splitting to make bots consume less CPU. You can now add a 200 of them to the match and you'd be fine.
-- Added support for deathmatch (because why not?).
+- Used newer tools (bspc 2.1i) to compile .aas files. Bots have to be acting slightly more clever now.
+- Added support for deathmatch, tourney and team deathmatch.
 
 ====================================================================================
 
@@ -53,8 +49,8 @@ Other:
 Gametype(s)             : CTF (+ FFA & TEAM)
 Players                 : 6 - 10 (3 vs 3, 4 vs 4, 5 vs 5)
 Bots                    : Hell Yeah!
-Weapons                 : All except Lightning Gun;          
-Powerups                : Quaddamage, Regen(2), Medkit(2), Teleporter(2), BFG(is this a powerup?)
+Weapons                 : All except Lightning Gun
+Powerups                : Quaddamage, Regen(2), Medkit(2), Teleporter(2)
 
 ====================================================================================
 
@@ -63,7 +59,7 @@ Powerups                : Quaddamage, Regen(2), Medkit(2), Teleporter(2), BFG(is
 Base                    : based on q3strongholdv2.bsp, work of Remco 'SithLord' Mooijweer.
 Editor(s) used          : GTKRadiant 1.6.4 (I hate it. It crashes all the time! Always make frequent (git) commits!)
 Additional Tools        : GIMP, Photopea (online photoshop).
-Known Bugs              : Fans through sky outside (still), if you know how to fix this contact me please.
+Known Bugs              : Fans are visible through sky outside (still), if you know how to fix this contact me please.
 Build Time              : 10 days.
 Textures used           : Base Texture set, Crate textures from Evil's TexturePack II and Kiltron's Texture Pack II.
 Compile machine         : Intel I5-3330 3.0Ghz with 8GB RAM, running Kubuntu 18.10.

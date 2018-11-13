@@ -1,0 +1,3 @@
+#!/bin/bash
+
+zip -r -9 q3strong2018.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt

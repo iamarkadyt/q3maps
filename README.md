@@ -8,8 +8,9 @@ cd ~/Games/Q3/baseq3/
 git clone https://github.com/arkadyt/q3maps
 rsync -a q3maps/q3strong2018/ ./
 ```
-To contribute, edit the map files directly in the cloned repository.<br>
-Also ensure the location of the game directory is set in the Radiant and shaderlist.txt is updated with the names of the new (copy-merged) shaders.
+Then ensure the location of the game directory is set in the Radiant and shaderlist.txt is updated with the names of the new (copy-merged) shaders.
+
+To contribute, edit the .map, texture and script files directly in the cloned repository and periodically copy the content out into the baseq3 folder for the editor.
 
 # Development tips
 

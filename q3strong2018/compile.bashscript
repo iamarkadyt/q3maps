@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# meta stage
+# some people also use -patchmeta. Meta for curved patches?
+q3map2 -meta -fs_basepath /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/ /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/maps/\!q3strong_workhorse.map
+
+# vis stage
+# -saveprt              : saves visibility splitting into a file that can be viewed in the Radiant.
+q3map2 -vis -saveprt -fs_basepath /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/ /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/maps/\!q3strong_workhorse.map
+
+# fast light
+# q3map2 -light -fast -fs_basepath /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/ /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/maps/\!q3strong_workhorse.map
+
+# final light
+# -shade                : enables phong shading
+# -sky <n>              : multiplies the sky light value by <n>
+# -pointscale <n.n>     : multiplies the point lights amount by <n.n>
+# -gamma <n.n>          : increases gamma (used with _ambient:10 and a value of 1.4 in q3strong2018)
+# -dirty                : enables ambient occlusion
+# -samples <n>          : enables anti-aliasing
+# -patchshadows         : cast and receive shadows for curves
+# -fast                 : enables faster light calculation
+# -bounce <n>           : enables radiosity effect
+# -fs_basepath          : game folder location!
+q3map2 -light -fast -patchshadows -samples 6 -bounce 8 -gamma 1.4 -dirty -shade -fs_basepath /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/ /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/maps/\!q3strong_workhorse.map
+
+# Build .aas files (Area Awareness System).
+# -optimize             : reduces the .aas file size (sometimes x2 times)
+# -forcesidesvisible    : have to be used if -meta switch is used
+# bspc -optimize -forcesidesvisible -bsp2aas /home/arkadyt/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/maps/!q3strong_workhorse.bsp
+
+echo Done

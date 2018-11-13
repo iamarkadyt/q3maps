@@ -1,0 +1,225 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Quake III Arena Shader Manual - Index</title>
+		<meta content="Ethan" name="keywords">
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body alink="red" bgcolor="white" link="black" text="black" vlink="black">
+		<center>
+			<a href="http://www.quake3arena.com/" target="_blank"><font face="Arial" size="6"><b>Quake III Arena</b></font></a><font face="Arial"> </font></center>
+		<center>
+			<p><font size="5" face="Arial">Shader Manual</font></p>
+		</center>
+		<center>
+			<p><font size="5" face="Arial">Revision #12</font></p>
+		</center>
+		<center>
+			<p><font size="2" face="Arial">By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a></font></p>
+		</center>
+		<center>
+			<p><font size="2" face="Arial">(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)</font></p>
+		</center>
+		<center>
+			<p>&nbsp;</p>
+		</center>
+		<div align="left">
+			<p><a href="section1.htm#1"><font face="Arial" size="3"><b>1. Preface: Making Your Own Shaders</b></font></a></p>
+		</div>
+		<div align="left">
+			<p><a href="section2.htm#2"><font size="3" face="Arial"><b>2. Introduction</b></font></a><b><font size="4" face="Arial"><br>
+			</font></b></p>
+		</div>
+		<ul>
+			<li><a href="section2.htm#2.1"><font face="Arial" size="2"><b>2.1 What is a Shader?</b></font></a>
+			<li><a href="section2.htm#2.2"><font face="Arial" size="2"><b>2.2 Shader Name &amp; File Conventions</b></font></a>
+			<li><a href="section2.htm#2.3"><font face="Arial" size="2"><b>2.3 Shader Types</b></font></a>
+			<li><a href="section2.htm#2.4"><font face="Arial" size="2"><b>2.4 Key Concepts</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section2.htm#2.4.1"><font size="2" face="Arial"><b>2.4.1 Surface Effects vs. Content Effects vs. Deformation Effects</b></font></a>
+				<li><a href="section2.htm#2.4.2"><font size="2" face="Arial"><b>2.4.2 Power Has a Price</b></font></a>
+				<li><a href="section2.htm#2.4.3"><font size="2" face="Arial"><b>2.4.3 RGB Color</b></font></a>
+				<li><a href="section2.htm#2.4.4"><font size="2" face="Arial"><b>2.4.4 Normalization: a Scale of 0 to 1</b></font></a>
+				<li><a href="section2.htm#2.4.5"><font size="2" face="Arial"><b>2.4.5 Texture Sizes</b></font></a>
+				<li><a href="section2.htm#2.4.6"><font size="2" face="Arial"><b>2.4.6 Color Math</b></font></a>
+				<li><a href="section2.htm#2.4.7"><font size="2" face="Arial"><b>2.4.7 Measurements</b></font></a>
+				<li><a href="section2.htm#2.4.8"><font size="2" face="Arial"><b>2.4.8 Waveform Functions</b></font></a>
+			</ul>
+		</ul>
+		<div align="left">
+			<p><a href="section3.htm#3"><font size="3" face="Arial"><b>3. General Shader Keywords</b></font></a><b><font size="4" face="Arial"><br>
+			</font></b></p>
+		</div>
+		<ul>
+			<li><a href="section3.htm#3.1"><font face="Arial" size="2"><b>3.1 skyParms &lt;farbox&gt; &lt;cloudheight&gt; &lt;nearbox&gt;</b></font></a>
+			<li><a href="section3.htm#3.2"><font face="Arial" size="2"><b>3.2 cull &lt;side&gt;</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section3.htm#3.2.1"><font size="2" face="Arial"><b>3.2.1 cull front</b></font></a>
+				<li><a href="section3.htm#3.2.2"><font size="2" face="Arial"><b>3.2.2 cull back</b></font></a>
+				<li><a href="section3.htm#3.2.3"><font size="2" face="Arial"><b>3.2.3 cull disable, cull none</b></font></a>
+			</ul>
+			<li><a href="section3.htm#3.3"><font face="Arial" size="2"><b>3.3 deformVertexes</b></font></a>
+			<ul>
+				<li><a href="section3.htm#3.3.1"><font size="2" face="Arial"><b>3.3.1 deformVertexes wave &lt;div&gt; &lt;func&gt; &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; &lt;freq&gt;</b></font></a>
+				<li><a href="section3.htm#3.3.2"><font size="2" face="Arial"><b>3.3.2 deformVertexes normal &lt;div&gt; &lt;func&gt; &lt;base&gt; &lt;amplitude ~0.1-~0.5&gt; &lt;frequency ~1.0-~4.0&gt;</b></font></a>
+				<li><a href="section3.htm#3.3.3"><font size="2" face="Arial"><b>3.3.3 deformVertexes bulge &lt;bulgeWidth&gt; &lt;bulgeHeight&gt; &lt;bulgeSpeed&gt;</b></font></a>
+				<li><a href="section3.htm#3.3.4"><font size="2" face="Arial"><b>3.3.4 deformVertexes move &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;func&gt; &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; &lt;freq&gt;</b></font></a>
+				<li><a href="section3.htm#3.3.5"><font size="2" face="Arial"><b>3.3.5 DeformVertexes autosprite</b></font></a>
+				<li><a href="section3.htm#3.3.6"><font size="2" face="Arial"><b>3.3.6 DeformVertexes autosprite2</b></font></a>
+			</ul>
+			<li><a href="section3.htm#3.4"><font face="Arial" size="2"><b>3.4 fogparms &lt;red value&gt; &lt;green value&gt; &lt;blue value&gt; &lt;distance to Opaque&gt;</b></font></a>
+			<li><a href="section3.htm#3.5"><font face="Arial" size="2"><b>3.5 nopicmip</b></font></a>
+			<li><a href="section3.htm#3.6"><font face="Arial" size="2"><b>3.6 nomipmap</b></font></a>
+			<li><a href="section3.htm#3.7"><font face="Arial" size="2"><b>3.7 polygonOffset</b></font></a>
+			<li><a href="section3.htm#3.8"><font face="Arial" size="2"><b>3.8 portal</b></font></a>
+			<li><a href="section3.htm#3.9"><font face="Arial" size="2"><b>3.9 sort &lt;value&gt;</b></font></a>
+		</ul>
+		<div align="left">
+			<p><a href="section4.htm#4"><font size="3" face="Arial"><strong>4. Q3MAP Specific Shader Keywords</strong></font></a><font size="4" face="Arial"><br>
+			</font></p>
+		</div>
+		<ul>
+			<li><a href="section4.htm#4.1"><font face="Arial" size="2"><b>4.1 tessSize &lt;amount&gt;</b></font></a>
+			<li><a href="section4.htm#4.2"><font face="Arial" size="2"><b>4.2 q3map_backshader &lt;shadername&gt;</b></font></a>
+			<li><a href="section4.htm#4.3"><font face="Arial" size="2"><b>4.3 q3map_globaltexture</b></font></a>
+			<li><a href="section4.htm#4.4"><font face="Arial" size="2"><b>4.4 q3map_sun &lt;red&gt; &lt;green&gt; &lt;blue&gt; &lt;intensity&gt; &lt;degrees&gt; &lt;elevation&gt;</b></font></a>
+			<li><a href="section4.htm#4.5"><font face="Arial" size="2"><b>4.5 q3map_surfaceLight &lt;light value&gt;</b></font></a>
+			<li><a href="section4.htm#4.6"><font face="Arial" size="2"><b>4.6 q3map_lightimage &lt; texturepath/texturename&gt;</b></font></a>
+			<li><a href="section4.htm#4.7"><font face="Arial" size="2"><b>4.7 q3map_lightsubdivide &lt;value&gt;</b></font></a>
+			<li><a href="section4.htm#4.8"><font face="Arial" size="2"><b>4.8 surfaceparm &lt;parm&gt;</b></font></a>
+			<ul>
+				<li><a href="section4.htm#4.8.1"><font size="2" face="Arial"><b>4.8.1 alphashadow</b></font></a>
+				<li><a href="section4.htm#4.8.2"><font size="2" face="Arial"><b>4.8.2 areaportal</b></font></a>
+				<li><a href="section4.htm#4.8.3"><font size="2" face="Arial"><b>4.8.3 clusterportal</b></font></a>
+				<li><a href="section4.htm#4.8.4"><font size="2" face="Arial"><b>4.8.4 donotenter</b></font></a>
+				<li><a href="section4.htm#4.8.5"><font size="2" face="Arial"><b>4.8.5 flesh</b></font></a>
+				<li><a href="section4.htm#4.8.6"><font size="2" face="Arial"><b>4.8.6 fog</b></font></a>
+				<li><a href="section4.htm#4.8.7"><font size="2" face="Arial"><b>4.8.7 lava</b></font></a>
+				<li><a href="section4.htm#4.8.8"><font size="2" face="Arial"><b>4.8.8 metalsteps</b></font></a>
+				<li><a href="section4.htm#4.8.9"><font size="2" face="Arial"><b>4.8.9 nodamage</b></font></a>
+				<li><a href="section4.htm#4.8.10"><font size="2" face="Arial"><b>4.8.10 nodlight</b></font></a>
+				<li><a href="section4.htm#4.8.11"><font size="2" face="Arial"><b>4.8.11 nodraw</b></font></a>
+				<li><a href="section4.htm#4.8.12"><font size="2" face="Arial"><b>4.8.12 nodrop</b></font></a>
+				<li><a href="section4.htm#4.8.13"><font size="2" face="Arial"><b>4.8.13 noimpact</b></font></a>
+				<li><a href="section4.htm#4.8.14"><font size="2" face="Arial"><b>4.8.14 nomarks</b></font></a>
+				<li><a href="section4.htm#4.8.15"><font size="2" face="Arial"><b>4.8.15 nolightmap</b></font></a>
+				<li><a href="section4.htm#4.8.16"><font size="2" face="Arial"><b>4.8.16 nosteps </b></font></a>
+				<li><a href="section4.htm#4.8.17"><font size="2" face="Arial"><b>4.8.17 nonsolid</b></font></a>
+				<li><a href="section4.htm#4.8.18"><font size="2" face="Arial"><b>4.8.18 origin</b></font></a>
+				<li><a href="section4.htm#4.8.19"><font size="2" face="Arial"><b>4.8.19 playerclip</b></font></a>
+				<li><a href="section4.htm#4.8.20"><font size="2" face="Arial"><b>4.8.20 slick</b></font></a>
+				<li><a href="section4.htm#4.8.21"><font size="2" face="Arial"><b>4.8.21 slime</b></font></a>
+				<li><a href="section4.htm#4.8.22"><font size="2" face="Arial"><b>4.8.22 structural</b></font></a>
+				<li><a href="section4.htm#4.8.23"><font size="2" face="Arial"><b>4.8.23 trans</b></font></a>
+				<li><a href="section4.htm#4.8.24"><font size="2" face="Arial"><b>4.8.24 water</b></font></a>
+			</ul>
+		</ul>
+		<div align="left">
+			<p><a href="section5.htm#5"><font size="3" face="Arial"><b>5. Editor specific shader instructions</b></font></a><b><font size="4" face="Arial"><br>
+			</font></b></p>
+		</div>
+		<ul>
+			<li><a href="section5.htm#5.1"><font face="Arial" size="2"><b>5.1 qer_editorimage &lt; texture path/texturename&gt;</b></font></a>
+			<li><a href="section5.htm#5.2"><font face="Arial" size="2"><b>5.2 qer_nocarve</b></font></a>
+			<li><a href="section5.htm#5.3"><font face="Arial" size="2"><b>5.3 qer_trans &lt;value&gt;</b></font></a>
+		</ul>
+		<div align="left">
+			<p><a href="section6.htm#6"><font size="3" face="Arial"><b>6. Stage Specific Keywords</b></font></a><b><font size="4" face="Arial"><br>
+			</font></b></p>
+		</div>
+		<ul>
+			<li><a href="section6.htm#6.1"><font face="Arial" size="2"><b>6.1 Texture map specification</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section6.htm#6.1.1"><font size="2" face="Arial"><b>6.1.1 map &lt;texturepath/texturename&gt;</b></font></a>
+				<li><a href="section6.htm#6.1.2"><font size="2" face="Arial"><b>6.1.2 Clampmap &lt;texturepath&gt;</b></font></a>
+				<li><a href="section6.htm#6.1.3"><font size="2" face="Arial"><b>6.1.3 AnimMap &lt;frequency&gt; &lt;texture1&gt; ... &lt;texture8&gt;</b></font></a>
+			</ul>
+			<li><a href="section6.htm#6.2"><font face="Arial" size="2"><b>6.2 Blend Functions</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section6.htm#6.2.1"><font size="2" face="Arial"><b>6.2.1 Simplified blend functions</b></font></a>
+				<ul>
+					<li><a href="section6.htm#6.2.1.1"><font size="2" face="Arial"><b>6.2.1.1 blendfunc add</b></font></a>
+					<li><a href="section6.htm#6.2.1.2"><font size="2" face="Arial"><b>6.2.1.2 blendfunc filter</b></font></a>
+					<li><a href="section6.htm#6.2.1.3"><font size="2" face="Arial"><b>6.2.1.3 blendfunc blend</b></font></a>
+				</ul>
+				<li><a href="section6.htm#6.2.2"><font size="2" face="Arial"><b>6.2.2 Explicit blend functions</b></font></a>
+				<li><a href="section6.htm#6.2.3"><font size="2" face="Arial"><b>6.2.3 Source Blend &lt;srcBlend&gt;</b></font></a>
+				<li><a href="section6.htm#6.2.4"><font size="2" face="Arial"><b>6.2.4 Destination Blend &lt;dstBlend&gt;</b></font></a>
+				<li><a href="section6.htm#6.2.5"><font size="2" face="Arial"><b>6.2.5 Default Blend Function</b></font></a>
+				<li><a href="section6.htm#6.2.6"><font size="2" face="Arial"><b>6.2.6 Technical Information/Limitations Regarding Blend Modes</b></font></a>
+			</ul>
+			<li><a href="section6.htm#6.3"><font face="Arial" size="2"><b>6.3 rgbGen &lt;func&gt;</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section6.htm#6.3.1"><font size="2" face="Arial"><b>6.3.1 RgbGen identityLighting</b></font></a>
+				<li><a href="section6.htm#6.3.2"><font size="2" face="Arial"><b>6.3.2 rgbGen identity</b></font></a>
+				<li><a href="section6.htm#6.3.3"><font size="2" face="Arial"><b>6.3.3 rgbGen wave &lt;func&gt; &lt;base&gt; &lt;amp&gt; &lt;phase&gt; &lt;freq&gt;</b></font></a>
+				<li><a href="section6.htm#6.3.4"><font size="2" face="Arial"><b>6.3.4 RgbGen entity</b></font></a>
+				<li><a href="section6.htm#6.3.5"><font size="2" face="Arial"><b>6.3.5 rgbGen oneMinusEntity</b></font></a>
+				<li><a href="section6.htm#6.3.6"><font size="2" face="Arial"><b>6.3.6 rgbGen Vertex</b></font></a>
+				<li><a href="section6.htm#6.3.7"><font size="2" face="Arial"><b>6.3.7 rgbGen oneMinusVertex</b></font></a>
+				<li><a href="section6.htm#6.3.8"><font size="2" face="Arial"><b>6.3.8 rgbGen lightingDiffuse</b></font></a>
+			</ul>
+			<li><a href="section6.htm#6.4"><font face="Arial" size="2"><b>6.4 AlphaGen &lt;func&gt;</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section6.htm#6.4.1"><font size="2" face="Arial"><b>6.4.1 AlphaGen portal</b></font></a>
+			</ul>
+			<li><a href="section6.htm#6.5"><font face="Arial" size="2"><b>6.5 tcGen &lt;coordinate source&gt;</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section6.htm#6.5.1"><font size="2" face="Arial"><b>6.5.1 tcGen vector (&lt;sx&gt; &lt;sy&gt; &lt;sz&gt;) (&lt;tx&gt; &lt;ty&gt; &lt;tz&gt;)</b></font></a>
+			</ul>
+			<li><a href="section6.htm#6.6"><font face="Arial" size="2"><b>6.6 tcMod &lt;func&gt; &lt;...&gt;</b></font></a><b><font face="Arial"> </font></b>
+			<ul>
+				<li><a href="section6.htm#6.6.1"><font size="2" face="Arial"><b>6.6.1 tcMod rotate &lt;degrees per per second&gt;</b></font></a>
+				<li><a href="section6.htm#6.6.2"><font size="2" face="Arial"><b>6.6.2 tcMod scale &lt;sScale&gt; &lt;tScale&gt;</b></font></a>
+				<li><a href="section6.htm#6.6.3"><font size="2" face="Arial"><b>6.6.3 tcMod scroll &lt;sSpeed&gt; &lt;tSpeed&gt;</b></font></a>
+				<li><a href="section6.htm#6.6.4"><font size="2" face="Arial"><b>6.6.4 tcMod stretch &lt;func&gt; &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; &lt;frequency&gt;</b></font></a>
+				<li><a href="section6.htm#6.6.5"><font size="2" face="Arial"><b>6.6.5 tcMod &lt;transform&gt; &lt;m00&gt; &lt;m01&gt; &lt;m10&gt; &lt;m11&gt; &lt;t0&gt; &lt;t1&gt;</b></font></a>
+				<li><a href="section6.htm#6.6.6"><font size="2" face="Arial"><b>6.6.6 tcMod turb &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; &lt;freq&gt;</b></font></a>
+			</ul>
+			<li><a href="section6.htm#6.7"><font face="Arial" size="2"><b>6.7 depthFunc &lt;func&gt;</b></font></a>
+			<li><a href="section6.htm#6.8"><font face="Arial" size="2"><b>6.8 depthWrite</b></font></a>
+			<li><a href="section6.htm#6.9"><font face="Arial" size="2"><b>6.9 Detail</b></font></a>
+			<li><a href="section6.htm#6.10"><font face="Arial" size="2"><b>6.10 alphaFunc &lt;func&gt;</b></font></a>
+		</ul>
+		<div align="left">
+			<p><a href="section7.htm#7"><font face="Arial" size="3"><b>7. Notes on Alpha Channels</b></font></a></p>
+		</div>
+		<div align="left">
+			<p><a href="section8.htm#8"><font face="Arial" size="3"><b>8. Troubleshooting Shaders</b></font></a></p>
+		</div>
+		<div align="left">
+			<p><a href="section9.htm#9"><font size="3" face="Arial"><b>9. Creating New Textures</b></font></a><b><font size="4" face="Arial"><br>
+			</font></b></p>
+		</div>
+		<ul>
+			<li><a href="section9.htm#9.1"><font face="Arial" size="2"><b>9.1 Tools Needed</b></font></a>
+			<li><a href="section9.htm#9.2"><font face="Arial" size="2"><b>9.2 Setting up Files</b></font></a>
+			<li><a href="section9.htm#9.3"><font face="Arial" size="2"><b>9.3 Rules and Guidelines</b></font></a>
+			<ul>
+				<li><a href="section9.htm#9.3.1"><font size="2" face="Arial"><b>9.3.1 Rules</b></font></a>
+				<li><a href="section9.htm#9.3.2"><font size="2" face="Arial"><b>9.3.2 Guidelines</b></font></a>
+			</ul>
+			<li><a href="section9.htm#9.4"><font face="Arial" size="2"><b>9.4 Making the .pk3 File</b></font></a>
+		</ul>
+		<p>
+		<hr>
+		<center>
+			<p><a href="section1.htm#1"><font face="Arial" size="2">Next</font></a></center>
+		<p></font>
+		<hr>
+		<p><font size="2" face="Arial"><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+		Revision 12 December 23, 1999<br>
+		<br>
+		</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><b><br>
+		</b>HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+		</b>http://www.heppler.com/shader/<br>
+		<b><br>
+		</b></font>
+	</body>
+
+</html>

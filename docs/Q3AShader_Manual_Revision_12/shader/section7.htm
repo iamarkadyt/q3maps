@@ -1,0 +1,202 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake III Arena Shader Manual - Section 7 - Notes on Alpha Channels</title>
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<font size="2" face="Arial"><a name="7"></a>Quake III Arena Shader Manual Revision #12<br>
+			By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a><br>
+			(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)</font></center>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section6.htm#6"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section8.htm#8">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="4" face="Arial"><b>7. Notes on Alpha Channels</b></font><font size="2" face="Arial"><br>
+		To use some blend modes of alphaFunc, you must add an alpha channel to your texture files. Photoshop can do this. Paintshop Pro has the ability to make an alpha channel cannot work directly in to it. In Photoshop you want to set the type to Mask. Black has a value of 255. White has a value of 0. The darkness of a pixel's alpha value determines the transparency of the corresponding RGB value in the game world. Darker = more transparent.</font></p>
+		<p><font size="2" face="Arial">Care must be taken when reworking textures with alpha channels. Textures without alpha channels are saved as 24 bit images while textures with alpha channels are saved as 32 bit. If you save them out as 24 bit, the alpha channel is erased. Note: Adobe Photoshop will prompt you to save as 32, 24 or 16 bit. Choose wisely. If you save a texture as 32 bit and you don't actually have anything in the alpha channel, Quake III Arena may still be forced to use a lower quality texture format (when in 16 bit rendering) than if you had saved it as 24 bit.</font></p>
+		<p><font size="2" face="Arial">To create a texture that has &quot;open&quot; areas, make those areas black in the alpha channel and make white the areas that are to be opaque. Using gray shades can create varying degrees of opacity/transparency.</font></p>
+		<p><font size="2" face="Arial"><b>Example: An opaque texture with see-through holes knocked in it.</b>textures/base_floor/pjgrate1<br>
+		</font></p>
+		<p><font size="2">
+		<table bgcolor="black" border="0" cellpadding="0" cellspacing="2" width="80%">
+			<tbody>
+				<tr>
+					<td>
+						<table bgcolor="white" border="0" cellpadding="5" cellspacing="1" width="100%">
+							<tbody>
+								<tr>
+									<td nowrap><font face="Arial">textures/base_floor/pjgrate1<br>
+										{<br>
+										</font>
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td nowrap>
+														<ul>
+															<font face="Arial">surfaceparmmetalsteps<br>
+															cull none<br>
+															<br>
+															// A GRATE OR GRILL THAT CAN BE SEEN FROM BOTH SIDES<br>
+															{<br>
+															</font>
+															<p>
+															<table border="0" cellpadding="0" cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td nowrap>
+																			<ul>
+																				<font face="Arial">map textures/base_floor/pjgrate1.tga<br>
+																				blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA<br>
+																				alphaFunc GT0<br>
+																				depthWrite<br>
+																				rgbGen identity<br>
+																				</font>
+																			</ul>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</p>
+															<p><font face="Arial">}<br>
+															{<br>
+															</font></p>
+															<p>
+															<table border="0" cellpadding="0" cellspacing="0">
+																<tbody>
+																	<tr>
+																		<td nowrap>
+																			<ul>
+																				<font face="Arial">map $lightmap<br>
+																				rgbGen identity<br>
+																				blendFunc GL_DST_COLOR GL_ZERO<br>
+																				depthFunc equal<br>
+																				</font>
+																			</ul>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</p>
+															<p><font face="Arial">}<br>
+															</font>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<p><font face="Arial">}</font></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font>
+		<table border="0" cellpadding="3" cellspacing="0">
+			<tbody>
+				<tr>
+					<td width="116">
+						<center>
+							<font size="2" face="Arial">1A</font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font size="2" face="Arial">1B</font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font size="2" face="Arial">1C</font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font size="2" face="Arial">1D</font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font size="2" face="Arial">1E</font></center>
+					</td>
+				</tr>
+				<tr>
+					<td width="116">
+						<center>
+							<font face="Arial"><img height="115" src="media/001.gif" width="116"></font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font face="Arial"><img height="114" src="media/002.gif" width="113"></font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font face="Arial"><img height="114" src="media/003.gif" width="114"></font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font face="Arial"><img height="114" src="media/004.gif" width="114"></font></center>
+					</td>
+					<td width="116">
+						<center>
+							<font face="Arial"><img height="112" src="media/005.gif" width="114"></font></center>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top" width="116">
+						<center>
+							<font size="1" face="Arial">pentagram.tga</font></center>
+					</td>
+					<td valign="top" width="116">
+						<center>
+							<font size="1" face="Arial">Alpha channel of pentagram.tga used as GL_SRC_ALPHA</font></center>
+					</td>
+					<td valign="top" width="116">
+						<center>
+							<font size="1" face="Arial">greenfloor.tga</font></center>
+					</td>
+					<td valign="top" width="116">
+						<center>
+							<font size="1" face="Arial">Alpha channel of pentagram.tga inverted by using it as GL_ONE_MINUS_SRC_ALPHA</font></center>
+					</td>
+					<td valign="top" width="116">
+						<center>
+							<font size="1" face="Arial">Greenfloor with pentagram merged into it.</font></center>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</p>
+		<p><font size="2" face="Arial">Start with a TGA file image. In this case, a pentagram on a plain white field (figure 1A). The color of the field surrrounding the image to be merged is not relevant to this process (although having a hard-edged break between the image to be isolated and the field makes the mask making process easier). Make an alpha channel. The area of the image to be merged with another image is masked off in white. The area to be masked out (not used) is pure black (figure 1B). The image to be merged into is greenfloor.tga (figure 1C).</font></p>
+		<p><font size="2" face="Arial">Make a <b>qer_editorimage</b> of greenfloor.tga. This is placed in the frame buffer as the map image for the texture. By using GL_SRC_ALPHA as the source part of the blend equation, the shader adds in only the non-black parts of the pentagram. Using GL_MINUS_ONE_SRC_ALPHA, the shader inverts the pentagram's alpha channel and adds in only the non-black parts of the green floor.</font></p>
+		<p><font size="2" face="Arial">In a like manner, the alpha channel can be used to blend the textures more evenly. A simple experiment involves using a linear gradiant in the alpha channel (white to black) and merging two textures so they appear to cross fade into each other.</font></p>
+		<p><font size="2" face="Arial">A more complicated experiment would be to take the pentagram in the first example and give it an aliased edge so that the pentagram appeared to fade or blend into the floor.</font></p>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section6.htm#6"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section8.htm#8">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font face="Arial" size="2"><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+		Revision 12 December 23, 1999<br>
+		<br>
+		</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><br>
+		HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+
+		</b><a href="http://www.heppler.com/shader/">http://www.heppler.com/shader/</a></font>
+	</body>
+
+</html>

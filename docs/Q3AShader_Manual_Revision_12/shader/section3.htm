@@ -1,0 +1,266 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake III Arena Shader Manual - Section 3 - General Shader Keywords</title>
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<font size="2" face="Arial"><a name="3"></a>Quake III Arena Shader Manual Revision #12<br>
+			By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a><br>
+			(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)</font></center>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section2.htm#2"><font size="2" face="Arial">Previous</font></a><font size="2" face="Arial">&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section4.htm#4">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="4" face="Arial"><b>3. General Shader Keywords</b></font><font size="2" face="Arial"><br>
+		<b>IMPORTANT NOTE:</b> Once again, be aware that some of the shader commands may be order dependent, so it's good practice to place all global shader commands (keywords defined in this section) at the very beginning of the shader and to place shader stages at the end (see various examples).</font></p>
+		<p><font size="2" face="Arial">These Keywords are global to a shader and affect all stages. They are also ignored by Q3MAP.</font></p>
+		<p><font face="Arial"><i><b><a name="3.1"></a>3.1 skyParms &lt;farbox&gt; &lt;cloudheight&gt; &lt;nearbox&gt;</b></i></font><font size="2" face="Arial"><br>
+		Specifies how to use the surface as a sky, including an optional far box (stars, moon, etc), optional cloud layers with any shader attributes, and an optional near box (mountains in front of the clouds, etc).</font></p>
+		<p><font size="2" face="Arial"><b>&lt;Farbox&gt;</b> Specifies a set of files to use as an environment box behind all cloud layers. Specify &quot;-&quot; for no farbox, or a file base name. A base name of &quot;env/test&quot; would look for files &quot;env/test_rt.tga&quot;, &quot;env/test_lf.tga&quot;, &quot;env/test_ft.tga&quot;, &quot;env/test_bk.tga&quot;, &quot;env/test_up.tga&quot;, &quot;env/test_dn.tga&quot; to use as the right / left / front / back / up / down sides.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;cloudheight&gt;</b> controls apparent curvature of the cloud layers - lower numbers mean more curvature (and thus more distortion at the horizons). Higher height values create &quot;flatter&quot; skies with less horizon distortion. Think of height as the radius of a sphere on which the clouds are mapped. Good ranges are 64 to 256. The default value is 128.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;nearbox&gt;</b> Specified as farbox, to be alpha blended on top of the clouds. This has not been tested in a long time, so it probably doesn't actually work. Set to &quot;-&quot; to ignore.</font></p>
+		<p><font face="Arial" size="2">Design Notes:<br>
+		</font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li type="disc"><font size="2" face="Arial">If you are making a map where the sky is seen by looking up most of the time, use a lower cloudheight value. Under those circumstances the tighter curve looks more dynamic. If you are making a map where the sky is seen by looking out windows most of the time or has a map area that is open to the sky on one or more sides, use a higher height to make the clouds seem more natural.<br>
+							</font>
+							<li type="disc"><font size="2" face="Arial">It is possible to create a sky with up to 8 cloud layers, but that also means 8 processing passes and a potentially large processing hit.<br>
+							</font>
+							<li type="disc"><font size="2" face="Arial">Be aware that the skybox does not wrap around the entire world. The &quot;floor&quot; or bottom face of the skybox is not drawn by the game. If a player in the game can see that face, they will see the &quot;hall of mirrors&quot; effect.</font><font face="Arial" size="2"> </font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial" size="2"><b>Example: Sky script</b></font><font size="2" face="Arial"><br>
+		</font></p>
+		<p><font size="2">
+		<table bgcolor="black" border="0" cellpadding="0" cellspacing="2" width="80%">
+			<tbody>
+				<tr>
+					<td>
+						<table bgcolor="white" border="0" cellpadding="5" cellspacing="1" width="100%">
+							<tbody>
+								<tr>
+									<td nowrap><font face="Arial">textures/skies/xtoxicsky_dm9<br>
+										{<br>
+										</font>
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td nowrap>
+														<ul>
+															<font face="Arial">qer_editorimage textures/skies/toxicsky.tga<br>
+															surfaceparm noimpact<br>
+															surfaceparm nolightmap<br>
+															q3map_globaltexture<br>
+															q3map_lightsubdivide 256<br>
+															q3map_surfacelight 400<br>
+															surfaceparm sky<br>
+															q3map_sun1 1 0.5 15030 60<br>
+															skyparms full 512 -<br>
+															{<br>
+															</font>
+															<p>
+															<table border="0" cellpadding="0" cellspacing="2">
+																<tbody>
+																	<tr>
+																		<td nowrap>
+																			<ul>
+																				<font face="Arial">map textures/skies/inteldimclouds.tga<br>
+																				tcMod scroll 0.1 0.1<br>
+																				tcMod scale 3 2<br>
+																				</font>
+																			</ul>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</p>
+															<p><font face="Arial">}<br>
+															{<br>
+															</font></p>
+															<p>
+															<table border="0" cellpadding="0" cellspacing="2">
+																<tbody>
+																	<tr>
+																		<td nowrap>
+																			<ul>
+																				<font face="Arial">map textures/skies/intelredclouds.tga<br>
+																				blendFunc add<br>
+																				tcMod scroll 0.05 0.05<br>
+																				tcMod scale 3 3<br>
+																				</font>
+																			</ul>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</p>
+															<p><font face="Arial">}<br>
+															</font>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<p><font face="Arial">}</font></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.2"></a>3.2 cull &lt;side&gt;</b></i></font><font size="2" face="Arial"><br>
+		Every surface of a polygon has two sides, a front and a back. Typically, we only see the front or &quot;out&quot; side. For example, a solid block you only show the front side. In many applications we see both. For example, in water, you can see both front and a back. The same is true for things like grates and screens.</font></p>
+		<p><font size="2" face="Arial">To &quot;cull&quot; means to remove. The value parameter determines the type of face culling to apply. The default value is cull front if this keyword is not specified. However for items that should be inverted then the value back should be used. To disable culling, the value disable or none should be used. Only one cull instruction can be set for the shader.</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.2.1"></a>3.2.1 cull front</b><br>
+		The front or &quot;outside&quot; of the polygon is not drawn in the world. This is the default value. It is used if the keyword &quot;<b>cull</b>&quot; appears in the content instructions without a <b>&lt;side&gt;</b> value or if the keyword cull does not appear at all in the shader.</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.2.2"></a>3.2.2 cull back</b><br>
+		Cull back removes the back or &quot;inside&quot; of a polygon from being drawn in the world.<br>
+		</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.2.3"></a>3.2.3 cull disable, cull none</b><br>
+		Neither side of the polygon is removed. Both sides are drawn in the game. Very useful for making panels or barriers that have no depth, such as grates, screens, metal wire fences and so on and for liquid volumes that the player can see from within. Also used for energy fields, sprites, and weapon effects (e.g.; plasma).</font></p>
+		<p><font size="2" face="Arial"><b>Design Notes: </b>For things like grates and screens, put the texture with the cull none property on one face only. On the other faces, use a non-drawing texture.</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.3"></a>3.3 deformVertexes</b></i></font><font size="2" face="Arial"><br>
+		This function performs a general deformation on the surface's vertexes, changing the actual shape of the surface before drawing the shader passes. You can stack multiple deformVertexes commands to modify positions in more complex ways, making an object move in two dimensions, for instance.</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.3.1"></a>3.3.1 deformVertexes wave &lt;div&gt; &lt;func&gt; &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; &lt;freq&gt;</b><br>
+		Designed for water surfaces, modifying the values differently at each point. It accepts the standard wave functions of the type <b>sin</b>, <b>triangle</b>, <b>square</b>, <b>sawtooth</b> or <b>inversesawtooth</b>. The &quot;div&quot; parameter is used to control the wave &quot;spread&quot; - a value equal to the tessSize of the surface is a good default value (tessSize is subdivision size, in game units, used for the shader when seen in the game world) .</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.3.2"></a>3.3.2 deformVertexes normal &lt;div&gt; &lt;func&gt; &lt;base&gt; &lt;amplitude ~0.1-~0.5&gt; &lt;frequency ~1.0-~4.0&gt;</b><br>
+		This deformation affects the normals of a vertex without actually moving it, which will effect later shader options like lighting and especially environment mapping. If the shader stages don't use normals in any of their calculations, there will be no visible effect.</font></p>
+		<p><font size="2" face="Arial">Design Notes: Putting values of 0.1 t o 0.5 in Amplitude and 1.0 to 4.0 in the Frequency can produce some satisfying results. Some things that have been done with it: A small fluttering bat, falling leaves, rain, flags.</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.3.3"></a>3.3.3 deformVertexes bulge &lt;bulgeWidth&gt; &lt;bulgeHeight&gt; &lt;bulgeSpeed&gt;</b><br>
+		This forces a bulge to move along the given s and t directions. Designed for use on curved pipes.</font></p>
+		<p><font size="2" face="Arial"><b>Specific parameter definitions for deform keywords:</b><br>
+		<b>&lt;div&gt;</b> This is roughly defined as the size of the waves that occur. It is measured in game units. Smaller values create a greater density of smaller wave forms occurring in a given area. Larger values create a lesser density of waves, or otherwise put, the appearance of larger waves. To look correct this value should closely correspond to the value (in pixels) set for tessSize (tessellation size) of the texture. A value of 100.0 is a good default value (which means your tessSize should be close to that for things to look &quot;wavelike&quot;).</font></p>
+		<p><font size="2" face="Arial"><b>&lt;func&gt;</b> This is the type of wave form being created. Sin stands for sine wave, a regular smoothly flowing wave. Triangle is a wave with a sharp ascent and a sharp decay. It will make a choppy looking wave forms. A square wave is simply on or off for the period of the frequency with no in between. The sawtooth wave has the ascent of a triangle wave, but has the decay cut off sharply like a square wave. An inversesawtooth wave reverses this.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;base&gt;</b> This is the distance, in game units that the apparent surface of the texture is displaced from the actual surface of the brush as placed in the editor. A positive value appears above the brush surface. A negative value appears below the brush surface. An example of this is the Quad effect, which essentially is a shell with a positive base value to stand it away from the model surface and a 0 (zero) value for amplitude.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;amplitude&gt;</b> The distance that the deformation moves away from the base value. See Wave Forms in the introduction for a description of amplitude.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;phase&gt;</b> See Wave Forms in the introduction for a description of phase)</font></p>
+		<p><font size="2" face="Arial"><b>&lt;frequency&gt;</b> See Wave Forms in the introduction for a description of frequency)</font></p>
+		<p><font size="2" face="Arial"><b>Design Note: </b>The div and amplitude parameters, when used in conjunction with liquid volumes like water should take into consideration how much the water will be moving. A large ocean area would have have massive swells (big div values) that rose and fell dramatically (big amplitude values). While a small, quiet pool may move very little.</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.3.4"></a>3.3.4 deformVertexes move &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;func&gt; &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; &lt;freq&gt;</b><br>
+		This keyword is used to make a brush, curve patch or md3 model appear to move together as a unit. The &lt;x&gt; &lt;y&gt; and &lt;z&gt; values are the distance and direction in game units the object appears to move relative to it's point of origin in the map.</font></p>
+		<p><font size="2" face="Arial">The &lt;func&gt; &lt;base&gt; &lt;amplitude&gt; &lt;phase&gt; and &lt;freq&gt; values are the same as found in other wave form manipulations.</font></p>
+		<p><font size="2" face="Arial">The product of the function modifies the values x, y, and z. Therefore, if you have an amplitude of 5 and an x value of 2, the object will travel 10 units from its point of origin along the x axis. This results in a total of 20 units of motion along the x axis, since the amplitude is the variation both above and below the base.</font></p>
+		<p><font size="2" face="Arial">It must be noted that an object made with this shader does not actually change position, it only appears to.</font></p>
+		<p><font size="2" face="Arial"><b>Design Note:</b> If an object is made up of surfaces with different shaders, all must have matching deformVertexes move values or the object will appear to tear itself apart.</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.3.5"></a>3.3.5 DeformVertexes autosprite</b><br>
+		This function can be used to make any given triangle quad (pair of triangles that form a square rectangle) automatically behave like a sprite without having to make it a separate entity. This means that the &quot;sprite&quot; on which the texture is placed will rotate to always appear at right angles to the player's view as a sprite would. Any four-sided brush side, flat patch, or pair of triangles in an .md3 model can have the <b>autosprite</b> effect on it. <b>The brush face containing a texture with this shader keyword must be square.</b></font></p>
+		<p><font size="2" face="Arial"><b>Design Note: </b>This is best used on objects that would appear the same regardless of viewing angle. An example might be a glowing light flare.<br>
+		</font></p>
+		<p><font size="2" face="Arial"><b><a name="3.3.6"></a>3.3.6 DeformVertexes autosprite2</b><br>
+		Is a slightly modified &quot;sprite&quot; that only rotates around the middle of its longest axis. This allows you to make a pillar of fire that you can walk around, or an energy beam stretched across the room.<br>
+		</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.4"></a>3.4 fogparms &lt;red value&gt; &lt;green value&gt; &lt;blue value&gt; &lt;distance to Opaque&gt;</b></i></font><font size="2" face="Arial"><br>
+		Note: you must also specify &quot;surfaceparm fog&quot; to cause q3map to identify the surfaces inside the volume. Fogparms only describes how to render the fog on the surfaces.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;red value&gt; &lt;green value&gt; &lt;blue value&gt;</b> These are normalized values. A good computer art program should give you the RGB values for a color. To obtain the values that define fog color for Quake III Arena , divide the desired color's Red, Green and Blue values by 255 to obtain three normalized numbers within the 0.0 to 1.0 range.</font></p>
+		<p><font face="Arial" size="2"><b>&lt;distance to opaque&gt;</b> This is the distance, in game units, until the fog becomes totally opaque, as measured from the point of view of the observer. By making the height of the fog brush shorter than the distance to opaque , the apparent density of the fog can be reduced (because it never reaches the depth at which full opacity occurs).. </font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li type="disc"><font size="2" face="Arial">The fog volume can only have one surface visible (from outside the fog).<br>
+							</font>
+							<li type="disc"><font size="2" face="Arial">Fog must be made of one brush. It cannot be made of adjacent brushes.<br>
+							</font>
+							<li type="disc"><font size="2" face="Arial">Fog brushes must be axial. This means that only square or rectangular brushes may contain fog, and those must have their edges drawn along the axes of the map grid (all 90 degree angles).<br>
+							</font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial" size="2"><b>Design Notes:</b> </font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li type="disc"><font size="2" face="Arial">If a water texture contains a fog parameter, it must be treated as if it were a fog texture when in use.<br>
+							</font>
+							<li type="disc"><font size="2" face="Arial">If a room is to be filled completely with a fog volume, it can only be entered through one surface (and still have the fog function correctly).<br>
+							</font>
+							<li type="disc"><font size="2" face="Arial">Additional shader passes may be placed on a fog brush, as with other brushes.<br>
+							</font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.5"></a>3.5 nopicmip</b></i></font><font size="2" face="Arial"><br>
+		This causes the texture to ignore user-set values for the <b>r_picmip</b> cvar command. The image will always be high resolution. Example: Used to keep images and text in the heads up display from blurring when user optimizes the game graphics.</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.6"></a>3.6 nomipmap: </b></i></font><font size="2" face="Arial"><br>
+		This implies nopicmip, but also prevents the generation of any lower resolution mipmaps for use by the 3d card. This will cause the texture to alias when it gets smaller, but there are some cases where you would rather have this than a blurry image. Sometimes thin slivers of triangles force things to very low mipmap levels, which leave a few constant pixels on otherwise scrolling special effects.</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.7"></a>3.7 polygonOffset</b></i></font><font size="2" face="Arial"><br>
+		Surfaces rendered with the <b>polygonOffset</b> keyword are rendered slightly off the polygon's surface. This is typically used for wall markings and &quot;decals.&quot; The distance between the offset and the polygon is fixed. It is not a variable in Quake III Arena.</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.8"></a>3.8 portal</b></i></font><font size="2" face="Arial"><br>
+		Specifies that this texture is the surface for a portal or mirror. In the game map, a portal entity must be placed directly in front of the texture (within 64 game units). All this does is set &quot;sort portal&quot;, so it isn't needed if you specify that explicitly.</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="3.9"></a>3.9 sort &lt;value&gt;</b></i></font><font size="2" face="Arial"><br>
+		Use this keyword to fine-tune the depth sorting of shaders as they are compared against other shaders in the game world. The basic concept is that if there is a question or a problem with shaders drawing in the wrong order against each other, this allows the designer to create a hierarchy of which shader draws in what order.</font></p>
+		<p><font size="2" face="Arial">The default behavior is to put all blended shaders in sort &quot;additive&quot; and all other shaders in sort &quot;opaque&quot;, so you only need to specify this when you are trying to work around a sorting problem with multiple transparent surfaces in a scene.</font></p>
+		<p><font size="2" face="Arial">The value here can be either a numerical value or one of the keywords in the following list (listed in order of ascending priority):</font></p>
+		<p><font size="2"><b>
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<font size="2" face="Arial"><b>portal (1):</b> This surface is a portal, it draws over every other shader seen inside the portal, but before anything in the main view.</font><font face="Arial" size="2"> </font>
+							<p><font size="2" face="Arial"><b>Sky (2): </b>Typically, the sky is the farthest surface in the game world. Drawing this after other opaque surfaces can be an optimization on some cards. This currently has the wrong value for this purpose, so it doesn't do much of anything.</font></p>
+							<p><font size="2" face="Arial"><b>Opaque (3): </b>This surface is opaque (rarely needed since this is the default with no blendfunc)</font></p>
+							<p><font size="2" face="Arial"><b>Banner (6) : </b>Transparent, but very close to walls.</font></p>
+							<p><font size="2" face="Arial"><b>Underwater (8): </b>Draw behind normal transparent surfaces.</font></p>
+							<p><font size="2" face="Arial"><b>Additive (9): </b>normal transparent surface (default for shaders with blendfuncs)</font></p>
+							<p><font size="2" face="Arial"><b>nearest (16): </b>this shader should always sort closest to the viewer, e.g. muzzle flashes and blend blobs</font>
+						</ul>
+					</td>
+				</tr>
+			</table>
+			</b></font></p>
+			<p><font size="2"><b>&nbsp;</b></font></p>
+			<p><font size="2"><b>
+			<hr>
+			</b></font></p>
+			<center>
+				<p><a href="section2.htm#2"><font size="2" face="Arial"><b>Previous</b></font></a><font size="2" face="Arial"><b>&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section4.htm#4">Next</a></b></font></p>
+			</center>
+			<p><font size="2"><b>
+			<hr>
+			</b></font></p>
+			<p><font size="2" face="Arial"><b><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+			Revision 12 December 23, 1999<br>
+			<br>
+			</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><br>
+			HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+
+			</b><a href="http://www.heppler.com/shader/">http://www.heppler.com/shader/</a></b></font>
+		</body>
+
+	</html>

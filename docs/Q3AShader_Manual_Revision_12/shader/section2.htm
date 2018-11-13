@@ -1,0 +1,157 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake III Arena Shader Manual - Section 2 - Introduction</title>
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<font size="2" face="Arial"><a name="2"></a>Quake III Arena Shader Manual Revision #12<br>
+			By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a><br>
+			(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)<br>
+			</font></center>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section1.htm#1"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section3.htm#3">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="4" face="Arial"><b>2. Introduction</b></font><font size="2" face="Arial"><br>
+		The graphic engine for Quake III Arena has taken a step forward by putting much more direct control over the surface qualities of textures into the hands of designers and artists. In writing this manual, we have tried to define the concepts and tools that are used to modify textures in a way that, it is hoped, will be graspable by users who already have basic knowledge of computer graphics but are not necessarily computer programmers. It is not a tutorial, nor was it intended to be one.<br>
+		</font></p>
+		<p><font face="Arial"><a name="2.1"></a><i><b>2.1 What is a Shader?</b></i></font><font size="2" face="Arial"><br>
+		Shaders are short text scripts that define the properties of a surface as it appears and functions in a game world (or compatible editing tool). By convention, the documents that contain these scripts usually has the same name as the texture set which contains the textures being modified (e.g; base, hell, castle, etc,). Several specific script documents have also been created to handle special cases, like liquids, sky and special effects.<br>
+		<br>
+		For Quake III Arena, Shader scripts are located in quake3/baseq3/scripts.<br>
+		<br>
+		A Quake III Arena shader file consists of a series of surface attribute and rendering instructions formatted within braces (&quot;{&quot; and &quot;}&quot;). Below you can see a simple example of syntax and format for a single process, including the Q3MAP keywords or &quot;Surface Parameters&quot;, which follow the first bracket and a single bracketed &quot;stage&quot;:<br>
+		</font></p>
+		<p><font size="2">
+		<table bgcolor="black" border="0" cellpadding="0" cellspacing="2" width="80%">
+			<tbody>
+				<tr>
+					<td>
+						<table bgcolor="white" border="0" cellpadding="5" cellspacing="1" width="100%">
+							<tbody>
+								<tr>
+									<td nowrap><font face="Arial">textures/liquids/lava<br>
+										{<br>
+										</font>
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td nowrap>
+														<ul>
+															<font face="Arial">deformVertexes wave sin 0 3 0 0.1<br>
+															tessSize 64<br>
+															{<br>
+															map textures/common/lava.tga<br>
+															}<br>
+															</font>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<p><font face="Arial">}<br>
+										</font></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial"><a name="2.2"></a><i><b>2.2 Shader Name &amp; File Conventions</b></i></font><font size="2" face="Arial"><br>
+		The first line is the shader name. Shader names can be up to 63 characters long. The names are often a mirror of a pathname to a .tga file without the extension or basedir (/quake3/baseq3 in our case), but they do not need to be.<br>
+		Shaders that are only going to be referenced by the game code, not modeling tools, often are just a single world, like &quot;projectionShadow&quot; or &quot;viewBlood&quot;.<br>
+		Shaders that are used on characters or other polygon models need to mirror a .tga file, which allows the modelers to build with normal textures, then have the special effects show up when the model is loaded into the game.<br>
+		Shaders that are placed on surfaces in the map editor commonly mirror a .tga file, but the &quot;qer_editorimage&quot; shader parameter can force the editor to use an arbitrary image for display.</font></p>
+		<p><font size="2" face="Arial">Shader pathnames have a case sensitivity issue - on windows, they aren't case sensitive, but on unix they are. Try to always use lowercase for filenames, and always use forward slashes &quot;/&quot; for directory separators.<br>
+		</font></p>
+		<p><font face="Arial"><a name="2.3"></a><i><b>2.3 Shader Types</b></i></font><font size="2" face="Arial"><br>
+		The keywords that affect shaders are divided into two classes. The first class of keywords are global parameters. Some global parameters ( &quot;<b>surfaceparms</b>.&quot; And all &quot;<b>q3map_</b>&quot; <b>keywords</b>) are processed by Q3MAP, and change physical attributes of the surface that uses the shader. These attributes can affect the player. To see changes in these parameters one must re-bsp the map.</font></p>
+		<p><font size="2" face="Arial">The remaining global keywords, and all Stage Specific Keywords are processed by the renderer. They are appearance changes only and have no effect on game play or game mechanics. Changes to any of these attributes will take effect as soon as the game goes to another level or vid_restarts (type command <b>vid_restart</b> in the game console).</font></p>
+		<p><font size="2" face="Arial">Shader keywords are not case sensitive.</font></p>
+		<p><font size="2" face="Arial"><b>IMPORTANT NOTE:</b> some of the shader commands may be order dependent, so it's good practice to place all global shader commands (keywords defined in this section) at the very beginning of the shader and to place shader stages at the end (see various examples).<br>
+		</font></p>
+		<p><font face="Arial"><a name="2.4"></a><i><b>2.4 Key Concepts</b></i></font><font size="2" face="Arial"><br>
+		Ideally, a designer or artist who is manipulating textures with shader files has a basic understanding of wave forms and knows about mixing colored light (high school physics sort of stuff). If not, there are some concepts you need to have a grasp on to make shaders work for you.</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.1"></a>2.4.1 Surface Effects vs. Content Effects vs. Deformation Effects</b><br>
+		Shaders not only modify the visible aspect of textures on a geometry brush, curve, patch or mesh model, but they can also have an effect on both the content, &quot;shape,&quot; and apparent movement of those things. A surface effect does nothing to modify the shape or content of the brush. Surface effects include glows, transparencies and rgb (red, green, blue) value changes. Content shaders affect the way the brush operates in the game world. Examples include water, fog, nonsolid, and structural. Deformation effects change the actual shape of the affected brush or curve, and may make it appear to move.</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.2"></a>2.4.2 Power Has a Price</b><br>
+		The shader script gives the designer, artist and programmer a great deal of easily accessible power over the appearance of and potential special effects that may be applied to surfaces in the game world. But it is power that comes with a price tag attached, and the cost is measured in performance speed. Each shader phase that affects the appearance of a texture causes the Q3:A engine to make another processing pass and redraw the world. Think of it as if you were adding all the shader-affected triangles to the total r_speed count for each stage in the shader script. A shader-manipulated texture that is seen through another shader manipulated texture (e.g.; a light in fog) has the effect of adding the total number of passes together for the affected triangles. A light that required two passes seen through a fog that requires one pass will be treated as having to redraw that part of the world three times.<br>
+		</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.3"></a>2.4.3 RGB Color</b><br>
+		RGB means &quot;Red, Green, Blue.&quot; Mixing red, green and blue light in differing intensities creates the colors in computers and television monitors. This is called additive color (as opposed to the mixing of pigments in paint or colored ink in the printing process, which is subtractive color). In Quake III Arena and most higher-end computer art programs (and the color selector in Windows), the intensities of the individual Red, Green and Blue components are expressed as number values. When mixed together on a screen, number values of equal intensity in each component color create a completely neutral (gray) color. The lower the number value (towards 0), the darker the shade. The higher the value, the lighter the shade or the more saturated the color until it reaches a maximum value of 255 (in the art programs). All colors possible on the computer can be expressed as a formula of three numbers. The value for complete black is 0 0 0. The value for complete white is 255 255 255. However, the Quake III Arena graphics engine requires that the color range be &quot;normalized&quot; into a range between 0.0 and 1.0.</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.4"></a>2.4.4 Normalization: a Scale of 0 to 1</b><br>
+		The mathematics in Quake III Arena use a scale of 0.0 to 1.0 instead of 0 to 255. Most computer art programs that can express RGB values as numbers use the 0 to 255 scale. To convert numbers, divide each of the art program's values for the component colors by 255. The resulting three values are your Quake III Arena formula for that color component. The same holds true for texture coordinates.<br>
+		</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.5"></a>2.4.5 Texture Sizes</b><br>
+		TGA texture files are measured in pixels (picture elements). Textures are measured in powers of 2, with 16 x16 pixels being the smallest (typically) texture in use. Most will be larger. Textures need not be square, so long as both dimensions are powers of 2. Examples include: 32x256, 16x32, 128x16.</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.6"></a>2.4.6 Color Math</b><br>
+		In Quake III Arena , colors are changed by mathematical equations worked on the textures by way of the scripts or &quot;programlets&quot; in the shader file. An equation that adds to or multiplies the number values in a texture causes it to become darker. Equations that subtract from or modulate number values in a texture cause it to become lighter. Either equation can change the hue and saturation of a color.<br>
+		</font></p>
+		<p><font face="Arial" size="2"><b><a name="2.4.7"></a>2.4.7 Measurements</b><br>
+		The measurements used in the shaders are in either game units, color units, or texture units. </font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li><font size="2" face="Arial"><b>Game unit:</b> A game unit is used by deformations to specify sizes relative to the world. Game units are the same scale we have had since way back in the Wolfenstein days - 8 units equals one foot. The default texture scale used by the Q3Radiant map editor results in two texels for each game unit, but that can be freely changed.<br>
+							</font>
+							<li><font size="2" face="Arial"><b>Color units: </b>Colors scale the values generated by the texture units to produce lighting effects. A value of 0.0 will be completely black, and a value of 1.0 will leave the texture unchanged. Colors are sometimes specified with a single value to be used across all red, green, and blue channels, or sometimes as separate values for each channel.<br>
+							</font>
+							<li><font size="2" face="Arial"><b>Texture units: </b>This is the normalized (see above) dimensions of the original texture image (or a previously modified texture at a given stage in the shader pipeline). A full texture, regardless of its original size in texels, has a normalized measurement of 1.0 x 1.0. For normal repeating textures, it is possible to have value greater than 1.0 or less than 0.0, resulting in repeating of the texture. The coordinates are usually assigned by the level editor or modeling tools, but you still need to be aware of this for scrolling or turbulent movement of the texture at runtime.</font><font face="Arial"> </font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font size="2" face="Arial"><b><a name="2.4.8"></a>2.4.8 Waveform Functions</b><br>
+		Many of the shader functions use waveforms to modulate measurements over time. Where appropriate, additional information is provided with wave modulated keyword functions to describe the effect of a particular waveform on that process. Currently there are five waveforms in use in Q3A shaders:</font></p>
+		<p><font size="2" face="Arial"><b>Sin:</b> Sin stands for sine wave, a regular smoothly flowing wave ranging from -1 to 1.<br>
+		<b>Triangle:</b> Triangle is a wave with a sharp ascent and a sharp decay, ranging from 0 to 1. It will make a choppy looking wave forms.<br>
+		<b>Square: </b>A square wave simply switches from -1 to 1 with no in-between.<br>
+		<b>Sawtooth:</b> In the sawtooth wave, the ascent is like a triangle wave from 0 to 1, but the decay cuts off sharply back to 0.<br>
+		<b>Inversesawtooth:</b> This is the reverse of the sawtooth ... instant ascent to the peak value (1), then a triangle wave descent to the valley value (0). The phase on this goes from 1.0 to 0.0 instead of 0.0 to 1.0. This wave is particularly useful for additive cross-fades.</font></p>
+		<p><font size="2" face="Arial">Waveforms all have the following properties:</font></p>
+		<p><font size="2" face="Arial"><b>&lt;base&gt;</b> Where the wave form begins. Amplitude is measured from this base value.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;amplitude&gt;</b> This is the height of the wave created, measured from the base. You will probably need to test and tweak this value to get it correct for each new shader stage. The greater the amplitude, the higher the wave peaks and the deeper the valleys.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;phase&gt; </b>This is a normalized value between 0.0 and 1.0. Changing phase to a non-zero value affects the point on the wave at which the wave form initially begins to be plotted. Example: In Sin or Triangle wave, a phase of 0.25 means it begins one fourth (25%) of the way along the curve, or more simply put, it begins at the peak of the wave. A phase of 0.5 would begin at the point the wave re-crosses the base line. A phase of 0.75 would be at the lowest point of the valley. If only one wave form is being used in a shader, a phase shift will probably not be noticed and phase should have a value of zero (0). However, including two or more stages of the same process in a single shader, but with the phases shifted can be used to create interesting visual effects. Example: using rgbGen in two stages with different colors and a 0.5 difference in phase would cause the manipulated texture to modulate between two distinct colors. Phase changes can also be used when you have two uses of the same effect near each other, and you don't want them to be synchronized. You would write a separate shader for each, changing only the phase value.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;freq&gt;</b> Frequency. This value is expressed as repetitions or cycles of the wave per second. A value of 1 would cycle once per second. A value of 10 would cycle 10 times per second. A value of 0.1 would cycle once every 10 seconds.</font></p>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section1.htm#1"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section3.htm#3">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="2" face="Arial"><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+		Revision 12 December 23, 1999<br>
+		<br>
+		</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><br>
+		HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+
+		</b><a href="http://www.heppler.com/shader/">http://www.heppler.com/shader/</a></font></p>
+		<p><font size="2" face="Arial"><br>
+		<b><br>
+		</b></font>
+	</body>
+
+</html>

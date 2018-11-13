@@ -1,0 +1,113 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake III Arena Shader Manual - Section 5 - Editor specific shader instructions</title>
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<font size="2" face="Arial"><a name="5"></a>Quake III Arena Shader Manual Revision #12<br>
+			By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a><br>
+			(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)</font></center>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section4.htm#4"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section6.htm#6">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="4" face="Arial"><b>5. Editor specific shader instructions</b></font><font size="2" face="Arial"><br>
+		These instructions only affect the texture when it is seen in the Q3Radiant editor. They should be grouped with the surface parameters but ahead of them in sequence.</font></p>
+		<p><font face="Arial"><i><b><a name="5.1"></a>5.1 qer_editorimage &lt; texture path/texturename&gt;</b></i></font><font size="2" face="Arial"><br>
+		This keyword creates a shader name in memory, but in the editor, it displays the TGA art image specified in qer_editorimage (in the example below this is textures/eerie/lavahell.tga).</font></p>
+		<p><font size="2" face="Arial">The editor maps a texture using the size attributes of the TGA file used for the editor image. When that editor image represents a shader, any texture used in any of the shader stages will be scaled up or down to the dimensions of the editor image. If a 128x128 pixel image is used to represent the shader in the editor, then a 256x256 image used in a later stage will be shrunk to fit. A 64x64 image would be stretched to fit. Be sure to check this on bouncy, acceleration, and power-up pads placed on surfaces other than 256 x 256. Use <b>tcMod scale</b> to change the size of the stretched texture. Remember that <b>tcMod scale</b> 0.5 0.5 will double your image, while <b>tcMod scale</b> 2 2 will halve it.</font></p>
+		<p><font size="2" face="Arial"><b>Design Notes:</b> The base_light and gothic_light shaders contain numerous uses of this. It can be very useful for making different light styles (mostly to change the light brightnesses) without having to create a new piece of TGA art for each new shader.</font></p>
+		<p><font size="2">
+		<table bgcolor="black" border="0" cellpadding="0" cellspacing="2" width="80%">
+			<tbody>
+				<tr>
+					<td>
+						<table bgcolor="white" border="0" cellpadding="5" cellspacing="1" width="100%">
+							<tbody>
+								<tr>
+									<td nowrap><font face="Arial">textures/liquids/lavahell2 //path and name of new texture<br>
+										{<br>
+										</font>
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td nowrap>
+														<ul>
+															<font face="Arial">qer_editorimage textures/eerie/lavahell.tga<br>
+															//based on this<br>
+															qer_nocarve<br>
+															//cannot be cut by CSG subtract<br>
+															surfaceparm noimpact<br>
+															//projectiles do not hit it<br>
+															surfaceparm lava<br>
+															//has the game properties of lava<br>
+															surfaceparm nolightmap<br>
+															//environment lighting does not affect<br>
+															q3map_surfacelight 3000<br>
+															//light is emitted<br>
+															tessSize 256<br>
+															//relatively large triangles<br>
+															cull disable<br>
+															//no sides are removed<br>
+															deformVertexes wave 100 sin 5 5 .5 0.02<br>
+															fogparms 0.8519142 0.309723 0.0 128 128<br>
+															{<br>
+															map textures/eerie/lavahell.tga<br>
+															//base texture artwork<br>
+															tcMod turb .25 0.2 1 0.02<br>
+															//texture is subjected to turbulence<br>
+															tcMod scroll 0.1 0.1<br>
+															//the turbulence is scrolled<br>
+															}<br>
+															</font>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<p><font face="Arial">}</font></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial"><i><b><a name="5.2"></a>5.2 qer_nocarve</b></i></font><font size="2" face="Arial"><br>
+		A brush marked with this instruction will not be affected by CSG subtract functions. It is especially useful for water and fog textures.<br>
+		</font></p>
+		<p><font face="Arial"><i><b><a name="5.3"></a>5.3 qer_trans &lt;value&gt;</b></i></font><font size="2" face="Arial"><br>
+		This parameter defines the percentage of transparency that a brush will have when seen in the editor (no effect on game rendering at all). It can have a positive value between 0 and 1. The higher the value, the less transparent the texture. Example: qer_trans 0.2 means the brush is 20% opaque and nearly invisible.</font></p>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section4.htm#4"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section6.htm#6">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font face="Arial" size="2"><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+		Revision 12 December 23, 1999<br>
+		<br>
+		</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><br>
+		HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+
+		</b><a href="http://www.heppler.com/shader/">http://www.heppler.com/shader/</a></font>
+	</body>
+
+</html>

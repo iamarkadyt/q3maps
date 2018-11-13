@@ -1,0 +1,129 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake III Arena Shader Manual - Section 9 - Creating New Textures</title>
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<font size="2" face="Arial"><a name="9"></a>Quake III Arena Shader Manual Revision #12<br>
+			By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a><br>
+			(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)<br>
+			</font></center>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section8.htm#8"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="4" face="Arial"><b>9. Creating New Textures</b></font><font size="2" face="Arial"><br>
+		If you are familiar with the required tools, creating new assets for use in Quake III Arena is not particularly difficult. As a general rule, you should create new directories for each map with names different from the names used by id. If you are making a map that will be called &quot;H4x0r_D00M&quot;, every directory containing new assets for that map should be titled H4x0r_D00M. This is to try and avoid asset directories overwriting each other as the editor and the game load in assets.</font></p>
+		<p><font face="Arial"><i><b><a name="9.1"></a>9.1 Tools Needed</b></i></font><font size="2" face="Arial"><br>
+		Any combination of graphic programs and plug-ins that can output a 24 bit MS windows compatible Targa (.tga) or JPEG (.jpg) graphic file. If you plan to make textures that will have an alpha channel component (a 4th 8-bit greyscale channel that is used by the shaders to further manipulate the art), you must have a program that can create 32-bit art with that fourth channel.</font></p>
+		<p><font size="2" face="Arial">Adobe Photoshop has the ability to easily create alpha channels. Paint Shop Pro from JASC (v5.0+) can also make an alpha channel by creating a mask and naming it &quot;alpha&quot;.</font></p>
+		<p><font size="2" face="Arial">Generally speaking, regardless of the program used, we found it best to do most of the art manipulation of the alpha channel in a separate layer or file and then paste it into the alpha channel before saving.</font></p>
+		<p><font face="Arial"><i><b><a name="9.2"></a>9.2 Setting up Files</b></i></font><font size="2" face="Arial"><br>
+		The editor and the game program look for assets to be located along the paths set up in your project file. Start by creating a directory for you new textures by creating file folders to make a directory path as follows: quake3\baseq3\textures\[mymapname]</font></p>
+		<p><font size="2" face="Arial">The installation of Q3Radiant will create a text document called &quot;shaderlist.txt&quot; in the following path:</font></p>
+		<ul>
+			<p><font face="Arial">quake3\baseq3\scripts\shaderlist.txt</font></p>
+		</ul>
+		<p><font size="2" face="Arial">Q3Radiant will use the contents of this script to grab your new textures for inclusion in the game. The contents of shaderlist.txt document will contain a listing of all the shader documents that were used by id Software to create Quake III Arena.</font></p>
+		<p><font size="2" face="Arial">Since you will obviously want to create your own shaders, you need to put them in separate folders and create a new shader script for them.</font></p>
+		<p><font size="2" face="Arial">If you plan to work on several maps at once and want to distinguish between textures used in each map, simply add additional map names here. For map and mod makers, we STRONGLY recommend that any new shader scripts created use the name of the map or mod in the shader file name. We know we can't avoid every incident of files overwriting each other, but we certainly can advise you how to try.</font></p>
+		<p><font size="2" face="Arial">Now, in the scripts directory that you just created, create another text file and call it:</font></p>
+		<ul>
+			<p><font face="Arial">[mymapname].shader</font></p>
+		</ul>
+		<p><font size="2" face="Arial">This file will contain the shader scripts you write to modify a particular texture.</font></p>
+		<p><font face="Arial"><i><b><a name="9.3"></a>9.3 Rules and Guidelines</b></i></font><font size="2" face="Arial"><br>
+		</font></p>
+		<p><font face="Arial" size="2"><b><a name="9.3.1"></a>9.3.1 Rules</b><br>
+		Follow these rules when creating textures for the Quake III Arena engine: </font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li><font size="2" face="Arial">Save your textures into your new [map name] directories.</font><font face="Arial"> </font>
+							<li><font size="2" face="Arial">Don't use the same names that id used for textures. It will cause problems.</font><font face="Arial"> </font>
+							<li><font size="2" face="Arial">For best quality, save textures without an alpha channel as 24 bit TARGA files. Using JPEG files can save memory space, but at the risk of losing detail and depth in the texture. JPEG files cannot be used for textures requiring an alpha channel.</font><font face="Arial"> </font>
+							<li><font size="2" face="Arial">Textures containing an alpha channel must be saved as 32 bit TARGA files.</font><font face="Arial"> </font>
+							<li><font size="2" face="Arial">If a new texture requires no further manipulation, it does not need a shader script.</font><font face="Arial"> </font>
+							<li><font size="2" face="Arial">Size textures in powers of 2. Example: 8x8, 16x16, 32x32, 64x64 pixels and so on.</font><font face="Arial"> </font>
+							<li><font size="2" face="Arial">Textures don't need to be square. A 32x256 pixel texture is perfectly acceptable.</font><font face="Arial"> </font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial" size="2"><b><a name="9.3.2"></a>9.3.2 Guidelines</b><br>
+		The following are some things the id designers learned about textures. </font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<li><font size="2" face="Arial">Create textures in &quot;suites&quot; built around one or two large textures with a number of much smaller supporting detail or accent textures.<br>
+							</font>
+							<li><font size="2" face="Arial">Very large textures are possible, but some video cards compress textures larger than 256x256 pixels.<br>
+							</font>
+							<li><font size="2" face="Arial">Textures are grouped alphabetically by name in the texture display window, so you may want to give suites of textures similar names.<br>
+							</font>
+							<li><font size="2" face="Arial">Use the shader function qe3_editorimage to conserve memory when making multiple versions of a single texture (as in the case of a glowing texture with several light values).<br>
+							</font>
+							<li><font size="2" face="Arial">Unless you are creating special effects or textures designed to draw the player's eye to a specific spot, muted, middle value colors work best with the game engine.<br>
+							</font>
+							<li><font size="2" face="Arial">Extremely busy (a lot of fussy detail) textures can break up or form visually unpleasant patterns when seen at distances.<br>
+							</font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial"><i><b><a name="9.4"></a>9.4 Making the .pk3 File</b></i></font><font size="2" face="Arial"><br>
+		When you go to distribute your creation to the gaming world, you need to put your newly created map, textures, bot area files, and shader documents into an archive format called a &quot;pk3&quot; file. You do not need to include the shaderlist.txt file, since that is only used by the editor. You will need to keep the paths to the various assets the same. So your paths should be something like this:</font></p>
+		<ul>
+			<p><font size="2" face="Arial">Textures: baseq3/textures/[mymapnamefolder]<br>
+			Bsp &amp; aas: baseq3/maps/mymapname.bsp , mymapname.aas<br>
+			Shader scripts: baseq3/scripts/mymapname.shader</font></p>
+		</ul>
+		<p><font size="2" face="Arial">You need to use an archiving program call Winzip to make the pk3 file. Get Winzip from <a href="http://www.winzip.com/winzip/winzip.htm" target="_blank">http://www.winzip.com/winzip/winzip.htm</a></font></p>
+		<p><font size="2" face="Arial">Make a zip archive called mymapname.zip</font></p>
+		<p><font size="2" face="Arial">Zip all the required assets into a zip archive file (Quake III Arena DOES support compressed pk3 files).</font></p>
+		<p><font size="2" face="Arial">Rename the zip archive to mymapname.pk3</font></p>
+		<p><font size="2" face="Arial">Put it where the Quake III Arena community can find it.</font></p>
+		<p><font size="2" face="Arial">&nbsp;</font></p>
+		<p><font size="2" face="Arial">&nbsp;</font></p>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section8.htm#8"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font face="Arial" size="2"><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+		Revision 12 December 23, 1999<br>
+		<br>
+		</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><br>
+		HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+
+		</b><a href="http://www.heppler.com/shader/">http://www.heppler.com/shader/</a></font>
+	</body>
+
+</html>

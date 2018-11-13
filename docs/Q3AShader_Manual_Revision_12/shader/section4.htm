@@ -1,0 +1,197 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Quake III Arena Shader Manual - Section 4 - Q3MAP Specific Shader Keywords</title>
+		<style type="text/css"><!--
+			a { color: #880002; text-decoration: none }
+			a:hover { color: #ff0003; text-decoration: underline }-->
+		</style>
+	</head>
+
+	<body bgcolor="white">
+		<center>
+			<font size="2" face="Arial"><a name="4"></a>Quake III Arena Shader Manual Revision #12<br>
+			By <a href="mailto:paulj@idsoftware.com?subject=Q3A Shader Manual">Paul Jaquays</a> and <a href="mailto:bwh@idsoftware.com?subject=Q3A Shader Manual">Brian Hook</a><br>
+			(with additional material by <a href="http://www.idsoftware.com/" target="_blank">John Carmack, Christian Antkow, Kevin Cloud, &amp; Adrian Carmack</a>)</font></center>
+		<p>
+		<hr>
+		</p>
+		<center>
+			<p><a href="section3.htm#3"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2"> &nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section5.htm#5">Next</a></font></p>
+		</center>
+		<p>
+		<hr>
+		</p>
+		<p><font size="4" face="Arial">4. Q3MAP Specific Shader Keywords</font><font size="2" face="Arial"><br>
+		These keywords change the physical nature of the textures and the brushes that are marked with them. Changing any of these values will require the map to be re-compiled. These are global and affect the entire shader.</font></p>
+		<p><font face="Arial"><i><b><a name="4.1"></a>4.1 tessSize &lt;amount&gt;</b></i></font><font size="2" face="Arial"><br>
+		For consistency's sake, this really should have been called q3map_tessSize. But it wasn't. The tessSize shader controls the tessellation size (how finely a surface is chopped up in to triangles), in game units, of the surface. This is only applicable to solid brushes, not curves, and is generally only used on surfaces that are flagged with the <b>deformVertexes</b> keyword. Abuse of this can create a huge number of triangles. This happens during q3map processing, so maps must be reprocessed for changes to take effect.</font></p>
+		<p><font size="2" face="Arial"><b>Design Note:</b> It can also be used on tesselating surfaces to make sure that tesselations are large, and thus, less costly in terms of triangles created.</font></p>
+		<p><font face="Arial"><i><b><a name="4.2"></a>4.2 q3map_backshader &lt;shadername&gt;</b></i></font><font size="2" face="Arial"><br>
+		This allows a brush to use a different shader when you are inside it looking out. By way of example, this would allow a water brush (or other) surfaces to have a different sort order (see <b>sort</b> above) or appearance when seen from the inside.</font></p>
+		<p><font face="Arial"><i><b><a name="4.3"></a>4.3 q3map_globaltexture</b></i></font><font size="2" face="Arial"><br>
+		Use this shader in the global keyword commands whenever the <b>tcMod scale</b> function is used in one of the later render stages. Many problems with getting shader effects to work across multiple adjacent brushes are a result of the way q3map optimizes texture precision. This option resolves that, but at the expense of some precision of the textures when they are far away from the origin of the map.</font></p>
+		<p><font face="Arial"><i><b><a name="4.4"></a>4.4 q3map_sun &lt;red&gt; &lt;green&gt; &lt;blue&gt; &lt;intensity&gt; &lt;degrees&gt; &lt;elevation&gt;</b></i></font><font size="2" face="Arial"><br>
+		This keyword in a sky shader will create the illusion of light cast into a map by a single, infinitely distance light source (sun, moon, hellish fire, etc.). This is only processed during the lighting phase of q3map.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;red&gt; &lt;green&gt; &lt;blue&gt;</b> Color is described by three normalized rgb values. Color will be normalized to a 0.0 to 1.0 range, so it doesn't matter what range you use.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;intensity&gt;</b> is the brightness of the generated light. A value of 100 is a fairly bright sun. The intensity of the light falls off with angle but not distance.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;degrees&gt;</b> is the angle relative to the directions on the map file. A setting of 0 degrees equals east. 90 is north, 180 is west and 270 is south.</font></p>
+		<p><font size="2" face="Arial"><b>&lt;elevation&gt;</b> is the distance, measured in degrees from the horizon (z value of zero in the map file). An elevation of 0 is sunrise/sunset. An elevation of 90 is noon</font></p>
+		<p><font size="2" face="Arial"><b>DESIGN NOTE:</b> Sky shaders should probably still have a <b>q3map_surfacelight</b> value. The &quot;sun&quot; gives a strong directional light, but doesn't necessarily give the fill light needed to soften and illuminate shadows. Skies with clouds should probably have a weaker <b>q3map_sun</b> value and a higher <b>q3map_surfacelight</b> value. Heavy clouds diffuse light and weaken shadows. The opposite is true of a cloudless or nearly cloudless sky. In such cases, the &quot;sun&quot; or &quot;moon&quot; will cast stronger, shadows that have a greater degree of contrast.<br>
+		</font></p>
+		<p><font size="2" face="Arial"><b>Design Trick: </b>Not certain what color formula you want to use for the sun's light? Try this. Create a light entity. Use the Q3Radiant editor's color selection tools to pick a color. The light's _color key's value will be the normalized RGB formula. Copy it from the value line in the editor (CTRL+c) and paste it into your shader.</font></p>
+		<p><font face="Arial"><i><b><a name="4.5"></a>4.5 q3map_surfaceLight &lt;light value&gt;</b></i></font><font size="2" face="Arial"><br>
+		The texture gives off light equal to the <b>&lt;light value&gt;</b> set for it. The relative surface area of the texture in the world affects the actual amount of light that appears to be radiated. To give off what appears to be the same amount of light, a smaller texture must be significantly brighter than a larger texture. Unless the qer_lightimage keyword is used to select a different source for the texture's light color information, the color of the light will be the averaged color of the texture.</font></p>
+		<p><font face="Arial"><i><b><a name="4.6"></a>4.6 q3map_lightimage &lt; texturepath/texturename&gt;</b></i></font><font size="2" face="Arial"><br>
+		The keyword q3map_lightimage generates lighting from the average color of the TGA image specified by the q3map_lightimage.</font></p>
+		<p><font size="2" face="Arial">The keyword sequence for generating light on a q3map_surfacelight should be ordered as follows:</font></p>
+		<p><font size="2">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<ul>
+							<font face="Arial" size="2">1) <b>q3map_lightimage</b> ; (the texture providing the light and the color of the light)</font><font face="Arial" size="2"> </font>
+							<p><font size="2" face="Arial">2) <b>qer_editorimage</b> ; (the editor-only image used to select the source map for the texture)</font></p>
+							<p><font size="2" face="Arial">3) the average color of the light emitted from the shader is calculated from the <b>lightimage</b>.)<br>
+							</font>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font size="2" face="Arial">The reason <b>q3map_lightimage</b> is specified for the light in the example below, is because the blend map is predominantly yellow, and the designer wanted more yellow light to be emitted from the light.</font></p>
+		<p><font face="Arial" size="2"><b>Example: Taking light from another source texture</b> </font></p>
+		<p><font size="2">
+		<table bgcolor="black" border="0" cellpadding="0" cellspacing="2" width="80%">
+			<tbody>
+				<tr>
+					<td>
+						<table bgcolor="white" border="0" cellpadding="5" cellspacing="1" width="100%">
+							<tbody>
+								<tr>
+									<td nowrap><font face="Arial">textures/eerie/ironcrosslt2_10000<br>
+										{<br>
+										</font>
+										<table border="0" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td nowrap>
+														<ul>
+															<font face="Arial">q3map_lightimage textures/gothic_light/ironcrosslt2.blend.tga<br>
+															// this TGA is the source for the color of the blended light<br>
+															<br>
+															qer_editorimage textures/gothic_light/ironcrosslt2.tga<br>
+															//base TGA (used because the shader is used with several<br>
+															// different light values<br>
+															<br>
+															q3map_surfacelight 10000<br>
+															//emitted light value of 10,000<br>
+															<br>
+															{<br>
+															map $lightmap<br>
+															//source texture is affected by the lightmap<br>
+															rgbGen identity<br>
+															// this command handles the overbright bits created by &quot;sunlight&quot;<br>
+															// in the game<br>
+															}<br>
+															{<br>
+															map textures/gothic_light/ironcrosslt2.tga<br>
+															blendFunc filter<br>
+															rgbGen identity<br>
+															}<br>
+															{<br>
+															map textures/gothic_light/ironcrosslt2.blend.tga<br>
+															blendFunc add<br>
+															}<br>
+															</font>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<p><font face="Arial">}</font></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="4.7"></a>4.7 q3map_lightsubdivide &lt;value&gt;</b></i></font><font size="2" face="Arial"><br>
+		This allows the user to define how large, or small to make the subdivisions (triangles) in a textured surface, particularly aimed at light-emitting textures like skies. It defaults to 120 game units, but can be made larger (256 or 512) for sky boxes or smaller for light surfaces at the bottoms of cracks. This can be a dominant factor in processing time for q3map lighting.</font></p>
+		<p><font face="Arial" size="2"><i><b><a name="4.8"></a>4.8 surfaceparm &lt;parm&gt;</b></i></font><font size="2" face="Arial"><br>
+		All surfaceparm keywords are preceded by the word surfaceparm as follows: <b>surfaceparm fog</b> or <b>surfaceparm noimpact</b>.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.1"></a>4.8.1 alphashadow</b><br>
+		This keyword applied to a texture on a brush, patch or model will cause the lighting phase of the q3map process to use the texture's alpha channel as a mask for casting static shadows in the game world.</font></p>
+		<p><font size="2" face="Arial"><b>Design Note:</b> Alphashadow does not work well with fine line detail on a texture. Fine lines may not cast acceptable shadows. It appears to work best with well-defined silhouettes and wider lines within the texture. Most of our tattered banners use this to cast tattered shadows.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.2"></a>4.8.2 areaportal</b><br>
+		A brush marked with this keyword functions as an area portal, a break in the Q3MAP tree. It is typically placed on a very thin brush placed inside a door entity (but is not a part of that entity). The intent is to block the game from processing surface triangles located behind it when the door is closed. It is also used by the BSPC (bot area file creation compiler) in the same manner as a cluster portal. The brush must touch all the structural brushes surrounding the <b>areaportal</b>.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.3"></a>4.8.3 clusterportal</b><br>
+		A brush marked with this keyword function creates a subdivision of the area file (.aas) used by the bots for navigation. It is typically placed in locations that are natural breaks in a map, such as entrances to halls, doors, tunnels, etc. The intent is keep the bot from having to process the entire map at once. As with the the areaportal parameter, the affected brush must touch all the structural brushes surrounding the <b>areaportal</b>.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.4"></a>4.8.4 donotenter</b><br>
+		Read as &quot;do not enter.&quot; Like clusterportal, this is a bot-only property. A brush marked with donotenter will not affect non-bot players, but bots will not enter it. It should be used only when bots appear to have difficulty navigating around some map features.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.5"></a>4.8.5 flesh</b><br>
+		This will cue different sounds (in a similar manner to metalsteps ) and cause blood to appear instead of bullet impact flashes.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.6"></a>4.8.6 fog</b><br>
+		Fog defines the brush as being a &quot;fog&quot; brush. This is a Q3MAP function that chops and identifies all geometry inside the brush. The General shader keyword fogparms must also be specified to tell how to draw the fog.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.7"></a>4.8.7 lava</b><br>
+		Assigns to the texture the game properties set for lava. This affects both the surface and the content of a brush.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.8"></a>4.8.8 metalsteps</b><br>
+		The player sounds as if he is walking on clanging metal steps or gratings. Other than specifiying <b>flesh</b>, <b>metalsteps</b>, <b>nosteps</b>, or default (i.e.; specify nothing) it is currently not possible for a designer to create or assign a specific sound routine to a texture. Note: If no sound is set for a texture, then the default footsteps sound routines are heard.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.9"></a>4.8.9 nodamage </b><br>
+		The player takes no damage if he falls onto a texture with this surfaceparm</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.10"></a>4.8.10 nodlight</b><br>
+		Read as &quot;No Dee Light&quot;. A texture containing this parameter will not be affected or lit by dynamic lights, such as weapon effects. And example in Quake III Arena would be solid lava.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.11"></a>4.8.11 nodraw</b><br>
+		A texture marked with nodraw will not visually appear in the game world. Most often used for triggers, clip brushes, origin brushes, and so on.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.12"></a>4.8.12 nodrop</b><br>
+		When a player dies inside a volume (brush) marked nodrop, no weapon is dropped. The intend use is for &quot;Pits of Death.&quot; Have a kill trigger inside a nodrop volume, and when the players die here, they won't drop their weapons. The intent is to prevent unnecessary polygon pileups on the floors of pits.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.13"></a>4.8.13 noimpact</b><br>
+		World entities will not impact on this texture. No explosions occur when projectiles strike this surface and no marks will be left on it. Sky textures are usually marked with this texture so those projectiles will not hit the sky and leave marks.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.14"></a>4.8.14 nomarks</b><br>
+		Projectiles will explode upon contact with this surface, but will not leave marks. Blood will also not mark this surface. This is useful to keep lights from being temporarily obscured by battle damage.</font></p>
+		<p><font size="2" face="Arial"><b>Design Note: </b>Use this on any surface with a deformVertexes keyword. Otherwise, the marks will appear on the unmodified surface location of the texture with the surface wriggles and squirms through the marks.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.15"></a>4.8.15 nolightmap</b><br>
+		This texture does not have a lightmap phase. It is not affected by the ambient lighting of the world around it. It does not require the addition of an rgbGen identity keyword in that stage.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.16"></a>4.8.16 nosteps </b><br>
+		The player makes no sound when walking on this texture.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.17"></a>4.8.17 nonsolid</b><br>
+		This attribute indicates a brush, which does not block the movement of entities in the game world. It applied to triggers, hint brushes and similar brushes. This affects the content of a brush.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.18"></a>4.8.18 origin</b><br>
+		Used on the &quot;origin&quot; texture. Rotating entities need to contain an origin brush in their construction. The brush must be rectangular (or square). The origin point is the exact center of the origin brush.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.19"></a>4.8.19 playerclip</b><br>
+		Blocks player movement through a <b>nonsolid</b> texture. Other game world entities can pass through a brush marked <b>playerclip</b>. The intended use for this is to block the player but not block projectiles like rockets.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.20"></a>4.8.20 slick</b><br>
+		This surfaceparm included in a texture should give it significantly reduced friction.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.21"></a>4.8.21 slime</b><br>
+		Assigns to the texture the game properties for slime. This affects both the surface and the content of a brush.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.22"></a>4.8.22 structural</b><br>
+		This surface attribute causes a brush to be seen by the Q3MAP process as a possible break-point in a BSP tree. It is used as a part of the shader for the &quot;hint&quot; texture. Generally speaking, any opaque texture not marked as &quot;<b>detail</b>&quot; is by default, <b>structural</b>, so you shouldn't need to specify this.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.23"></a>4.8.23 trans</b><br>
+		Tells q3map that pre-computed visibility should not be blocked by this surface. Generally, any shaders that have blendfuncs should be marked as surfaceparm trans.</font></p>
+		<p><font size="2" face="Arial"><b><a name="4.8.24"></a>4.8.24 water</b><br>
+		Assigns to the texture the game properties for water.</font></p>
+		<p><font size="2">
+		<hr>
+		</font></p>
+		<center>
+			<p><a href="section3.htm#3"><font face="Arial" size="2">Previous</font></a><font face="Arial" size="2">&nbsp;&nbsp;&nbsp;&nbsp; <a href="index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="section5.htm#5">Next</a></font></p>
+		</center>
+		<p><font size="2">
+		<hr>
+		</font></p>
+		<p><font face="Arial" size="2"><b>Quake 3: Arena Shader Manual Copyright 1999 id Software, Inc.<br>
+		Revision 12 December 23, 1999<br>
+		<br>
+		</b>HTML&nbsp;by <a href="mailto:jason@heppler.com?subject=Q3A Shader Manual">Jason Heppler</a><br>
+		HTML Linking by <a href="mailto:bushboy@ritualistic.com">Matthew &quot;Bushboy&quot; Trow</a><b><br>
+
+		</b><a href="http://www.heppler.com/shader/">http://www.heppler.com/shader/</a></font>
+	</body>
+
+</html>

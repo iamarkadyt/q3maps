@@ -36,7 +36,7 @@ rm $outputFolder/$pk3Name.pk3
 #    have to be mirrored into the baseq3 because Radiant
 #    reads shaders and textures only from there.
 echo launching the synchronizer...
-$repoDir/aux-build-scripts/syncBaseQ3 $gameFolder $mapFolder
+$repoDir/aux-build-scripts/sync-baseq3 $gameFolder $mapFolder
 # pack
 echo building a pk3 file...
 zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'

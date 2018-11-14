@@ -1,3 +1,12 @@
 #!/bin/bash
 
-zip -r -9 q3strong2018.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt
+mapFolder=~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/q3maps/q3strong2018
+pk3Name=$(basename $mapFolder)
+outputFolder=~/Downloads
+
+(
+  cd $mapFolder
+  zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'
+)
+
+echo Successfully wrote $outputFolder/$pk3Name.pk3

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# https://github.com/arkadyt/q3maps
+
+############################################################################
+#                                                                          #
+# This script synchronizes map files such as textures, scripts and maps    #
+# located in the specific map subdirectory in this repository              #
+# with the baseq3 directory, modifying the latter only.                    #
+#                                                                          #
+# That is required because Radiant editor reads content from the baseq3    #
+# folder and development is encouraged to be done only in the repository   # 
+# folder.                                                                  #
+# Then sometimes the game engine itself prioritizes content located in the #
+# baseq3 over the content packaged in the .pk3 files themselves.           #
+#                                                                          #
+# Arguments may be passed with the bash call or the script may be          #
+# configured manually.                                                     #
+#                                                                          #
+# Required arguments are:                                                  #
+# $1    : game installation folder                                         #
+# $2    : map subdirectory in this repository                              #
+#                                                                          #
+############################################################################
+
+
+gameDir=${1:-~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive}
+mapDir=${2:-$gameDir/baseq3/q3maps/q3strong2018}
+
+
+# rsync [flags] SRC DEST
+# builds a file list off of the SRC, passes it through specified filters and processes it into the DEST.
+# Tip: use SRC/* to copy objects from that folder instead of processing SRC folder directly to the DEST.
+#
+# -a            : archive mode, copy recursively preserving the timestamps, ownerships, etc.
+# -v            : be verbose
+# -I            : overwrite files despite the same size/timestamp
+# --include=""  : objects to NOT EXCLUDE, most useful with --exclude="*"
+# --exclude=""  : objects to exclude from processing, --exclude="*" has to always go after all the includes.
+rsync -avI --include="maps/***" --include="textures/***" --include="scripts/***" --exclude="*" $mapDir/* $gameDir/baseq3
+
+echo done synchronizing
+

@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# https://github.com/arkadyt/q3maps
+
+############################################################################
+#                                                                          #
+# This script packages up files from the specific map subfolder in this    #
+# repository into the .pk3 file.                                           #
+#                                                                          #
+# Sript can be configured manually or executed with the following          #
+# required arguments:                                                      #
+# $1    : mapFolder                                                        #
+# $2    : outputFolder                                                     #
+#                                                                          #
+############################################################################
+
+
+# configurable:
+gameFolder=~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive
+mapFolder=${1:-$gameFolder/baseq3/q3maps/q3strong2018}
+outputFolder=${2:-~$gameFolder/baseq3}
+
+# don't touch :)
+pk3Name=$(basename $mapFolder)
+repoDir=$mapFolder/../
+
+
+cd $mapFolder
+# delete old .pk3 file to create a clean build:
+echo cleaning up...
+rm $outputFolder/$pk3Name.pk3 
+# synchronize baseq3 with the current map's folder in the repository:
+#    this is required because sometimes game reads .bsps
+#    textures or scripts directly from baseq3;
+#    also any modifications you make to your map content
+#    have to be mirrored into the baseq3 because Radiant
+#    reads shaders and textures only from there.
+echo launching the synchronizer...
+$repoDir/aux-build-scripts/syncBaseQ3 $gameFolder $mapFolder
+# pack
+echo building a pk3 file...
+zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'
+
+
+
+echo wrote $outputFolder/$pk3Name.pk3

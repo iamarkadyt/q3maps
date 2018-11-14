@@ -1,21 +1,37 @@
 #!/bin/bash
 
+# https://github.com/arkadyt/q3maps
+
 ############################################################################
 #                                                                          #
-# This is a build script that calls q3map2 from the editor's folder,       #
-# builds a BSP and creates a PK3 file.                                     #
+# This is a build script that does the following:                          #
+#       * builds a full final BSP off of the .map file.                    #
+#       * packages a .PK3 file and puts it into the baseq3 folder,         #
+#         replacing the existing one                                       #
+#       * synchronizes the map content into the baseq3 folder.             #
+# I strongly recommend that you read (at least) the intro sections in      #
+# both auxillary build scripts located in the ./aux-build-scripts          #
+# to understand what is happening here and why.                            #
 #                                                                          #
 # Please configure the variables in the next section before executing it.  #
+# Script also can be called with the following required arguments:         #
+# $1    : editor installation folder                                       #
+# $2    : game installation folder (the one holding baseq3 dir)            #
+# $3    : map subfolder in the repository                                  #
+# $4    : map file path in that subfolder                                  #
 #                                                                          #
 ############################################################################
 
 
 
-currentDir=$(pwd)
-gameFolder=~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive
-mapFolder=$gameFolder/baseq3/q3maps/q3strong2018
-mapFilePath=$mapFolder/maps/q3strong2018.map
-editorFolder=~/Programs/GtkRadiant-1.6.4-Linux-x86_64-20131213
+# configurable:
+editorFolder=${1:-~/Programs/GtkRadiant-1.6.4-Linux-x86_64-20131213}
+gameFolder=${2:-~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive}
+mapFolder=${3:-$gameFolder/baseq3/q3maps/q3strong2018}
+mapFilePath=${4:-$mapFolder/maps/q3strong2018.map}
+
+# don't touch :)
+repoDir=$mapFolder/../
 
 
 
@@ -57,4 +73,4 @@ q3map2 -light -fast -patchshadows -samples 6 -bounce 8 -gamma 1.4 -dirty -shade 
 echo done compiling, calling the packager...
 
 # will package a .pk3 file and place it into the baseq3 directory
-$currentDir/pk3build $mapFolder $gameFolder/baseq3
+$repoDir/aux-build-scripts/pk3build $mapFolder $gameFolder/baseq3

@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # https://github.com/arkadyt/q3maps
+# requires:
+# * GtkRadiant (~1.6.4, the one w/ included q3map2 and bspc).
+# * rsync and zip installed in the system.
+# * The game itself (ioquake).
 
 ############################################################################
 #                                                                          #
@@ -61,7 +65,7 @@ q3map2 -vis -saveprt -fs_basepath $gameFolder $mapFilePath
 # -fast                 : enables faster light calculation
 # -bounce <n>           : enables radiosity effect
 # -fs_basepath          : game folder location!
-q3map2 -light -fast -patchshadows -samples 6 -bounce 8 -gamma 1.4 -dirty -shade -fs_basepath $gameFolder $mapFilePath
+# q3map2 -light -fast -patchshadows -samples 6 -bounce 8 -gamma 1.4 -dirty -shade -fs_basepath $gameFolder $mapFilePath
 
 # Build .aas files (Area Awareness System).
 # Commented out because as of the Nov. 10 2018, bspc coming with GtkRadiant is unusable.

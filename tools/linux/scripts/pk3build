@@ -9,26 +9,39 @@
 #                                                                          #
 # Sript can be configured manually or executed with the following          #
 # required arguments:                                                      #
-# $1    : mapFolder                                                        #
-# $2    : outputFolder                                                     #
+# $1    : map folder in the repository                                     #
+# $2    : folder to place .pk3 file in                                     #
 #                                                                          #
 ############################################################################
 
 
+
 # configurable:
+# gameFolder is not required as an argument if called through bash
 gameFolder=~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive
 mapFolder=${1:-$gameFolder/baseq3/q3maps/q3strong2018}
 outputFolder=${2:-~$gameFolder/baseq3}
 
 # don't touch :)
 pk3Name=$(basename $mapFolder)
-repoDir=$mapFolder/../
+repoRoot=$mapFolder/..
+
 
 
 cd $mapFolder
+
 # delete old .pk3 file to create a clean build:
 echo cleaning up...
-rm $outputFolder/$pk3Name.pk3 
+# -f    : supress 'file not found' warning or force delete
+rm -f $outputFolder/$pk3Name.pk3 
+
+# pack
+echo building a pk3 file...
+# -r    : recurse into directories
+# -9    : compression level 9/9
+# -x    : exclude list
+zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'
+
 # synchronize baseq3 with the current map's folder in the repository:
 #    this is required because sometimes game reads .bsps
 #    textures or scripts directly from baseq3;
@@ -36,10 +49,7 @@ rm $outputFolder/$pk3Name.pk3
 #    have to be mirrored into the baseq3 because Radiant
 #    reads shaders and textures only from there.
 echo launching the synchronizer...
-$repoDir/aux-build-scripts/sync-baseq3 $gameFolder $mapFolder
-# pack
-echo building a pk3 file...
-zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'
+$repoRoot/tools/linux/scripts/sync-baseq3 $gameFolder $mapFolder
 
 
 

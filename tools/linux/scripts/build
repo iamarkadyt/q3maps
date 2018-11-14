@@ -38,11 +38,10 @@ toolsFolder=$repoRoot/tools/linux
 bspPath=${mapFilePath%.*}.bsp
 
 
-# bspc and q3map2 are supplied with the GTKRadiant, q3map2 requires to be executed from the editor directory,
-# because it needs some specific(?) libpng located next to it and won't pick up the one installed globally.
+
 cd $toolsFolder/q3map2
 
-# meta stage
+# bsp stage
 # some people also use -patchmeta. Meta for curved patches?
 ./q3map2 -meta -fs_basepath $gameFolder $mapFilePath
 
@@ -66,15 +65,19 @@ cd $toolsFolder/q3map2
 # -fs_basepath          : game folder location!
 ./q3map2 -light -fast -patchshadows -samples 6 -bounce 8 -gamma 1.4 -dirty -shade -fs_basepath $gameFolder $mapFilePath
 
+
+
 cd $toolsFolder
 
 # Build .aas files (Area Awareness System).
 # -optimize             : reduces the .aas file size (sometimes x2 times)
 # -forcesidesvisible    : have to be used if -meta switch is used
-# -breadthfirst         : slightly faster aas build
+# -breadthfirst         : for slightly faster aas build
 ./tbspc -optimize -forcesidesvisible -breadthfirst -bsp2aas $bspPath
+
+
 
 echo done compiling, calling the packager...
 
 # will package a .pk3 file and place it into the baseq3 directory
-$repoRoot/tools/scripts/pk3build $mapFolder $gameFolder/baseq3
+$toolsFolder/scripts/pk3build $mapFolder $gameFolder/baseq3

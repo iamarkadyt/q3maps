@@ -10,7 +10,7 @@ git clone https://github.com/arkadyt/q3maps
 
 # cd into the repo directory, choose a map 
 # and copy-merge its content into the baseq3 folder:
-./tools/scripts/sync-baseq3 [gameDir] [mapDir]
+./tools/linux/scripts/sync-baseq3 [gameDir] [mapDir]
 
 # (you can also configure the variables in the 
 # sync-baseq3 directly instead of passing args)

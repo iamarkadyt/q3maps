@@ -1,6 +1,6 @@
 # Description
 
-In this repository you will find some of my map works for the Quake III Arena game.
+In this repository you will find some of my mapmaking works for the Quake III Arena game.
 
 If you want to checkout the maps in the editor, clone the repository and copy-merge the contents of the directory of the desired map into the `baseq3` folder:
 ```
@@ -10,12 +10,15 @@ git clone https://github.com/arkadyt/q3maps
 
 # cd into the repo directory, choose a map 
 # and copy-merge its content into the baseq3 folder:
-./aux-build-scripts/sync-baseq3 [gameDir] [mapDir]
-# or configure the variables in the sync-baseq3 directly.
-```
-Then ensure the location of the game directory is set in the Radiant and shaderlist.txt is updated with the names of the new (copy-merged) shaders.
+./tools/scripts/sync-baseq3 [gameDir] [mapDir]
 
-To contribute, edit the .map, texture and script files directly in the cloned repository and use `build*` script to compile the map, build a .pk3 file and put it into the baseq3 directory copy-merging the map content into the baseq3/ along the way.
+# (you can also configure the variables in the 
+# sync-baseq3 directly instead of passing args)
+```
+Then ensure the location of the game directory is set in the Radiant and the shaderlist.txt is (always!) updated with the names of the new (copy-merged) shaders.
+
+To contribute, edit the map content directly in the cloned repository and then use `build` script to compile the map, build a .pk3 file, place it into the baseq3 directory and copy-merge the map content out into the baseq3 folder.<br>
+WARNING: `build` script does not update the shaderlist.txt, you will have to do that manually.
 
 # Development tips
 

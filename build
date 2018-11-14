@@ -1,0 +1,60 @@
+#!/bin/bash
+
+############################################################################
+#                                                                          #
+# This is a build script that calls q3map2 from the editor's folder,       #
+# builds a BSP and creates a PK3 file.                                     #
+#                                                                          #
+# Please configure the variables in the next section before executing it.  #
+#                                                                          #
+############################################################################
+
+
+
+currentDir=$(pwd)
+gameFolder=~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive
+mapFolder=$gameFolder/baseq3/q3maps/q3strong2018
+mapFilePath=$mapFolder/maps/q3strong2018.map
+editorFolder=~/Programs/GtkRadiant-1.6.4-Linux-x86_64-20131213
+
+
+
+# bspc and q3map2 are supplied with the GTKRadiant, q3map2 requires to be executed from the editor directory,
+# because it needs some specific(?) libpng located next to it and won't pick up the one installed globally.
+cd $editorFolder
+
+# meta stage
+# some people also use -patchmeta. Meta for curved patches?
+q3map2 -meta -fs_basepath $gameFolder $mapFilePath
+
+# vis stage
+# -saveprt              : saves visibility splitting into a file that can be viewed in the Radiant.
+q3map2 -vis -saveprt -fs_basepath $gameFolder $mapFilePath
+
+# fast light
+# q3map2 -light -fast -fs_basepath $gameFolder $mapFilePath 
+
+# final light
+# -shade                : enables phong shading
+# -sky <n>              : multiplies the sky light value by <n>
+# -pointscale <n.n>     : multiplies the point lights amount by <n.n>
+# -gamma <n.n>          : increases gamma (used with _ambient:10 and a value of 1.4 in q3strong2018)
+# -dirty                : enables ambient occlusion
+# -samples <n>          : enables anti-aliasing
+# -patchshadows         : cast and receive shadows for curves
+# -fast                 : enables faster light calculation
+# -bounce <n>           : enables radiosity effect
+# -fs_basepath          : game folder location!
+q3map2 -light -fast -patchshadows -samples 6 -bounce 8 -gamma 1.4 -dirty -shade -fs_basepath $gameFolder $mapFilePath
+
+# Build .aas files (Area Awareness System).
+# Commented out because as of the Nov. 10 2018, bspc coming with GtkRadiant is unusable.
+# Use the battle tested .exe version included in this repository.
+# -optimize             : reduces the .aas file size (sometimes x2 times)
+# -forcesidesvisible    : have to be used if -meta switch is used
+# bspc -optimize -forcesidesvisible -bsp2aas $pathToTheBSP
+
+echo done compiling, calling the packager...
+
+# will package a .pk3 file and place it into the baseq3 directory
+$currentDir/pk3build $mapFolder $gameFolder/baseq3

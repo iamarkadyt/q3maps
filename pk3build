@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# can be configured manually or called from bash with the following args:
+# $1    : mapFolder
+# $2    : outputFolder
+
+mapFolder=${1:-~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive/baseq3/q3maps/q3strong2018}
+pk3Name=$(basename $mapFolder)
+outputFolder=${2:-~/Downloads}
+
+(
+  cd $mapFolder
+  zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'
+)
+
+echo wrote $outputFolder/$pk3Name.pk3

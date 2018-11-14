@@ -1,14 +1,17 @@
 # Links
 
-BSP Compiler:
+### Q3MAP2:
+* working version comes with the GtkRadiant or could be found in this folder.
 * https://en.wikibooks.org/wiki/Q3Map2
-* https://github.com/Elzair/q3map2
-* battle tested version can be found in the current folder
+* https://github.com/Elzair/q3map2 (no make files)
 
-The editor:
+### Radiant:
 * https://github.com/TTimo/GtkRadiant
 * https://en.wikibooks.org/wiki/GtkRadiant
 
-AAS Compiler:
-* https://github.com/bnoordhuis/bspc (unusable as of Nov 10, 2018)
-* battle tested version of bspc is included (sadly, .exe).
+### BSPC:
+* the one coming with the GtkRadiant (as of 1.6.4) is buggy.
+* https://github.com/TTimo/bspc contains the latest, working community version. 
+* working versions of bspc are included for both platforms.
+
+Visit `www.quake3world.com` for more.

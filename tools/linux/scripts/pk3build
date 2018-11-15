@@ -40,7 +40,7 @@ echo building a pk3 file...
 # -r    : recurse into directories
 # -9    : compression level 9/9
 # -x    : exclude list
-zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak'
+zip -r -9 $outputFolder/$pk3Name.pk3 levelshots/ maps/ scripts/ sound/ textures/ readme.txt -x '*.srf' '*.prt' '*.bak' '*.map'
 
 # synchronize baseq3 with the current map's folder in the repository:
 #    this is required because sometimes game reads .bsps

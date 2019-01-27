@@ -1,51 +1,59 @@
 # Description
 
-In this repository you will find some of my mapmaking works for the Quake III Arena game.
+In this repository you will find some of my level design works for Quake III Arena game.
 
-If you want to checkout the maps in the editor, clone the repository and copy-merge the contents of the directory of the desired map into the `baseq3` folder:
+If you want to take a look at some map in the radiant, clone the repo and copy-merge contents of the directory of the map of your choice into the `baseq3` folder:
 ```
 # clone:
 cd ~/Games/Q3/baseq3/
 git clone https://github.com/arkadyt/q3maps
 
-# cd into the repo directory, choose a map 
-# and copy-merge its content into the baseq3 folder:
-./tools/linux/scripts/sync-baseq3 [gameDir] [mapDir]
+# cd into repo root, choose a map and do copy-merging 
+# through running this bash script:
+you@comp$ ./tools/linux/scripts/sync-baseq3 [gameDir] [mapDir]
 
-# (you can also configure the variables in the 
-# sync-baseq3 directly instead of passing args)
+# (you can also edit vars in sync-baseq3 to configure it directly)
 ```
-Then ensure the location of the game directory is set in the Radiant and the shaderlist.txt is (always!) updated with the names of the new (copy-merged) shaders.
+Then ensure the location of game directory is set in the Radiant and shaderlist.txt is (always!) updated with names of new (copy-merged) shaders.
 
-To contribute, edit the map content directly in the cloned repository and then use `build` script to compile the map, build a .pk3 file, place it into the baseq3 directory and copy-merge the map content out into the baseq3 folder.<br>
-WARNING: `build` script does not update the shaderlist.txt, you will have to do that manually.
+# Contributing
+To contribute, edit map content directly in the cloned repository, then use `build` script to:
+
+* compile the map
+* build a .pk3 file
+* place it into the baseq3 directory
+* and copy-merge the map content out into the baseq3 folder
+
+`build` script will do it all for you except editing shaderlist.txt. You will have to do that yourself.
 
 # Development tips
 
 ### When reverse engineering pk3 files:
 
-* Unpack textures and scripts folders directly into the baseq3 folder (that's what we do above with rsync).
-* Then add the names of the unpacked shaders to the baseq3/scripts/shaderlist.txt file.
+* Unpack textures and scripts folders directly into the baseq3 folder (use sync-baseq3 script).
+* Then add names of unpacked shaders to the baseq3/scripts/shaderlist.txt file.
 * Finally, in the radiant, set the game folder to the directory containing the abovementioned baseq3 and the game binary.
 
-Good luck!
+All the best!
 
 ### Some other tips
 
 * `Commit` frequently. You never know when Radiant will crash next.
-* `Describe changes` precisely. You can't walk through commits with `git bisect` and checkout the sources. It's hard to know what changes have been done, but really important to, when trying to understang what broke the (say) `bspc` build.
-* `Leave No Leaks` With every commit make sure that your map has no leaks. When checking out older commits later and building .aas files off of them, to understand what change was breaking, you have to have no leaks on the map. Otherwise bspc will return error. Same concept applies to catching vis and light stage errors like `MAX_TW_VERTS exceeded` and `MAX_MAP_VISIBILITY exceeded`. 
-* To `quickly adjust the textures around some face` without manually tweaking values in the Texture Inspector (S) use the following routine: copy the texture from that face onto the surrounding textures (this will copy xy scale and shift and rotation) then apply a new texture through selecting it in the texture inspector and clicking `Shift MMBC` on the surrounding faces (this will keep the texture scales and shifts intact).
-* `T Junction Issues` Fighting stitching issues often includes caulking invisible faces and ensuring that visible faces are perfectly aligned to each other. If none of that helps, tweaking the geometry slightly usually resolves the problem.
-* `Radiant` Radiant (as of Gtk v1.6.4) needs to be restarted every so often when working long hours to avoid sudden crashes and the following brush mutation.
+* `Describe changes` precisely. It's hard to know what changes have been done, but really important to when trying to understang what broke the (say) `bspc` build.
+* `No Compilation Errors`, never. With every commit make sure that you can fully build your map, including BSPs and AAS files. This will come vital when something will break later on and you'll find yourself `git bisecting` through history and building from sources.
+* To `quickly adjust textures around some brush face` without manually tweaking values in the Texture Inspector (S) use following routine: 
+  - copy texture from that face onto surrounding faces; this will copy xy scales, xy shift and rotation.
+  - then apply a new texture through selecting it in the texture inspector and clicking `Shift MMBC` on those surrounding faces; using that key combo will keep their texture scales and shifts intact.
+* `T Junction Issues` Fighting stitching issues often includes caulking invisible faces and ensuring that visible faces are perfectly aligned to each other. If none of that helps, rebuilding problematic geometry chunk or slightly tweaking brush sizes in that area usually resolves the problem.
+* `Radiant` Radiant (as of Gtk v1.6.4) needs to be restarted every so often, when working long hours, to avoid sudden crashes and following brush mutation.
 * `bspc 2.1h` is problematic. Windows version of bspc 2.1i works much better.
-* `target_speaker` entities depend on the `vis`!
-* `Cluster Portals` have to be thick because otherwise bots get stuck in them for a few moments.
-* `ERROR: Tried parent` appears when some geometry on the map seems to be very complex for bspc. Binary search the map with the huge botclip brush (covering the entire map) for the problematic areas.
+* `target_speaker` sound blocking depends on the `vis` data!
+* `Cluster Portals` have to be around 16 units thick; otherwise bots start getting stuck.
+* `ERROR: Tried parent` appears when some geometry on the map seems to be very complex for bspc. Binary search the map with huge botclip/playerclip brush (covering the entire map) for problematic areas.
 
 # Useful Shortcuts
 
-Following are some of the useful GTKRadiant shortcuts:
+Following are some useful GTKRadiant shortcuts:
 
 `Ctrl + Alt + Shift + LMBC` Select individual faces for texture assigment.<br>
 `Ctrl + LMBD` Select & drag a face.<br>
@@ -53,10 +61,10 @@ Following are some of the useful GTKRadiant shortcuts:
 `Shift + LMBD` Select items in a brush mode.<br>
 `Shift + Ctrl + LMBD` Select individual faces in a brush mode.<br>
 `MMBC` Pick a texture.<br>
-`Shift + MMBC` Assign a current texture to a brush face.<br>
-`Shift + A` When some face is selected: selects all brushes that have the texture.<br>
+`Shift + MMBC` Assign current texture to a brush face.<br>
+`Shift + A` When some face is selected: selects all brushes that have the same texture.<br>
 
 
 ### KDE Specific Shortcuts
 
-`Alt + RMB Drag` Easily resize Gtk windows with 1px border.
+`Alt + RMB Drag` Easily resize annoying Gtk windows with microscopic 1px border.

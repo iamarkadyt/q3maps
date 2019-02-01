@@ -1,3 +1,6 @@
+![q3strong2018](https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190222.png)
+![q3strong2018](https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190449.png)
+
 # Description
 
 In this repository you will find some of my level design works for Quake III Arena game.

@@ -1,11 +1,13 @@
-![q3strong2018](https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190222.png)
-![q3strong2018](https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190449.png)
+<img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190222.png" width="400" /> <img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190449.png" width="397" />
 
-# Description
+# Table of contents
+* [Contributing](#contributing)
+* [Development tips](#development-tips)
+* [Useful Shortcuts](#useful-shortcuts)
 
-In this repository you will find some of my level design works for Quake III Arena game.
+# Contributing
 
-If you want to take a look at some map in the radiant, clone the repo and copy-merge contents of the directory of the map of your choice into the `baseq3` folder:
+If you want to just take a look at some map in the radiant, clone the repo and copy-merge contents of the directory of the map of your choice into the `baseq3` folder:
 ```
 # clone:
 cd ~/Games/Q3/baseq3/
@@ -19,7 +21,6 @@ you@comp$ ./tools/linux/scripts/sync-baseq3 [gameDir] [mapDir]
 ```
 Then ensure the location of game directory is set in the Radiant and shaderlist.txt is (always!) updated with names of new (copy-merged) shaders.
 
-# Contributing
 To contribute, edit map content directly in the cloned repository, then use `build` script to:
 
 * compile the map

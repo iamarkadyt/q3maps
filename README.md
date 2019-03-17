@@ -1,4 +1,5 @@
 <img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190222.png" width="400" /> <img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/Screenshot_20181110_190449.png" width="397" />
+<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_11.jpg" width="264" /> <img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_07.jpg" width="264" /> <img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_02.jpg" width="264" />
 
 # Table of contents
 * [Contributing](#contributing)

@@ -8,28 +8,31 @@
 
 # Contributing
 
-If you want to just take a look at some map in the radiant, clone the repo and copy-merge contents of the directory of the map of your choice into the `baseq3` folder:
+To contribute, [download and install GtkRadiant](https://icculus.org/gtkradiant/downloads.html). 
+
+Configure your editor to point to the game folder (dir that contains baseq3 directory), then in the editor on the menu bar tick **Textures > shaderlist.txt only** and open **Textures > base > ..anything..** to generate shaderlist.txt file and copy other files important for map compilation process.
+
+Next clone this repo and synchronize contents of the map of your choice into the `baseq3` folder by running `sync-baseq3` script:
 ```
 # clone:
 cd ~/Games/Q3/baseq3/
 git clone https://github.com/arkadyt/q3maps
 
-# cd into repo root, choose a map and do copy-merging 
-# through running this bash script:
-you@comp$ ./tools/linux/scripts/sync-baseq3 [gameDir] [mapDir]
+# sync:
+./tools/linux/scripts/sync-baseq3 [gameDir] [mapDir]
 
-# (you can also edit vars in sync-baseq3 to configure it directly)
+# (you can also edit sync-baseq3 to configure it directly)
 ```
-Then ensure the location of game directory is set in the Radiant and shaderlist.txt is (always!) updated with names of new (copy-merged) shaders.
+Now update `baseq3/scripts/shaderlist.txt` with names of new shaders copied to `baseq3/scripts` folder.
 
-To contribute, edit map content directly in the cloned repository, then use `build` script to:
+You should edit map content directly in the cloned repository then use `build` script to:
 
 * compile the map
 * build a .pk3 file
 * place it into the baseq3 directory
-* and copy-merge the map content out into the baseq3 folder
+* and synchronize map content with the baseq3 folder
 
-`build` script will do it all for you except editing shaderlist.txt. You will have to do that yourself.
+`build` script will do it all for you except for keeping your `shaderlist.txt` file up to date. You will have to do that yourself! Yay fun!
 
 # Development tips
 

@@ -10,7 +10,7 @@
 
 To contribute, [download and install GtkRadiant](https://icculus.org/gtkradiant/downloads.html). 
 
-Configure your editor to point to the game folder (dir that contains baseq3 directory), then in the editor on the menu bar tick **Textures > shaderlist.txt only** and open **Textures > base > ..anything..** to generate shaderlist.txt file and copy other files important for map compilation process.
+Configure your editor to point to the game folder (dir that contains baseq3 directory), then in the editor on the menu bar tick **Textures > shaderlist.txt only** and open **Textures > base > ..anything..** to generate shaderlist.txt file an other files important for map compilation process.
 
 Next clone this repo and synchronize contents of the map of your choice into the `baseq3` folder by running `sync-baseq3` script:
 ```

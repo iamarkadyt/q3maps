@@ -44,11 +44,14 @@ You should edit map content directly in the cloned repository then use `build` s
 
 All the best!
 
-### Some other tips
+### Important tips
 
 * `Commit` frequently. You never know when Radiant will crash next.
 * `Describe changes` precisely. It's hard to know what changes have been done, but really important to when trying to understang what broke the (say) `bspc` build.
 * `No Compilation Errors`, never. With every commit make sure that you can fully build your map, including BSPs and AAS files. This will come vital when something will break later on and you'll find yourself `git bisecting` through history and building from sources.
+
+### Some other tips
+
 * To `quickly adjust textures around some brush face` without manually tweaking values in the Texture Inspector (S) use following routine: 
   - copy texture from that face onto surrounding faces; this will copy xy scales, xy shift and rotation.
   - then apply a new texture through selecting it in the texture inspector and clicking `Shift MMBC` on those surrounding faces; using that key combo will keep their texture scales and shifts intact.

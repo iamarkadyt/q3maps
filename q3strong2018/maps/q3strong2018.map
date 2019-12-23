@@ -35198,6 +35198,15 @@ common/clip
 ( -408 -224 448 ) ( -408 -224 392 ) ( -408 -360 392 ) q3stronghold/kilt_alien_boarder 0 128 0 0.500000 0.500000 0 0 0
 ( -584 -360 448 ) ( -584 -360 392 ) ( -584 -224 392 ) q3stronghold/kilt_alien_boarder 0 128 0 0.500000 0.500000 0 0 0
 }
+// brush 3878
+{
+( -424 -488 400 ) ( -424 -488 288 ) ( -424 -352 288 ) base_wall/concrete_dark -112 0 0 0.500000 0.500000 0 0 0
+( -408 -224 392 ) ( -408 -224 280 ) ( -408 -360 280 ) q3stronghold/kilt_conc_tekfloor2 14 0 0 0.440000 0.437500 0 0 0
+( -448 -360 392 ) ( -448 -360 280 ) ( -624 -360 280 ) q3stronghold/kilt_conc_tekfloor2 0 0 0 0.500000 0.437500 0 0 0
+( -576 -288 392 ) ( -576 -288 280 ) ( -400 -288 280 ) base_wall/concrete_dark 0 0 0 0.500000 0.500000 0 0 0
+( -584 -224 280 ) ( -584 -360 280 ) ( -408 -360 280 ) q3stronghold/kilt_conc_tekfloor2 0 0 0 0.500000 0.437500 0 0 0
+( -584 -360 392 ) ( -584 -224 392 ) ( -408 -224 392 ) q3stronghold/kilt_conc_tekfloor2 0 0 0 0.500000 0.437500 0 0 0
+}
 }
 // entity 1
 {
@@ -39632,67 +39641,49 @@ common/clip
 }
 // entity 608
 {
-"lip" "18"
-"wait" "10"
-"speed" "10"
-"health" "1"
-"angle" "270"
-"classname" "func_door"
-// brush 0
-{
-( -424 -488 400 ) ( -424 -488 288 ) ( -424 -352 288 ) base_wall/concrete_dark -112 0 0 0.500000 0.500000 0 0 0
-( -408 -224 392 ) ( -408 -224 280 ) ( -408 -360 280 ) q3stronghold/kilt_conc_tekfloor2 14 0 0 0.440000 0.437500 0 0 0
-( -448 -360 392 ) ( -448 -360 280 ) ( -624 -360 280 ) q3stronghold/kilt_conc_tekfloor2 0 0 0 0.500000 0.437500 0 0 0
-( -576 -288 392 ) ( -576 -288 280 ) ( -400 -288 280 ) base_wall/concrete_dark 0 0 0 0.500000 0.500000 0 0 0
-( -584 -224 280 ) ( -584 -360 280 ) ( -408 -360 280 ) q3stronghold/kilt_conc_tekfloor2 0 0 0 0.500000 0.437500 0 0 0
-( -584 -360 392 ) ( -584 -224 392 ) ( -408 -224 392 ) q3stronghold/kilt_conc_tekfloor2 0 0 0 0.500000 0.437500 0 0 0
-}
-}
-// entity 609
-{
 "origin" "-520 -200 296"
 "classname" "item_health_large"
 }
-// entity 610
+// entity 609
 {
 "origin" "-476 -200 296"
 "classname" "ammo_rockets"
 }
-// entity 611
+// entity 610
 {
 "origin" "-520 -156 304"
 "classname" "team_CTF_redspawn"
 "angle" "360"
 }
-// entity 612
+// entity 611
 {
 "origin" "-520 -156 304"
 "classname" "info_player_deathmatch"
 "angle" "360"
 }
-// entity 613
+// entity 612
 {
 "origin" "1544 320 308"
 "classname" "item_health_large"
 }
-// entity 614
+// entity 613
 {
 "origin" "1500 320 308"
 "classname" "ammo_rockets"
 }
-// entity 615
+// entity 614
 {
 "targetname" "t8"
 "noise" "*taunt.wav"
 "origin" "524 200 84"
 "classname" "target_speaker"
 }
-// entity 616
+// entity 615
 {
 "origin" "-432 -200 296"
 "classname" "weapon_grenadelauncher"
 }
-// entity 617
+// entity 616
 {
 "wait" "150"
 "count" "60"
@@ -39700,7 +39691,7 @@ common/clip
 "origin" "-392 1728 -104"
 "classname" "item_invis"
 }
-// entity 618
+// entity 617
 {
 "random" "30"
 "wait" "150"

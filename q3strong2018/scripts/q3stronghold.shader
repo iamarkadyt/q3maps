@@ -46,66 +46,6 @@ textures/q3stronghold/waterfog1
   fogparms ( 0 0 0 ) 1500
 }
 
-textures/q3stronghold/about_q3strong2018
-{
-	qer_editorimage textures/q3stronghold/about_q3strong2018.tga
-	qer_trans 0.99
-	surfaceparm nodamage
-	surfaceparm nolightmap
-	surfaceparm nonsolid
-	surfaceparm nomarks
-	surfaceparm trans
-	polygonoffset
-	q3map_backsplash 0 0
-	q3map_surfacelight 300
-	q3map_lightsubdivide 128
-	{
-		clampmap textures/q3stronghold/about_q3strong2018.tga
-		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
-		rgbGen Vertex
-	}
-}
-
-textures/q3stronghold/tomydad
-{
-	qer_editorimage textures/q3stronghold/tomydad.tga
-	qer_trans 0.99
-	surfaceparm nodamage
-	surfaceparm nolightmap
-	surfaceparm nonsolid
-	surfaceparm nomarks
-	surfaceparm trans
-	polygonoffset
-	q3map_backsplash 0 0
-	q3map_surfacelight 300
-	q3map_lightsubdivide 128
-	{
-		clampmap textures/q3stronghold/tomydad.tga
-		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
-		rgbGen Vertex
-	}
-}
-
-textures/q3stronghold/werestillhere
-{
-	qer_editorimage textures/q3stronghold/werestillhere.tga
-	qer_trans 0.99
-	surfaceparm nodamage
-	surfaceparm nolightmap
-	surfaceparm nonsolid
-	surfaceparm nomarks
-	surfaceparm trans
-	polygonoffset
-	q3map_backsplash 0 0
-	q3map_surfacelight 300
-	q3map_lightsubdivide 128
-	{
-		clampmap textures/q3stronghold/werestillhere.tga
-		blendFunc GL_SRC_ALPHA GL_ONE_MINUS_SRC_ALPHA
-		rgbGen Vertex
-	}
-}
-
 textures/q3stronghold/kilt_alien_light1_600
 {
 	qer_editorimage textures/q3stronghold/kilt_alien_light1.tga

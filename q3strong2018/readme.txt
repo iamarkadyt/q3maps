@@ -1,5 +1,5 @@
 Stronghold Opposition 2018 for Q3A by Arkady 'arcan770077f' Titenko.
-To my loving dad, Sergey 'alarixx' Titenko.
+To my dad, Sergey 'alarixx' Titenko! :)
 
 ====================================================================================
 Title                   : Stronghold Opposition 2018
@@ -63,5 +63,3 @@ Known Bugs              : Fans are visible through sky outside (still), if you k
 Build Time              : 10 days.
 Textures used           : Base Texture set, Crate textures from Evil's TexturePack II and Kiltron's Texture Pack II.
 Compile machine         : Intel I5-3330 3.0Ghz with 8GB RAM, running Kubuntu 18.10.
-
-follow the melody

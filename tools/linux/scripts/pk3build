@@ -20,7 +20,7 @@
 # gameFolder is not required as an argument if called through bash
 gameFolder=~/Games/q3.linux.ioq3.clean.excssmod/ioquake3_excessive
 mapFolder=${1:-$gameFolder/baseq3/q3maps/q3strong2018}
-outputFolder=${2:-~$gameFolder/baseq3}
+outputFolder=${2:-$gameFolder/baseq3}
 
 # don't touch :)
 pk3Name=$(basename $mapFolder)

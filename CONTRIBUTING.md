@@ -2,7 +2,6 @@
 
 * [Setting up local environment](#setting-up-local-environment)
 * [Development tips](#development-tips)
-* [Useful Shortcuts](#useful-shortcuts)
 
 ## Setting up local environment
 
@@ -26,7 +25,7 @@ Build script usage:
 
 Also remember to update `baseq3/scripts/shaderlist.txt` with the names of the new shader files that were copied to `baseq3/scripts` folder by sync script. I haven't implemented an auto update yet, so it has to be done manually. This step allows the GtkRadiant to properly display shaders in the Texture View panel.
 
-## Tips
+## Development tips
 
 ### Reverse engineering pk3 files
 
@@ -67,7 +66,6 @@ And if you are using KDE desktop environment:
 
 `Alt + RMB Drag` Helps easily resize annoying Gtk windows with microscopic 1px border.
 
-<p align="center">
+</br><p align="center">
   <img src="readme-media/quake_3.png" alt="" width="150" />
-</p></br>
-
+</p>

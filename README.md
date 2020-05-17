@@ -3,15 +3,19 @@
 
 ## Description
 
-This repository contains sources of many Quake III Arena maps that I've created throughout years, some of which [I published on lvlworld.com](https://lvlworld.com/author/arcan770077f).
+This repository contains source files of many Quake III Arena maps of mine that I've created throughout years, some of which [I published on lvlworld.com](https://lvlworld.com/author/arcan770077f).
 
-This repo also contains backups of vitally important tools (q3map2 and bspc) for Win and Linux platforms, as well as copies of some important documentation (editor, shader engine, compiler etc.) that continues to get lost around internet as more Quake 3 Arena forums close and go offline.
+This repo also contains backups of vitally important tools, such as q3map2 and bspc, for Windows and Linux platforms, as well as copies of some important documentation (editor, shader engine, compiler etc.) that continues to get lost around internet as more Quake 3 Arena forums close and go offline.
 
 ## Contributing
 
-Feel free to open a PR if you would like to contribute! All contributions are welcome. Adding more docs? Mapping tools? Suggesting map edits? Tutorials or even your custom maps? I would accept them all! The goal of this project is to help preserve what's being lost.
+Feel free to open a PR if you would like to contribute! All contributions are welcome. Adding more docs? More mapping tools? Suggesting map edits? Tutorials? Your custom maps? Or anything related to Quake 3 you would like to backup? I would accept them all. Data stored in this repository is mirrored to physical hard drives and paid cloud storage. The goal of this project is to help preserve what's being lost.
 
 See [CONTRIBUTING.md](https://github.com/arkadyt/q3maps/blob/master/CONTRIBUTING.md) for more info.
+
+## Tools
+
+Looking for mapping tools? Check out [vendor directory](https://github.com/arkadyt/q3maps/tree/master/vendor) for more info.
 
 ## License
 

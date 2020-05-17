@@ -1,7 +1,7 @@
-# Links
+## Links
 
 ### Q3MAP2:
-* working version comes with the GtkRadiant or could be found in this folder.
+* Working version comes with the GtkRadiant or could be found in this folder.
 * https://en.wikibooks.org/wiki/Q3Map2
 * https://github.com/Elzair/q3map2 (no make files)
 
@@ -10,8 +10,8 @@
 * https://en.wikibooks.org/wiki/GtkRadiant
 
 ### BSPC:
-* the one coming with the GtkRadiant (as of 1.6.4) is buggy.
+* The one coming with the GtkRadiant (as of 1.6.4) is buggy.
 * https://github.com/TTimo/bspc contains the latest, working community version. 
-* working versions of bspc are included for both platforms.
+* Working versions of bspc are included for both platforms.
 
 Visit `www.quake3world.com` for more.

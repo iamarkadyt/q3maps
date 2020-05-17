@@ -19,7 +19,7 @@ Next clone this repository and choose a map you would like to edit. After that r
 * Load up the game, open the console and execute `/devmap map_i_am_working_on`
 * Test and inspect the map
 
-Sync script usage:
+Build script usage:
 ```
 ./tools/build [gameFolder] [repoMapFolder]
 ```
@@ -50,9 +50,9 @@ Also remember to update `baseq3/scripts/shaderlist.txt` with the names of the ne
 * `ERROR: Tried parent` occurs during compilation when bspc can't handle the map geomentry for some reason. It might be simply too complex. To find out which geometry that is do a binary search on the map with a huge playerclip brush until you narrow down the area enough to identify what caused the problem. Remove the geometry or cover it in player or bot clips.
 * If you have renamed the game directory and GtkRadiant won't launch, go to GtkRadiant directory, then `/games` and delete `q3.game` file.
 
-### Editor shortcuts
+### Useful shortcuts
 
-Following are some useful GTKRadiant shortcuts:
+Following are useful GTKRadiant shortcuts:
 
 `Ctrl + Alt + Shift + LMBC` Select individual faces for texture assigment.<br>
 `Ctrl + LMBD` Select & drag a face.<br>
@@ -63,6 +63,11 @@ Following are some useful GTKRadiant shortcuts:
 `Shift + MMBC` Assign current texture to a brush face.<br>
 `Shift + A` When some face is selected: selects all brushes that have the same texture.<br>
 
-### KDE Specific Shortcuts
+And if you are using KDE desktop environment:
 
-`Alt + RMB Drag` Easily resize annoying Gtk windows with microscopic 1px border.
+`Alt + RMB Drag` Helps easily resize annoying Gtk windows with microscopic 1px border.
+
+<p align="center">
+  <img src="readme-media/quake_3.png" alt="" width="150" />
+</p></br>
+

@@ -3,7 +3,7 @@
 
 ## Description
 
-This repository contains source files of many Quake III Arena maps of mine that I've created throughout years, some of which [I published on lvlworld.com](https://lvlworld.com/author/arcan770077f).
+This repository contains source files of many Quake III Arena maps of mine that I've created throughout years, some of which [I published on lvlworld.com](https://lvlworld.com/author/arcan770077f). Some of the maps are based on the works of other people, such as `q3strong2018` that's based on `Stronghold Keep` by Dave 'Zoid' Kirsch (Quake 2).
 
 This repo also contains backups of vitally important tools, such as q3map2 and bspc, for Windows and Linux platforms, as well as copies of some important documentation (editor, shader engine, compiler etc.) that continues to get lost around internet as more Quake 3 Arena forums close and go offline.
 

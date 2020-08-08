@@ -1,5 +1,5 @@
-<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_11.jpg" width="292" />&nbsp;<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_07.jpg" width="292" />&nbsp;<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_02.jpg" width="292" />
-<img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/q3strong3.jpg" width="440" />&nbsp;<img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/q3strong4.jpg" width="440" />
+<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_11.jpg" width="252" />&nbsp;<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_07.jpg" width="252" />&nbsp;<img src="https://github.com/arkadyt/q3maps/blob/master/rd3ctfq3/media/RD3CTFQ3_02.jpg" width="252" />
+<img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/q3strong3.jpg" width="380" />&nbsp;<img src="https://github.com/arkadyt/q3maps/blob/master/q3strong2018/media/q3strong4.jpg" width="380" />
 
 ## Description
 

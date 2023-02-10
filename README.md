@@ -9,7 +9,7 @@ This repo also contains backups of vitally important tools, such as q3map2 and b
 
 ## Contributing
 
-Feel free to open a PR if you would like to contribute! All contributions are welcome. Adding more docs? More mapping tools? Suggesting map edits? Tutorials? Your custom maps? Or anything related to Quake 3 you would like to backup? I would accept them all. Data stored in this repository is mirrored to physical hard drives and paid cloud storage. The goal of this project is to help preserve what's being lost.
+Feel free to open a PR if you would like to contribute! All contributions are welcome. Adding more docs? More mapping tools? Suggesting map edits? Tutorials? Your custom maps? Or anything related to Quake 3 you would like to backup? Everything will be accepted. Data stored in this repository is mirrored to physical hard drives and paid cloud storage. The goal of this project is to help preserve what's being lost.
 
 See [CONTRIBUTING.md](https://github.com/arkadyt/q3maps/blob/master/CONTRIBUTING.md) for more info.
 
